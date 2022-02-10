@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2363636"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <ImageView
+            android:id="@+id/fragment_loginp_login_back_iv"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_sticky_back"/>
+        <font.FTextView
+            custom:customFont="@string/font_name_ygt_760"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="@string/signup"
+            android:layout_marginLeft="107dp"
+            android:gravity="center_vertical"
+            android:textColorHint="#999999"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <font.FEditText
+            android:id="@+id/editJoinName"
+            custom:customFont="@string/font_name_ygt_740"
+            android:background="#00000000"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:textColor="#ffffff"
+            android:textColorHint="#999999"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/editJoinNameUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="center_horizontal"
+            android:background="#555555"/>
+
+        <font.FEditText
+            android:id="@+id/editJoinId"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="@string/email"
+            android:textColor="#ffffff"
+            android:inputType="textEmailAddress"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColorHint="#999999"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/editJoinIdUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#555555" />
+
+        <font.FTextView
+            android:id="@+id/txtSendEmailAgreement"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="8dp"
+            android:text="@string/join_send_agreement"
+            android:textColor="#999999"
+            android:textSize="11dp" />
+
+        <font.FEditText
+            android:id="@+id/editJoinRewriteId"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="@string/intro_rewrite_email"
+            android:textColor="#ffffff"
+            android:inputType="textEmailAddress"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:layout_marginTop="15dp"
+            android:textColorHint="#999999"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/editJoinRewriteIdUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#555555" />
+
+        <font.FEditText
+            android:id="@+id/editJoinPwd"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="@string/intro_pwd_hint"
+            android:textColor="#ffffff"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColorHint="#999999"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/editJoinPwdUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#555555" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal" >
+
+            <font.FTextView
+                android:id="@+id/JoinAgreementCheck"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:background="@drawable/checkbox_push_agree" />
+
+            <font.FTextView
+                android:id="@+id/txtJoinAgreement"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/join_agreement"
+                android:textColor="#999999"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <font.FTextView
+            android:id="@+id/Join_btn"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/selector_black_btn"
+            android:gravity="center"
+            android:text="@string/do_join"
+            android:textColor="#ffffff"
+            android:textSize="13dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="top"
+        android:paddingBottom="8dp"
+        android:paddingLeft="7.5dp"
+        android:paddingRight="7.5dp"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/join_banner_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+    
+    </LinearLayout>
+    
+</LinearLayout><!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <font.FEditText
+            android:id="@+id/editJoinName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input_top"
+            android:gravity="center_vertical"
+            android:hint="@string/join_first_name"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#b4b4b4"
+            android:textSize="17sp" />
+
+        <font.FEditText
+            android:id="@+id/editJoinId"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input_middle"
+            android:gravity="center_vertical"
+            android:hint="@string/intro_email"
+            android:inputType="textEmailAddress"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#b4b4b4"
+            android:textSize="17sp" />
+
+        <font.FEditText
+            android:id="@+id/editJoinRewriteId"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input_middle"
+            android:gravity="center_vertical"
+            android:hint="@string/intro_rewrite_email"
+            android:inputType="textEmailAddress"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#b4b4b4"
+            android:textSize="17sp" />
+
+        <font.FEditText
+            android:id="@+id/editJoinPwd"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input_bottom"
+            android:gravity="center_vertical"
+            android:hint="@string/intro_pwd_hint"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#b4b4b4"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <font.FTextView
+            android:id="@+id/txtSendEmailAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:text="@string/join_send_agreement"
+            android:textSize="@dimen/default_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <font.FTextView
+                android:id="@+id/JoinAgreementCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_check_on" />
+
+            <font.FTextView
+                android:id="@+id/txtJoinAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/join_agreement"
+                android:textColor="@color/brown"
+                android:textSize="@dimen/default_size" />
+        </LinearLayout>
+
+        <font.FTextView
+            android:id="@+id/Join_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_black03"
+            android:gravity="center"
+            android:text="@string/joincomp_title"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+  
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:paddingBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+	    <ImageView
+	       android:id="@+id/join_banner_img"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:scaleType="fitXY" />    
+    </LinearLayout>
+	       android:src="@drawable/img_join_bottom_banner"
+    
+</LinearLayout>
+-->
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/color_rgb_ebe9e9"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="7.5dp"-->
+        <!--android:layout_marginRight="7.5dp"-->
+        <!--android:layout_marginTop="7.5dp"-->
+        <!--android:background="@drawable/shape_image_rounded_partial"-->
+        <!--android:orientation="vertical"-->
+        <!--android:paddingBottom="25dp"-->
+        <!--android:paddingLeft="20dp"-->
+        <!--android:paddingRight="20dp"-->
+        <!--android:paddingTop="21dp" >-->
+
+        <!--<font.FEditText-->
+            <!--android:id="@+id/editJoinName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="#00000000"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/name"-->
+            <!--android:inputType="text"-->
+            <!--android:maxLength="50"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColorHint="#999999"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="#f2f2f2" />-->
+
+        <!--<font.FEditText-->
+            <!--android:id="@+id/editJoinId"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginTop="21dp"-->
+            <!--android:background="#00000000"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/email"-->
+            <!--android:inputType="textEmailAddress"-->
+            <!--android:maxLength="100"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColorHint="#999999"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="#f2f2f2" />-->
+
+        <!--<font.FEditText-->
+            <!--android:id="@+id/editJoinRewriteId"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginTop="21dp"-->
+            <!--android:background="#00000000"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/intro_rewrite_email"-->
+            <!--android:inputType="textEmailAddress"-->
+            <!--android:maxLength="100"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColorHint="#999999"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="#f2f2f2" />-->
+
+        <!--<font.FEditText-->
+            <!--android:id="@+id/editJoinPwd"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginTop="21dp"-->
+            <!--android:background="#00000000"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/intro_pwd_hint"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:maxLength="15"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColorHint="#999999"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="#f2f2f2" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="18dp"-->
+            <!--android:orientation="horizontal" >-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:scaleType="centerInside"-->
+                <!--android:src="@drawable/img_find_pw_dot" />-->
+
+            <!--<font.FTextView-->
+                <!--android:id="@+id/txtSendEmailAgreement"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginLeft="7.5dp"-->
+                <!--android:text="@string/join_send_agreement"-->
+                <!--android:textColor="#999999"-->
+                <!--android:textSize="@dimen/default_size" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="21dp"-->
+            <!--android:orientation="horizontal" >-->
+
+            <!--<font.FTextView-->
+                <!--android:id="@+id/JoinAgreementCheck"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@drawable/img_join_check_box_on" />-->
+
+            <!--<font.FTextView-->
+                <!--android:id="@+id/txtJoinAgreement"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="7.5dp"-->
+                <!--android:text="@string/join_agreement"-->
+                <!--android:textColor="#333333"-->
+                <!--android:textSize="12dp" />-->
+        <!--</LinearLayout>-->
+
+        <!--<font.FTextView-->
+            <!--android:id="@+id/Join_btn"-->
+            <!--android:layout_width="304dp"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:layout_marginTop="21dp"-->
+            <!--android:background="@drawable/selector_gray_orange_btn"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/signup_complete"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="17sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:gravity="top"-->
+        <!--android:paddingBottom="8dp"-->
+        <!--android:paddingLeft="7.5dp"-->
+        <!--android:paddingRight="7.5dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" >-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/join_banner_img"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:scaleType="fitXY" />-->
+    <!-- -->
+    <!--</LinearLayout>-->
+    <!-- -->
+<!--</LinearLayout>&lt;!&ndash;-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="@color/white" >-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:paddingTop="15dp" >-->
+
+        <!--<font.FEditText-->
+            <!--android:id="@+id/editJoinName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:background="@drawable/bg_input_top"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/join_first_name"-->
+            <!--android:inputType="text"-->
+            <!--android:maxLength="50"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColorHint="#b4b4b4"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<font.FEditText-->
+            <!--android:id="@+id/editJoinId"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:background="@drawable/bg_input_middle"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/intro_email"-->
+            <!--android:inputType="textEmailAddress"-->
+            <!--android:maxLength="100"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColorHint="#b4b4b4"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<font.FEditText-->
+            <!--android:id="@+id/editJoinRewriteId"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:background="@drawable/bg_input_middle"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/intro_rewrite_email"-->
+            <!--android:inputType="textEmailAddress"-->
+            <!--android:maxLength="100"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColorHint="#b4b4b4"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<font.FEditText-->
+            <!--android:id="@+id/editJoinPwd"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:background="@drawable/bg_input_bottom"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/intro_pwd_hint"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:maxLength="15"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColorHint="#b4b4b4"-->
+            <!--android:textSize="17sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical" >-->
+
+        <!--<font.FTextView-->
+            <!--android:id="@+id/txtSendEmailAgreement"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="@string/join_send_agreement"-->
+            <!--android:textSize="@dimen/default_size" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:gravity="center" >-->
+
+            <!--<font.FTextView-->
+                <!--android:id="@+id/JoinAgreementCheck"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@drawable/btn_check_on" />-->
+
+            <!--<font.FTextView-->
+                <!--android:id="@+id/txtJoinAgreement"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="@string/join_agreement"-->
+                <!--android:textColor="@color/brown"-->
+                <!--android:textSize="@dimen/default_size" />-->
+        <!--</LinearLayout>-->
+
+        <!--<font.FTextView-->
+            <!--android:id="@+id/Join_btn"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:background="@drawable/btn_black03"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/joincomp_title"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="17sp" />-->
+    <!--</LinearLayout>-->
+  <!-- -->
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:gravity="bottom"-->
+        <!--android:paddingBottom="12dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" >-->
+	    <!--<ImageView-->
+	       <!--android:id="@+id/join_banner_img"-->
+	       <!--android:layout_width="match_parent"-->
+	       <!--android:layout_height="wrap_content"-->
+	       <!--android:scaleType="fitXY" />    -->
+    <!--</LinearLayout>-->
+	       <!--android:src="@drawable/img_join_bottom_banner"-->
+    <!-- -->
+<!--</LinearLayout>-->
+<!--&ndash;&gt;-->

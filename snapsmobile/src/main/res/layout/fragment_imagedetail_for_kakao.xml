@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!--<com.snaps.mobile.activity.google_style_image_selector.ui.custom.ImageSelectGridView-->
+        <!--android:id="@+id/custom_snaps_native_super_recycler_view"-->
+        <!--style="@style/PhotoGridLayout"-->
+        <!--android:background="#e3e3e3"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:clipToPadding="false"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:paddingTop="15dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:paddingBottom="20dp"-->
+        <!--android:columnWidth="@dimen/image_thumbnail_size"-->
+        <!--android:horizontalSpacing="@dimen/image_thumbnail_spacing_for_kakaobook"-->
+        <!--android:numColumns="3"-->
+        <!--android:stretchMode="columnWidth"-->
+        <!--android:scrollbars="none"-->
+        <!--android:verticalSpacing="@dimen/image_thumbnail_spacing_for_kakaobook" />-->
+
+    <com.snaps.mobile.activity.diary.customview.SnapsSuperRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/custom_snaps_native_super_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_moreProgress="@layout/snaps_recycler_view_more_progress"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        android:scrollbars="none"
+        android:background="#ffffff"
+        app:recyclerClipToPadding="false"/>
+
+    <TextView
+        android:id="@+id/noPhotoMsg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/no_printable_photo"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/noPhotoImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/noPhotoMsg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/img_unprint"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/noPhotoDetailMsg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noPhotoMsg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/photoprint_noprint_facebook_detail_message1"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/noPhotoDetailMsg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noPhotoDetailMsg1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/photoprint_noprint_facebook_detail_message2"
+        android:visibility="invisible" />
+
+</RelativeLayout>

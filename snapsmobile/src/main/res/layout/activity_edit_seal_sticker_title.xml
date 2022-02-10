@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_title_bar_height"
+    android:background="@color/white"
+    tools:ignore="SpUsage">
+    <!-- 타이틀바의 높이를 건드리면, 드래그앤 드랍뷰가 비정상 동작 할 수 있음. 같이 수정 할 것. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="0dp"
+        android:paddingEnd="16dp">
+
+        <!-- 백키 -->
+        <RelativeLayout
+            android:id="@+id/ThemeTitleLeftLy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <ImageView
+                android:id="@+id/ThemeTitleLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/empty_cd"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_prev" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnTitleLeftLy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!-- 배경 수정 (씰 스티커 전용)-->
+        <LinearLayout
+            android:id="@+id/btn_toggle_background_toolbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/corner_radius_16_with_border"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/empty_cd"
+                android:src="@drawable/ic_background_edit" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:gravity="center_vertical"
+                android:text="@string/smart_recommend_book_edit_bottom_bg_text"
+                android:textColor="@color/cod_gray"
+                android:textSize="13dp"
+                custom:customFont="@string/font_name_ygt_740" />
+        </LinearLayout>
+
+        <!-- 디자인 변경 -->
+        <ImageView
+            android:id="@+id/theme_cover_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:contentDescription="@string/empty_cd"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_cardchange"
+            android:visibility="gone" />
+
+        <!-- 제목 변경 -->
+        <ImageView
+            android:id="@+id/theme_text_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:contentDescription="@string/empty_cd"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_edit_title_btn"
+            android:visibility="gone" />
+
+        <!-- 미리보기 -->
+        <ImageView
+            android:id="@+id/theme_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty_cd"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_edit_view_btn"
+            android:visibility="gone" />
+
+        <!-- 저장 -->
+        <ImageView
+            android:id="@+id/theme_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/empty_cd"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_edit_save_btn"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ThemecartBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/empty_cd"
+                android:gravity="center_vertical" />
+
+            <font.FTextView
+                android:id="@+id/ThemecartTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/cart"
+                android:textColor="@color/selector_edit_save_text_btn"
+                android:textSize="13dp"
+                custom:customFont="@string/font_name_ygt_760" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <font.FTextView
+            android:id="@+id/ThemeTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/photo_card_title"
+            android:textColor="#191919"
+            android:textSize="@dimen/title_size"
+            custom:customFont="@string/font_name_ygt_760" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="("
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_740" />
+
+            <font.FTextView
+                android:id="@+id/photo_count_current_index_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#e36a63"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_740" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_740" />
+
+            <font.FTextView
+                android:id="@+id/photo_count_current_total_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_740" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=")"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_740" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/snaps_edit_activity_title_bar_blind_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:visibility="gone" />
+
+</RelativeLayout>

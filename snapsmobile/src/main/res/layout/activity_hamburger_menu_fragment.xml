@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2363636">
+
+    <!-- 설정 버튼 -->
+    <ImageView
+        android:id="@+id/activity_hamburger_menu_setting_iv"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/selector_setting_icon"/>
+    <!--android:src="@drawable/img_hamburger_menu_setting_icon"-->
+
+    <!-- 닫기 버튼 -->
+    <ImageView
+        android:id="@+id/activity_hamburger_menu_close_iv"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/selector_close_for_menu"/>
+
+    <!-- 개인화 영역 -->
+    <ImageView
+        android:id="@+id/activity_hamburger_menu_grade_iv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_hamburger_menu_default_grade"/>
+
+    <LinearLayout
+        android:id="@+id/activity_hamburger_menu_user_id_ly"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/activity_hamburger_menu_grade_iv"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <font.FTextView
+            android:id="@+id/activity_hamburger_menu_user_id_tv"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="#ffffff"
+            android:textSize="14dp"/>
+
+        <ImageView
+            android:id="@+id/activity_hamburger_menu_user_id_arrow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_hamburger_menu_login_arrow"/>
+    </LinearLayout>
+
+    <!-- mysnaps, cart, coupon -->
+    <LinearLayout
+        android:id="@+id/activity_hamburger_menu_middle_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_hamburger_menu_user_id_ly"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/activity_hamburger_menu_order_ly"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:minHeight="52dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_hamburger_menu_order_iv"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_order"/>
+
+            <font.FTextView
+                android:id="@+id/activity_hamburger_menu_order_tv"
+                custom:customFont="@string/font_name_ygt_760"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="@string/order_and_delivery"
+                android:textColor="@color/selector_my_snaps_color"
+                android:textSize="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_hamburger_menu_cart_ly"
+            android:layout_width="58dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="22dp"
+            android:orientation="vertical">
+
+            <font.FTextView
+                android:id="@+id/activity_hamburger_menu_cart_tv"
+                custom:customFont="@string/font_name_ygt_760"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="11dp"
+                android:textColor="#e8625a"
+                android:gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:background="@drawable/selector_cart_icon_for_sticky"/>
+
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_760"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="@string/cart"
+                android:textColor="@color/selector_my_snaps_color"
+                android:textSize="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_hamburger_menu_coupon_ly"
+            android:layout_width="58dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="22dp"
+            android:orientation="vertical">
+
+            <font.FTextView
+                android:id="@+id/activity_hamburger_menu_coupon_tv"
+                custom:customFont="@string/font_name_ygt_760"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:textSize="11dp"
+                android:textColor="#e8625a"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:background="@drawable/selector_coupon_icon"/>
+
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_760"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="@string/coupon"
+                android:textColor="@color/selector_my_snaps_color"
+                android:textSize="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- home, event, diary, customer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_hamburger_menu_middle_ly"
+        android:layout_marginTop="28dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:background="#66ffffff"
+            android:layout_width="8dp"
+            android:layout_height="1dp"/>
+
+        <com.snaps.common.customui.SnapsUnderlineTextView
+            android:id="@+id/activity_hamburger_home_utv"
+            custom:text="@string/home"
+            custom:textColor="#ffffff"
+            custom:textSize="15"
+            custom:customFont="@string/font_name_ygt_760"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"/>
+
+        <com.snaps.common.customui.SnapsUnderlineTextView
+            android:id="@+id/activity_hamburger_event_utv"
+            custom:text="@string/event_title_text"
+            custom:textColor="#ffffff"
+            custom:textSize="15"
+            custom:customFont="@string/font_name_ygt_760"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="14dp"/>
+
+        <com.snaps.common.customui.SnapsUnderlineTextView
+            android:id="@+id/activity_hamburger_diary_utv"
+            custom:text="@string/diary_mission_prev_subject"
+            custom:textColor="#ffffff"
+            custom:textSize="15"
+            custom:customFont="@string/font_name_ygt_760"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="14dp"/>
+
+        <com.snaps.common.customui.SnapsUnderlineTextView
+            android:id="@+id/activity_hamburger_customer_utv"
+            custom:text="@string/customer_center"
+            custom:textColor="#ffffff"
+            custom:textSize="15"
+            custom:customFont="@string/font_name_ygt_760"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="14dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_hamburger_menu_notice_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="22dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <font.FTextView
+            android:id="@+id/activity_hamburger_menu_notice_prefix_tv"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_hamburger_menu_notice_round"
+            android:textColor="#ffffff"
+            android:text="@string/notice_short"
+            android:textSize="10dp"
+            android:clickable="false"
+            android:focusable="false"/>
+        <font.FTextView
+            android:id="@+id/activity_hamburger_menu_notice_tv"
+            custom:customFont="@string/font_name_ygt_740"
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:textSize="13dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smart_recommend_book_image_select_tutorial_parent_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <!--android:layout_marginBottom="20dp"-->
+    <LinearLayout
+        android:id="@+id/smart_recommend_book_image_select_tutorial_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/shape_black_e6191919_rounded_border_rect"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_smile_wh" />
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="11dp"
+            android:gravity="center"
+            android:text="@string/recommend_book_image_sel_tutorial_msg_good_choice"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            custom:customFont="@string/font_name_ygt_760" />
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/recommend_book_image_sel_tutorial_msg_max_count"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            custom:customFont="@string/font_name_ygt_740" />
+    </LinearLayout>
+
+</RelativeLayout>

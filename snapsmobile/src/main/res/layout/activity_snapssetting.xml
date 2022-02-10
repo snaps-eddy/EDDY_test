@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    android:orientation="vertical">
+
+    <com.snaps.mobile.component.ObserveScrollingScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ededed"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_title_bar_height" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:paddingBottom="32dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone">
+
+                <!-- 회원 계정 -->
+                <font.FTextView
+                    android:id="@+id/activity_snapssetting_account_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/customer_account"
+                    android:textColor="#191919"
+                    android:textSize="14dp"
+                    custom:customFont="@string/font_name_ygt_760" />
+
+                <!-- Login -->
+                <RelativeLayout
+                    android:id="@+id/laylogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:onClick="onClick">
+
+                    <font.FTextView
+                        android:id="@+id/txtUserId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/login"
+                        android:textColor="#333333"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageView
+                        android:id="@+id/imgAccountArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_arrow" />
+
+                    <font.FTextView
+                        android:id="@+id/btnSettingLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="11dp"
+                        android:layout_toLeftOf="@id/imgAccountArrow"
+                        android:textColor="#999999"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+
+                <!-- pass -->
+                <RelativeLayout
+                    android:id="@+id/laypassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:onClick="onClick">
+
+                    <font.FTextView
+                        android:id="@+id/btnSettingPwdReset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/change_password"
+                        android:textColor="#333333"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_arrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+
+                <!-- certification -->
+                <RelativeLayout
+                    android:id="@+id/activity_snapssetting_certification_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:visibility="gone">
+
+                    <font.FTextView
+                        android:id="@+id/btnSettingCertification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/member_certification"
+                        android:textColor="#333333"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_arrow" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#eeeeee" />
+                </RelativeLayout>
+
+                <!-- retire -->
+
+                <RelativeLayout
+                    android:id="@+id/layretire"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClick">
+
+                    <font.FTextView
+                        android:id="@+id/btnSettingRetire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/delete_account"
+                        android:textColor="#999999"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_arrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+            </LinearLayout>
+
+            <!-- SNS 연동 -->
+
+            <LinearLayout
+                style="@style/SettingActivity.Group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <font.FTextView
+                    android:id="@+id/activity_snapssetting_sns_title"
+                    style="@style/SettingActivity.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="@string/connect_sns"
+                    custom:customFont="@string/font_name_ygt_760" />
+
+                <!-- 카카오스토리 -->
+
+                <LinearLayout
+                    android:id="@+id/activity_snapssetting_kakao_story_ly"
+                    style="@style/SettingActivity.Child"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_setting_kas" />
+
+                    <font.FTextView
+                        android:id="@+id/txtkakaoName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/kakaostory_login"
+                        android:textColor="#191919"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <font.FTextView
+                        android:id="@+id/btnkakaoConnect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="11dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#b4b4b4"
+                        android:textSize="13dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:src="@drawable/icon_arrow" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/activity_snapssetting_sns_divide_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#eeeeee" />
+
+                <!-- 페이스북 -->
+
+                <LinearLayout
+                    android:id="@+id/activity_snapssetting_facebook_ly"
+                    style="@style/SettingActivity.Child"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_setting_fb" />
+
+                    <font.FTextView
+                        android:id="@+id/txtFBName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/facebook_login"
+                        android:textColor="#191919"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <font.FTextView
+                        android:id="@+id/btnFacebookConnect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="11dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#b4b4b4"
+                        android:textSize="13dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:src="@drawable/icon_arrow" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/activity_snapssetting_sns_divide_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+
+                <!-- 인스타그램 -->
+
+                <LinearLayout
+                    android:id="@+id/activity_snapssetting_instagram_ly"
+                    style="@style/SettingActivity.Child"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:id="@+id/icon_instagram"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/pic_select_insta" />
+
+                    <font.FTextView
+                        android:id="@+id/txt_instagram_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/instagram_login"
+                        android:textColor="#191919"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <font.FTextView
+                        android:id="@+id/btn_instagram_connect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="11dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#b4b4b4"
+                        android:textSize="13dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:src="@drawable/icon_arrow" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/activity_snapssetting_sns_divide_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#eeeeee" />
+
+                <LinearLayout
+                    android:id="@+id/activity_snapssetting_googlephoto_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="onClick"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="10dp"
+                        android:clickable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/pic_select_google" />
+
+                    <font.FTextView
+                        android:id="@+id/txt_google_photo_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:text="@string/google_photo_login"
+                        android:textColor="#191919"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <font.FTextView
+                        android:id="@+id/btn_google_photo_connect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="11dp"
+                        android:clickable="false"
+                        android:gravity="center_vertical"
+                        android:textColor="#b4b4b4"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:clickable="false"
+                        android:src="@drawable/icon_arrow" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/activity_snapssetting_sns_divide_line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#eeeeee"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingActivity.Group.Margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 알림 설정 -->
+
+                <font.FTextView
+                    android:id="@+id/activity_snapssetting_alarm_title"
+                    style="@style/SettingActivity.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="@string/notification_setting"
+                    custom:customFont="@string/font_name_ygt_760" />
+
+                <LinearLayout
+                    style="@style/SettingActivity.Child"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp">
+
+                    <font.FTextView
+                        style="@style/SettingActivity.Description"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/setting_alarm_desc"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageButton
+                        android:id="@+id/btnPushReceive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:onClick="onClick"
+                        android:src="@drawable/img_switch_off" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--
+            <LinearLayout
+                android:id="@+id/snapsai_setting_whole_layout"
+                style="@style/SettingActivity.Group.Margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <font.FTextView
+                    android:id="@+id/activity_snapssetting_snapsai_title"
+                    style="@style/SettingActivity.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="@string/snapsai_setting"
+                    custom:customFont="@string/font_name_ygt_760" />
+
+                <LinearLayout
+                    style="@style/SettingActivity.Child"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp">
+
+                    <font.FTextView
+                        style="@style/SettingActivity.Description"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/setting_snapsai_desc"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageButton
+                        android:id="@+id/btnSnapsAI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:onClick="onClick"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/img_switch_off" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            !-->
+
+            <!--
+            <LinearLayout
+                android:id="@+id/snapsai_use_lte_setting_whole_layout"
+                style="@style/SettingActivity.Group.Margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <font.FTextView
+                    style="@style/SettingActivity.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="@string/snaps_ai_use_lte_title"
+                    custom:customFont="@string/font_name_ygt_760" />
+
+                <LinearLayout
+                    style="@style/SettingActivity.Child"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp">
+
+                    <font.FTextView
+                        style="@style/SettingActivity.Description"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/snaps_ai_use_lte_content"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <ImageButton
+                        android:id="@+id/btn_snaps_ai_with_lte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:contentDescription="@null"
+                        android:onClick="onClick"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/img_switch_off" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            !-->
+
+            <LinearLayout
+                style="@style/SettingActivity.Group.Margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 언어 설정 -->
+
+                <font.FTextView
+                    style="@style/SettingActivity.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="@string/language_setting"
+                    custom:customFont="@string/font_name_ygt_760" />
+
+                <LinearLayout
+                    style="@style/SettingActivity.Child"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <font.FTextView
+                        style="@style/SettingActivity.Description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/language_current_applied"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <LinearLayout
+                        android:id="@+id/modify_lang_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <font.FTextView
+                            android:id="@+id/current_lang_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="12dp"
+                            android:gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            custom:customFont="@string/font_name_ygt_740" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_triangle" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingActivity.Group.Margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <!-- 버전 정보 -->
+
+                <font.FTextView
+                    style="@style/SettingActivity.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="@string/version_info"
+                    custom:customFont="@string/font_name_ygt_760" />
+
+                <LinearLayout
+                    style="@style/SettingActivity.Child"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <font.FTextView
+                        style="@style/SettingActivity.Description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/current_app_version_info"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <font.FTextView
+                        android:id="@+id/txtSettingVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/version_info"
+                        android:textColor="#191919"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_ai_photobook_debug"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_show_select_ai_photo_book_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="AI 포토북 선택"
+                    android:textColor="#aa0000"/>
+
+                <!-- 디버그용 서버 통신 에러 로그 -->
+                <Button
+                    android:id="@+id/btn_show_net_err_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="에러 로그"
+                    android:textColor="#aa0000"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.snaps.mobile.component.ObserveScrollingScrollView>
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/_include_title" />
+</RelativeLayout>

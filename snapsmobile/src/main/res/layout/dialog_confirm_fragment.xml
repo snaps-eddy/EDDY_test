@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_alert_white_bg"
+    android:minWidth="300dp"
+    android:orientation="vertical" >
+
+    <font.FTextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="26dp"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:textColor="#474747"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DEDEDE" />
+
+    <LinearLayout
+        android:id="@+id/dialog_button_2"
+        android:layout_width="match_parent"
+        android:layout_height="47.5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/btn_cancel_ly"
+            android:visibility="gone"
+            android:layout_width="0px"
+            android:layout_height="47.5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <font.FTextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#474747"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#DEDEDE" />
+        </LinearLayout>
+
+        <font.FTextView
+            android:id="@+id/btn_confim"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#e54736"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout><!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup_4"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:minWidth="300dp" >
+
+    <font.FTextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="#332a29"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/dialog_button_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+
+        <font.FTextView
+            android:id="@+id/btn_confim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/selector_popup_list_2"
+            android:gravity="center"
+            android:textColor="#6e4e4f"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>
+-->

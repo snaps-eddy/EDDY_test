@@ -1,0 +1,99 @@
+<!--<com.snaps.common.customui.dragdrop.DSRelativeLayout-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/item_lay"
+        android:layout_centerHorizontal="true"
+        android:layout_width="85dp"
+        android:layout_height="50dp">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/item"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:src="@drawable/img_default_pic_bottom"-->
+            <!--android:adjustViewBounds="true"-->
+			<!--android:paddingRight="1dp"-->
+            <!--android:scaleType="centerInside" >-->
+        <!--</ImageView>-->
+
+        <ImageView
+            android:id="@+id/item_outline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/item"
+            android:layout_margin="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+<!--             android:background="@drawable/shape_image_border" -->
+
+        <ImageView
+            android:id="@+id/iv_warning"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/alert_01" >
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/thumbanail_progress"
+            android:visibility="gone"
+            android:indeterminateDrawable="@drawable/thumb_rotate_progress"
+            android:layout_centerInParent="true"
+            android:layout_width="12dp"
+            android:layout_height="12dp" />
+
+    </RelativeLayout>
+
+    <font.FTextView
+        android:id="@+id/itemintroindex"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/item_lay"
+        android:gravity="center"
+        android:textColor="#999999"
+        android:textSize="11dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_lay"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal" >
+
+        <font.FTextView
+            android:id="@+id/itemleft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="11dp"
+            android:textColor="#999999"
+            android:visibility="visible" >
+        </font.FTextView>
+
+        <font.FTextView
+            android:id="@+id/itemright"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="11dp"
+            android:textColor="#999999"
+            android:visibility="visible" >
+        </font.FTextView>
+    </LinearLayout>
+
+</RelativeLayout>

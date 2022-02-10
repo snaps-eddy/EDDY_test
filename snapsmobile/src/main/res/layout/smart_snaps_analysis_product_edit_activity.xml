@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smart_snaps_analysis_product_edit_activity_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/smart_snaps_analysis_product_capture_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false" />
+
+    <com.snaps.mobile.activity.themebook.smart_analysis_product.page_edit.custom.SmartRecommendBookMainListItemPinchZoomLayout
+        android:id="@+id/smart_snaps_analysis_product_edit_activity_main_list_item_pinch_zoom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!-- 타이틀 영역 -->
+            <include layout="@layout/_include_theme_title_limit_area" />
+
+            <com.snaps.mobile.activity.diary.customview.SnapsRecyclerView
+                android:id="@+id/smart_snaps_analysis_product_edit_activity_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/smart_snaps_analysis_product_edit_activity_cover_dummy_view"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="288dp" />
+
+        <LinearLayout
+            android:id="@+id/smart_snaps_analysis_product_edit_activity_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/smart_recommend_book_main_act_bottom_layout_height"
+            android:visibility="invisible"
+            android:layout_marginBottom="@dimen/smart_recommend_book_main_act_bottom_layout_reverse_height"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <font.FTextView
+                android:id="@+id/smart_snaps_analysis_product_edit_activity_order_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_transparent_red_btn"
+                android:gravity="center"
+                android:text="@string/accessory_go_to_cart"
+                android:textColor="#ffffff"
+                android:textSize="13dp"
+                custom:customFont="@string/font_name_ygt_740" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/smart_snaps_analysis_product_edit_activity_scroll_top_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:layout_above="@id/smart_snaps_analysis_product_edit_activity_bottom_layout"
+            android:src="@drawable/btn_smart_recommend_book_top" />
+
+        <ImageView
+            android:id="@+id/smart_snaps_analysis_product_edit_activity_full_screen_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:layout_above="@id/smart_snaps_analysis_product_edit_activity_scroll_top_btn"
+            android:src="@drawable/btn_smart_recommend_book_zoom" />
+
+        <com.snaps.mobile.activity.themebook.smart_analysis_product.page_edit.custom.SmartRecommendBookMainListItemPinchZoomDrawer
+            android:id="@+id/smart_snaps_analysis_product_edit_activity_pinch_zoom_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.snaps.mobile.activity.themebook.smart_analysis_product.page_edit.custom.SmartRecommendBookMainListItemPinchZoomLayout>
+
+</FrameLayout>

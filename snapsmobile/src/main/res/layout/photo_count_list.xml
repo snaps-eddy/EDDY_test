@@ -1,0 +1,441 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_rgb_ebe9e9"
+    tools:context=".PhotoCountChangeActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_title_bar_height"
+            android:background="@drawable/top_bg"
+            android:gravity="center_vertical"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/btnTopBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_prev" />
+
+            <font.FTextView
+                android:id="@+id/txtTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                custom:customFont="@string/font_name_ygt_760"
+                android:textColor="#191919"
+                android:text="@string/change_quantity"
+                android:textSize="@dimen/title_size" />
+
+            <font.FTextView
+                android:id="@+id/btnTopEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:textSize="17sp" />
+
+            <font.FTextView
+                android:id="@+id/btnTopEditComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selector_top_btn"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/done"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/title_line_color" />
+
+        <LinearLayout
+            android:id="@+id/photo_count_list_top_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_marginTop="7.5dp"
+            android:background="@drawable/shape_image_rounded_partial"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="16dp" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:gravity="center_vertical" >
+
+                <font.FTextView
+                    android:id="@+id/photoitemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#333333"
+                    android:textSize="17sp" />
+
+                <font.FTextView
+                    android:id="@+id/photoPaper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_toRightOf="@+id/photoitemName"
+                    android:text="@string/glossy_with_braket"
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+                <font.FTextView
+                    android:id="@+id/photoitemCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_toRightOf="@+id/photoPaper"
+                    android:textColor="#e54736"
+                    android:textSize="17sp" />
+
+                <font.FTextView
+                    android:id="@+id/photoitemEach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/photoitemCount"
+                    android:text=""
+                    android:textColor="#e54736"
+                    android:textSize="17sp" />
+
+                <font.FTextView
+                    android:id="@+id/photoitemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#e54736"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_dotted_line" />
+
+            <RelativeLayout
+                android:id="@+id/rlphotoitem"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical" >
+
+                <font.FTextView
+                    android:id="@+id/photoitemTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/change_all"
+                    android:textColor="#333333"
+                    android:textSize="17sp" />
+
+                <font.FTextView
+                    android:id="@+id/photoitemCountTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/photoitemEdit"
+                    android:text="@string/quantity"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <com.snaps.mobile.activity.cartorder.photocount.EditLayout
+                    android:id="@+id/photoitemEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dp"
+                    android:layout_toLeftOf="@+id/photoitemChange" />
+
+                <font.FTextView
+                    android:id="@+id/photoitemChange"
+                    android:layout_width="44dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/img_btn_strong_gray"
+                    android:gravity="center"
+                    android:text="@string/modify"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="0px"
+            android:divider="#00000000"
+            android:layout_below="@id/photo_count_list_top_ly"
+			android:layout_marginBottom="7.5dp"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_marginTop="8dp"
+            android:descendantFocusability="afterDescendants"
+            android:focusable="false" />
+    </LinearLayout>
+
+</RelativeLayout><!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoCountChangeActivity" >
+
+    <RelativeLayout
+        android:id="@+id/editPhotolay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone" >
+
+        <font.FTextView
+            android:id="@+id/editPhotoClose"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="닫기"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/editPhotoPreView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/editPhotoClose"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/top_bg"
+            android:gravity="center_vertical"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/btnTopBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_top_back" />
+
+            <font.FTextView
+                android:id="@+id/txtTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="33dp"
+            	android:layout_toRightOf="@id/btnTopBack"
+                android:text="@string/photoprint_count_change"
+                android:textSize="@dimen/title_size" />
+
+            <font.FTextView
+                android:id="@+id/btnTopEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/cart_edit"
+                android:textSize="17sp" />
+
+            <font.FTextView
+                android:id="@+id/btnTopEditComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selector_top_btn"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/cart_complete"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/title_line_color" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical" >
+
+            <font.FTextView
+                android:id="@+id/photoitemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp" />
+
+            <font.FTextView
+                android:id="@+id/photoPaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/photoitemName"
+                android:text="(유광)"
+                android:textColor="#6e4e4f"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <font.FTextView
+                android:id="@+id/photoitemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/photoPaper"
+                android:textSize="15sp" />
+
+            <font.FTextView
+                android:id="@+id/photoitemEach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/photoitemCount"
+                android:text=""
+                android:textSize="15sp" />
+
+            <font.FTextView
+                android:id="@+id/photoitemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlphotoitem"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#DCDCDC"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical" >
+
+            <font.FTextView
+                android:id="@+id/photoitemTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/photoprint_allcount_change"
+                android:textSize="15sp" />
+
+            <font.FTextView
+                android:id="@+id/photoitemCountTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/photoitemEdit"
+                android:text="@string/photoprint_item_currency"
+                android:textSize="13sp" />
+
+            <com.snaps.mobile.activity.cartorder.photocount.EditLayout
+                android:id="@+id/photoitemEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/photoitemChange" />
+
+            <font.FTextView
+                android:id="@+id/photoitemChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_modify"
+                android:gravity="center"
+                android:text="@string/modify"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#aaaaaa" />
+
+        <ListView
+            android:id="@+id/lv_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="afterDescendants"
+            android:focusable="false" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>
+-->

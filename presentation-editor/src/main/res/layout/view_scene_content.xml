@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scene_container"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/contents_container"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
+        android:background="@color/gallery"
+        android:elevation="4dp"
+        tools:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/contents_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:contentDescription="@string/empty_cd"
+            android:elevation="4dp" />
+
+        <View
+            android:id="@+id/guide_center"
+            android:layout_width="12dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:elevation="4dp" />
+
+        <View
+            android:id="@+id/view_skin_spine_left"
+            android:layout_width="6dp"
+            android:layout_height="0dp"
+            android:layout_alignStart="@id/guide_center"
+            android:layout_alignTop="@id/guide_center"
+            android:layout_alignBottom="@id/guide_center"
+            android:background="@drawable/scene_cover_spine_left_skin"
+            android:elevation="4dp" />
+
+        <View
+            android:id="@+id/view_skin_spine_right"
+            android:layout_width="6dp"
+            android:layout_height="0dp"
+            android:layout_alignTop="@id/guide_center"
+            android:layout_alignEnd="@id/guide_center"
+            android:layout_alignBottom="@id/guide_center"
+            android:background="@drawable/scene_cover_spine_right_skin"
+            android:elevation="4dp" />
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@id/view_skin_spine_left"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@id/view_skin_spine_left"
+            android:contentDescription="@string/empty_cd"
+            android:elevation="4dp"
+            android:src="@drawable/qrcode_photobook"
+            android:visibility="invisible" />
+
+        <FrameLayout
+            android:id="@+id/object_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@id/contents_background"
+            android:layout_alignTop="@id/contents_background"
+            android:layout_alignEnd="@id/contents_background"
+            android:layout_alignBottom="@id/contents_background"
+            android:elevation="4dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_controller"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_below="@id/contents_container"
+        android:layout_alignStart="@id/contents_container"
+        android:layout_alignEnd="@id/contents_container"
+        android:gravity="center">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/backpage_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/selector_scene_cover_focus_indicator"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/back_cover"
+            android:textColor="@color/white"
+            android:textSize="11dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/spine_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/selector_scene_cover_focus_indicator"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/book_spine"
+            android:textColor="@color/white"
+            android:textSize="11dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/frontpage_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/selector_scene_cover_focus_indicator"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/front_cover"
+            android:textColor="@color/white"
+            android:textSize="11dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

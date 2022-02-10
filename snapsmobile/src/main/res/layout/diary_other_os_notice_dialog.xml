@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="310dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round_white"
+    android:minWidth="350dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/icon_diary_other_os_notice"
+        android:scaleType="centerInside"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/diary_other_os_notice_popup_title"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/diary_popup_contents_1"
+            android:text="@string/diary_other_os_notice_popup_contents_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:textSize="13dp" />
+        <TextView
+            android:text="@string/diary_other_os_notice_popup_contents_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#474747"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/diary_popup_contents_3"
+            android:text="@string/diary_other_os_notice_popup_contents_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#e54736"
+            android:textSize="13dp" />
+        </LinearLayout>
+
+        <TextView
+            android:text="@string/diary_other_os_notice_popup_contents_04"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#e54736"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/diary_popup_contents_5"
+            android:text="@string/diary_other_os_notice_popup_contents_05"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dip"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/custom_dialog_cancel_btn"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_round_orange"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

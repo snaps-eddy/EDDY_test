@@ -1,0 +1,143 @@
+<!--<com.snaps.common.customui.dragdrop.DSRelativeLayout-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="112dp"
+    android:layout_height="101dp"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/baby_name_card_thumbnail_divide_line"
+        android:visibility="gone"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#eeeeee"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:gravity="center"
+        android:paddingRight="10dp">
+        <RelativeLayout
+            android:id="@+id/item_lay"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true" >
+
+
+            <ImageView
+                android:id="@+id/item_outline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"/>
+
+            <RelativeLayout
+                android:id="@+id/item"
+                android:layout_margin="1dp"
+                android:layout_width="84dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"/>
+            <RelativeLayout
+                android:id="@+id/itemOutLine"
+                android:layout_margin="1dp"
+                android:layout_width="84dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="#eeeeee"/>
+                <ImageView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="#eeeeee"/>
+                <ImageView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="#eeeeee"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="#eeeeee"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/item"
+                android:layout_alignLeft="@+id/item"
+                android:layout_alignRight="@+id/item"
+                android:layout_alignTop="@+id/item"
+                android:adjustViewBounds="true"
+                android:background="@drawable/skin_pageset_a4"
+                android:visibility="gone" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/iv_warning"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alert_01"></ImageView>
+
+            <ProgressBar
+                android:id="@+id/thumbanail_progress"
+                android:visibility="gone"
+                android:indeterminateDrawable="@drawable/thumb_rotate_progress"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/thumbnail_progress_dialog_size"
+                android:layout_height="@dimen/thumbnail_progress_dialog_size" />
+
+        </RelativeLayout>
+
+        <font.FTextView
+            android:id="@+id/itemintroindex"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_below="@id/item_lay"
+            android:layout_centerHorizontal="true"
+            android:textColor="#999999"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:textSize="11dp" />
+        <LinearLayout
+            android:id="@+id/text_lay"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/item_lay"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <font.FTextView
+                android:id="@+id/itemleft"
+                android:layout_width="0px"
+                android:layout_height="17dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#999999"
+                android:textSize="11dp">
+            </font.FTextView>
+
+            <font.FTextView
+                android:id="@+id/itemright"
+                android:layout_width="0px"
+                android:layout_height="17dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#999999"
+                android:textSize="11dp">
+            </font.FTextView>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,553 @@
+﻿{
+  "papers": [
+    {
+      "code": "160001",
+      "millimeter": "0.166",
+      "mo_maxpage": "151",
+      "spine": [
+        {
+          "page_min": "21",
+          "millimeter": "9",
+          "thickness": "4",
+          "number": "1",
+          "page_max": "49"
+        },
+        {
+          "page_min": "51",
+          "millimeter": "11",
+          "thickness": "6.4",
+          "number": "2",
+          "page_max": "79"
+        },
+        {
+          "page_min": "81",
+          "millimeter": "14",
+          "thickness": "8.8",
+          "number": "3",
+          "page_max": "109"
+        },
+        {
+          "page_min": "111",
+          "millimeter": "17",
+          "thickness": "11.2",
+          "number": "4",
+          "page_max": "139"
+        },
+        {
+          "page_min": "141",
+          "millimeter": "20",
+          "thickness": "13.6",
+          "number": "5",
+          "page_max": "169"
+        },
+        {
+          "page_min": "171",
+          "millimeter": "23",
+          "thickness": "16.6",
+          "number": "6",
+          "page_max": "207"
+        },
+        {
+          "page_min": "209",
+          "millimeter": "26",
+          "thickness": "19.6",
+          "number": "7",
+          "page_max": "245"
+        },
+        {
+          "page_min": "247",
+          "millimeter": "29",
+          "thickness": "22.6",
+          "number": "8",
+          "page_max": "283"
+        },
+        {
+          "page_min": "285",
+          "millimeter": "32",
+          "thickness": "25.6",
+          "number": "9",
+          "page_max": "321"
+        },
+        {
+          "page_min": "323",
+          "millimeter": "35",
+          "thickness": "28.6",
+          "number": "10",
+          "page_max": "359"
+        },
+        {
+          "page_min": "361",
+          "millimeter": "38",
+          "thickness": "31.6",
+          "number": "11",
+          "page_max": "397"
+        },
+        {
+          "page_min": "399",
+          "millimeter": "41",
+          "thickness": "34.6",
+          "number": "12",
+          "page_max": "435"
+        }
+      ]
+    },
+    {
+      "code": "160002",
+      "millimeter": "0.157",
+      "mo_maxpage": "151",
+      "spine": [
+        {
+          "page_min": "21",
+          "millimeter": "9",
+          "thickness": "4",
+          "number": "1",
+          "page_max": "49"
+        },
+        {
+          "page_min": "51",
+          "millimeter": "11",
+          "thickness": "6.4",
+          "number": "2",
+          "page_max": "79"
+        },
+        {
+          "page_min": "81",
+          "millimeter": "14",
+          "thickness": "8.8",
+          "number": "3",
+          "page_max": "111"
+        },
+        {
+          "page_min": "113",
+          "millimeter": "17",
+          "thickness": "11.2",
+          "number": "4",
+          "page_max": "141"
+        },
+        {
+          "page_min": "143",
+          "millimeter": "20",
+          "thickness": "13.6",
+          "number": "5",
+          "page_max": "171"
+        },
+        {
+          "page_min": "173",
+          "millimeter": "23",
+          "thickness": "16.6",
+          "number": "6",
+          "page_max": "211"
+        },
+        {
+          "page_min": "213",
+          "millimeter": "26",
+          "thickness": "19.6",
+          "number": "7",
+          "page_max": "251"
+        },
+        {
+          "page_min": "253",
+          "millimeter": "29",
+          "thickness": "22.6",
+          "number": "8",
+          "page_max": "291"
+        },
+        {
+          "page_min": "293",
+          "millimeter": "32",
+          "thickness": "25.6",
+          "number": "9",
+          "page_max": "331"
+        },
+        {
+          "page_min": "333",
+          "millimeter": "35",
+          "thickness": "28.6",
+          "number": "10",
+          "page_max": "371"
+        },
+        {
+          "page_min": "373",
+          "millimeter": "38",
+          "thickness": "31.6",
+          "number": "11",
+          "page_max": "411"
+        }
+      ]
+    },
+    {
+      "code": "160003",
+      "millimeter": "0.214",
+      "mo_maxpage": "151",
+      "spine": [
+        {
+          "page_min": "21",
+          "millimeter": "9",
+          "thickness": "3.4",
+          "number": "1",
+          "page_max": "37"
+        },
+        {
+          "page_min": "39",
+          "millimeter": "11",
+          "thickness": "5.8",
+          "number": "2",
+          "page_max": "61"
+        },
+        {
+          "page_min": "63",
+          "millimeter": "14",
+          "thickness": "7.5",
+          "number": "3",
+          "page_max": "73"
+        },
+        {
+          "page_min": "75",
+          "millimeter": "17",
+          "thickness": "9",
+          "number": "4",
+          "page_max": "91"
+        },
+        {
+          "page_min": "93",
+          "millimeter": "20",
+          "thickness": "12",
+          "number": "5",
+          "page_max": "121"
+        },
+        {
+          "page_min": "123",
+          "millimeter": "23",
+          "thickness": "15",
+          "number": "6",
+          "page_max": "151"
+        },
+        {
+          "page_min": "153",
+          "millimeter": "26",
+          "thickness": "18",
+          "number": "7",
+          "page_max": "181"
+        },
+        {
+          "page_min": "183",
+          "millimeter": "29",
+          "thickness": "21",
+          "number": "8",
+          "page_max": "211"
+        },
+        {
+          "page_min": "213",
+          "millimeter": "32",
+          "thickness": "24",
+          "number": "9",
+          "page_max": "241"
+        },
+        {
+          "page_min": "243",
+          "millimeter": "35",
+          "thickness": "27",
+          "number": "10",
+          "page_max": "271"
+        },
+        {
+          "page_min": "273",
+          "millimeter": "38",
+          "thickness": "30",
+          "number": "11",
+          "page_max": "301"
+        },
+        {
+          "page_min": "303",
+          "millimeter": "41",
+          "thickness": "33",
+          "number": "12",
+          "page_max": "331"
+        },
+        {
+          "page_min": "333",
+          "millimeter": "44",
+          "thickness": "36",
+          "number": "13",
+          "page_max": "361"
+        },
+        {
+          "page_min": "363",
+          "millimeter": "47",
+          "thickness": "39",
+          "number": "14",
+          "page_max": "401"
+        }
+      ]
+    },
+    {
+      "code": "160004",
+      "millimeter": "0.17",
+      "mo_maxpage": "21",
+      "spine": [
+        {
+          "page_min": "21",
+          "millimeter": "8",
+          "thickness": "3.4",
+          "number": "1",
+          "page_max": "21"
+        }
+      ]
+    },
+    {
+      "code": "160007",
+      "millimeter": "0.1",
+      "mo_maxpage": "151",
+      "spine": [
+        {
+          "page_min": "21",
+          "thickness": "4.5",
+          "number": "1",
+          "page_max": "55"
+        },
+        {
+          "page_min": "57",
+          "thickness": "7",
+          "number": "2",
+          "page_max": "87"
+        },
+        {
+          "page_min": "89",
+          "thickness": "9.5",
+          "number": "3",
+          "page_max": "121"
+        },
+        {
+          "page_min": "123",
+          "thickness": "12",
+          "number": "4",
+          "page_max": "151"
+        },
+        {
+          "page_min": "153",
+          "thickness": "14.5",
+          "number": "5",
+          "page_max": "179"
+        },
+        {
+          "page_min": "181",
+          "thickness": "17",
+          "number": "6",
+          "page_max": "211"
+        },
+        {
+          "page_min": "213",
+          "thickness": "19.5",
+          "number": "7",
+          "page_max": "241"
+        },
+        {
+          "page_min": "243",
+          "thickness": "22",
+          "number": "8",
+          "page_max": "273"
+        },
+        {
+          "page_min": "275",
+          "thickness": "24.5",
+          "number": "9",
+          "page_max": "305"
+        },
+        {
+          "page_min": "307",
+          "thickness": "27",
+          "number": "10",
+          "page_max": "335"
+        },
+        {
+          "page_min": "337",
+          "thickness": "29.5",
+          "number": "11",
+          "page_max": "367"
+        },
+        {
+          "page_min": "369",
+          "thickness": "32",
+          "number": "12",
+          "page_max": "401"
+        }
+      ]
+    },
+    {
+      "code": "160008",
+      "millimeter": "0.416",
+      "mo_maxpage": "131",
+      "spine": [
+        {
+          "page_min": "21",
+          "millimeter": "11",
+          "thickness": "6.4",
+          "number": "2",
+          "page_max": "25"
+        },
+        {
+          "page_min": "27",
+          "millimeter": "14",
+          "thickness": "8.8",
+          "number": "3",
+          "page_max": "35"
+        },
+        {
+          "page_min": "37",
+          "millimeter": "17",
+          "thickness": "11.2",
+          "number": "4",
+          "page_max": "47"
+        },
+        {
+          "page_min": "49",
+          "millimeter": "20",
+          "thickness": "13.6",
+          "number": "5",
+          "page_max": "59"
+        },
+        {
+          "page_min": "61",
+          "millimeter": "23",
+          "thickness": "16.6",
+          "number": "6",
+          "page_max": "73"
+        },
+        {
+          "page_min": "75",
+          "millimeter": "26",
+          "thickness": "19.6",
+          "number": "7",
+          "page_max": "87"
+        },
+        {
+          "page_min": "89",
+          "millimeter": "29",
+          "thickness": "22.6",
+          "number": "8",
+          "page_max": "101"
+        },
+        {
+          "page_min": "103",
+          "millimeter": "32",
+          "thickness": "25.6",
+          "number": "9",
+          "page_max": "117"
+        },
+        {
+          "page_min": "119",
+          "millimeter": "35",
+          "thickness": "28.6",
+          "number": "10",
+          "page_max": "131"
+        }
+      ]
+    },
+    {
+      "code": "160015",
+      "millimeter": "0.166",
+      "mo_maxpage": "151",
+      "spine": [
+        {
+          "page_min": "21",
+          "millimeter": "9",
+          "thickness": "4",
+          "number": "1",
+          "page_max": "49"
+        },
+        {
+          "page_min": "51",
+          "millimeter": "11",
+          "thickness": "6.4",
+          "number": "2",
+          "page_max": "79"
+        },
+        {
+          "page_min": "81",
+          "millimeter": "14",
+          "thickness": "8.8",
+          "number": "3",
+          "page_max": "109"
+        },
+        {
+          "page_min": "111",
+          "millimeter": "17",
+          "thickness": "11.2",
+          "number": "4",
+          "page_max": "139"
+        },
+        {
+          "page_min": "141",
+          "millimeter": "20",
+          "thickness": "13.6",
+          "number": "5",
+          "page_max": "169"
+        },
+        {
+          "page_min": "171",
+          "millimeter": "23",
+          "thickness": "16.6",
+          "number": "6",
+          "page_max": "207"
+        },
+        {
+          "page_min": "209",
+          "millimeter": "26",
+          "thickness": "19.6",
+          "number": "7",
+          "page_max": "245"
+        },
+        {
+          "page_min": "247",
+          "millimeter": "29",
+          "thickness": "22.6",
+          "number": "8",
+          "page_max": "283"
+        },
+        {
+          "page_min": "285",
+          "millimeter": "32",
+          "thickness": "25.6",
+          "number": "9",
+          "page_max": "321"
+        },
+        {
+          "page_min": "323",
+          "millimeter": "35",
+          "thickness": "28.6",
+          "number": "10",
+          "page_max": "359"
+        },
+        {
+          "page_min": "361",
+          "millimeter": "38",
+          "thickness": "31.6",
+          "number": "11",
+          "page_max": "397"
+        },
+        {
+          "page_min": "399",
+          "millimeter": "41",
+          "thickness": "34.6",
+          "number": "12",
+          "page_max": "435"
+        }
+      ]
+    },
+    {
+      "code": "160028",
+      "millimeter": "0.14",
+      "mo_maxpage": "21",
+      "spine": [
+        {
+          "page_min": "21",
+          "millimeter": "8",
+          "thickness": "2.94",
+          "number": "1",
+          "page_max": "21"
+        }
+      ]
+    }
+  ],
+  "version": "1.5"
+}

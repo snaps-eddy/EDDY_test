@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/custom_dialog_list_shape_btn_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="17dp"
+        android:gravity="center"
+        android:minHeight="52dp"
+        android:background="@drawable/shape_list_round_top"/>
+
+    <View
+        android:id="@+id/custom_dialog_list_line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c9c9c9"/>
+
+    <Button
+        android:id="@+id/custom_dialog_list_shape_btn_01"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColor="#333333"
+        android:minHeight="52dp"
+        android:background="@drawable/shape_list_round_bottom"/>
+
+
+</LinearLayout>

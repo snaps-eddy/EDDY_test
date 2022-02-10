@@ -1,0 +1,173 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "com.google.firebase.crashlytics"
+    id "com.google.gms.google-services"
+    id "dagger.hilt.android.plugin"
+    id "kotlin-kapt"
+    id "kotlin-parcelize"
+}
+
+apply from: "apk-copy.gradle"
+apply from: "../environments.gradle"
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'snaps'
+            keyPassword '1xkqtmsoqtm'
+            storeFile file('snaps.keystore')
+            storePassword '1xkqtmsoqtm'
+        }
+        debug {
+            storeFile file('debug.keystore')
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+    }
+
+    compileSdkVersion androidCompileSdkVersion
+
+    defaultConfig {
+        applicationId "com.snaps.mobile.kr"
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+        multiDexEnabled true
+
+        versionCode 447
+        versionName "3.5.81"
+    }
+
+    buildToolsVersion androidBuildToolVersion
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude "META-INF/*.kotlin_module"
+    }
+
+    flavorDimensions "products", "api"
+
+    productFlavors {
+        develop {
+            dimension "products"
+            applicationIdSuffix ".develop"
+            versionNameSuffix "_D"
+            versionCode 1
+            manifestPlaceholders = [
+                    appLabel: "@string/app_develop_name",
+                    fbAuth  : "com.facebook.app.FacebookContentProvider146557952375028"
+            ]
+            minSdkVersion 21 // 빠른 빌드 속도를 위하여 Develop 에서는 misSDKVersion을 21로 높힌다.
+            aaptOptions.cruncherEnabled = false //해당 옵션은 PNG 최적화 기능인데 dev 에선 끈다.
+        }
+
+        product {
+            dimension "products"
+            manifestPlaceholders = [
+                    appLabel: "@string/app_name",
+                    fbAuth  : "com.facebook.app.FacebookContentProvider871422272945829"
+            ]
+        }
+
+        /---- API ----/
+
+        dev {
+            dimension = "api"
+            versionCode 1 // 실수로 앱스토어 등록시, versioncode 가 낮기 때문에 업로드 실패할 것이다. 실수 방지용
+            buildConfigField "String", "FRONT_END_BASE_URL", "\"" + environments.dev.frontendBaseUrl + "\""
+            buildConfigField "String", "BACK_END_BASE_URL", "\"" + environments.dev.backendBaseUrl + "\""
+            buildConfigField "String", "BACK_END_NEW_BASE_URL", "\"" + environments.dev.backendNewBaseUrl + "\""
+        }
+
+        stg {
+            dimension = "api"
+            versionCode 1 // 실수로 앱스토어 등록시, versioncode 가 낮기 때문에 업로드 실패할 것이다. 실수 방지용
+            buildConfigField "String", "FRONT_END_BASE_URL", "\"" + environments.stg.frontendBaseUrl + "\""
+            buildConfigField "String", "BACK_END_BASE_URL", "\"" + environments.stg.backendBaseUrl + "\""
+            buildConfigField "String", "BACK_END_NEW_BASE_URL", "\"" + environments.stg.backendNewBaseUrl + "\""
+        }
+
+        stg2 {
+            dimension = "api"
+            versionCode 1 // 실수로 앱스토어 등록시, versioncode 가 낮기 때문에 업로드 실패할 것이다. 실수 방지용
+            buildConfigField "String", "FRONT_END_BASE_URL", "\"" + environments.stg2.frontendBaseUrl + "\""
+            buildConfigField "String", "BACK_END_BASE_URL", "\"" + environments.stg2.backendBaseUrl + "\""
+            buildConfigField "String", "BACK_END_NEW_BASE_URL", "\"" + environments.stg2.backendNewBaseUrl + "\""
+        }
+
+        real {
+            dimension = "api"
+            buildConfigField "String", "FRONT_END_BASE_URL", "\"" + environments.real.frontendBaseUrl + "\""
+            buildConfigField "String", "BACK_END_BASE_URL", "\"" + environments.real.backendBaseUrl + "\""
+            buildConfigField "String", "BACK_END_NEW_BASE_URL", "\"" + environments.real.backendNewBaseUrl + "\""
+        }
+    }
+
+    variantFilter { variant ->
+        def names = variant.flavors*.name
+
+        if (names.contains("product")) {
+            variant.ignore = variant.buildType.name == "debug"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+
+    //di hilt
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltExtVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltExtVersion"
+
+    //Rx
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
+
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.powermock:powermock-module-junit4:$powerMockitoVersion"
+    testImplementation "org.powermock:powermock-api-mockito2:$powerMockitoVersion"
+    testImplementation "org.assertj:assertj-core:3.17.2"
+
+    implementation project(':snapsmobile')
+    implementation project(':data')
+    implementation project(':domain')
+    implementation project(':presentation-editor')
+
+}

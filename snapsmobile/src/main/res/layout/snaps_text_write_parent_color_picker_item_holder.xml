@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<View
+		android:id="@+id/snasp_text_write_color_picker_item_holder_bg_view"
+		android:layout_marginTop="2dp"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<LinearLayout
+		android:id="@+id/snasp_text_write_color_picker_item_holder_footer"
+		android:orientation="vertical"
+		android:layout_alignParentBottom="true"
+		android:layout_width="match_parent"
+		android:layout_height="9dp">
+		<!--<View-->
+			<!--android:visibility="visible"-->
+			<!--android:layout_width="match_parent"-->
+			<!--android:layout_height="31dp"-->
+			<!--android:background="@drawable/shape_gray_cccccc_transparent_solid_border_rect" />-->
+
+		<!--<View-->
+			<!--android:visibility="visible"-->
+			<!--android:layout_width="match_parent"-->
+			<!--android:layout_height="9dp"-->
+			<!--android:background="#fafafa" />-->
+		<View
+			android:visibility="visible"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#eeeeee" />
+
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/snasp_text_write_color_picker_item_holder_selector"
+		android:visibility="gone"
+		android:scaleType="fitXY"
+		android:src="@drawable/img_text_server_color_picker_selector"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+
+</RelativeLayout>

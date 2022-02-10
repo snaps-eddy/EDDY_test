@@ -1,0 +1,153 @@
+<!-- 트레이 영역 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/snaps_sticky_viewpager_strip_height"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--android:layout_height="@dimen/snaps_sticky_tray_view_offset_y">-->
+
+    <RelativeLayout
+        android:id="@+id/include_google_photo_style_image_select_tray_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <!-- 썸네일 -->
+                <com.snaps.mobile.activity.diary.customview.SnapsRecyclerView
+                    android:id="@+id/include_google_photo_style_image_select_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"/>
+
+                <include
+                    layout="@layout/image_select_tray_thumbnail_single_item" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/google_photo_style_image_select_tray_add_btn"
+                android:layout_width="35dp"
+                android:layout_height="92dp"
+                android:visibility="gone"
+                android:background="@drawable/selector_edit_view_bottom_plus_btn"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_edit_view_pageplus" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/layout_under_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="#FFEEEEEE"
+        android:layout_below="@id/include_google_photo_style_image_select_tray_ly"
+        android:scaleType="fitXY" />
+
+
+    <!-- 카운터 및 전체 보기 -->
+    <RelativeLayout
+        android:id="@+id/include_google_photo_style_image_select_tray_all_view_ly"
+        android:layout_below="@id/layout_under_line"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <LinearLayout
+            android:id="@+id/google_photo_style_image_select_tray_all_view_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <font.FTextView
+                android:id="@+id/google_photo_style_image_select_tray_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/image_select_tray_all_view_title"
+                android:textColor="#191919"
+                android:textSize="11dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text=" ("
+                android:textColor="#191919"
+                android:textSize="11dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:id="@+id/google_photo_style_image_select_tray_count_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="0"
+                android:textColor="#e8625a"
+                android:textSize="11dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:id="@+id/google_photo_style_image_select_tray_count_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_toRightOf="@id/google_photo_style_image_select_tray_count_left_tv"
+                android:maxLines="1"
+                android:textColor="#191919"
+                android:textSize="11dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text=")"
+                android:textColor="#191919"
+                android:textSize="11dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <ImageView
+                android:id="@+id/google_photo_style_image_select_title_bar_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_arrow_for_right_s"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/include_google_photo_style_image_select_tray_all_view_ly"
+        android:background="#eeeeee"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"/>
+
+</RelativeLayout>

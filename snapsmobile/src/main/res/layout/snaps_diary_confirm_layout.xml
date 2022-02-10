@@ -1,0 +1,154 @@
+<RelativeLayout
+    android:id="@+id/rootLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frameMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"/>
+
+    <include
+        android:id="@+id/snaps_diary_title_include"
+        layout="@layout/_include_theme_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/snaps_diary_title_include"/>
+
+    <ScrollView
+        android:id="@+id/snaps_diary_confitm_scroll_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/snaps_diary_title_include"
+        android:background="@color/color_diary_list_bg"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_diary_list_round"
+                android:orientation="vertical"
+                android:paddingLeft="20dp">
+
+                <LinearLayout
+                    android:id="@+id/snaps_diary_confirm_date_weather_feels_area_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="20dp"
+                    android:paddingTop="17dp">
+
+                    <LinearLayout
+                        android:id="@+id/snaps_diary_confirm_date_ly"
+                        android:orientation="horizontal"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <font.FTextView
+                            android:id="@+id/snaps_diary_confirm_date_tv"
+                            android:clickable="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:textColor="#343434"
+                            android:textSize="17dp"/>
+
+                        <ImageView
+                            android:id="@+id/snaps_diary_confirm_date_icon_iv"
+                            android:visibility="gone"
+                            android:src="@drawable/icon_diary_calendar_small"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerInside"
+                            android:layout_marginLeft="9dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/snaps_diary_confirm_weather_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="centerInside"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/snaps_diary_confirm_feels_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="centerInside"
+                        android:layout_marginLeft="14dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <font.FTextView
+                    android:id="@+id/snaps_diary_confirm_registered_date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:visibility="gone"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="12dp"
+                    android:textColor="#999999"
+                    android:textSize="12dp"/>
+
+                <FrameLayout
+                    android:id="@+id/snaps_diary_confirm_fragment_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"/>
+
+                <font.FEditText
+                    android:id="@+id/snaps_diary_confirm_contents_et"
+                    android:inputType="textCapSentences|textFilter|textMultiLine|textNoSuggestions"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="11dp"
+                    android:background="#FFFFFF"
+                    android:cursorVisible="false"
+                    android:gravity="left|top"
+                    android:hint="@string/diary_default_hint"
+                    android:textColor="#333333"
+                    android:textColorHint="#999999"
+                    android:textSize="14dp"/>
+
+                <View
+                    android:id="@+id/snaps_diary_confirm_contents_scroll_end_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"/>
+
+                <font.FTextView
+                    android:id="@+id/snaps_diary_confirm_contents_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="11dp"
+                    android:background="#ffffff"
+                    android:gravity="left|top"
+                    android:textColor="#333333"
+                    android:textSize="14dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

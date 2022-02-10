@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:background="@color/white"
+	android:orientation="vertical">
+	
+    <RelativeLayout
+        android:id="@+id/layoutImgFrame"
+        android:layout_width="match_parent" 
+		android:layout_height="wrap_content">
+		
+        <ImageView
+			android:id="@+id/imgCategoryAlbum"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_centerInParent="true"
+			android:scaleType="centerCrop"/>
+        
+        <ImageView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_centerInParent="true"
+			android:scaleType="fitXY"
+			android:src="@drawable/frame_album_thumb"/>
+        
+    </RelativeLayout>
+    
+    <font.FTextView
+		android:id="@+id/txtcategoryName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:gravity="center"
+		android:background="@drawable/bg_album_title"
+		android:textStyle="bold"
+		android:textSize="15sp"/>
+    
+</LinearLayout>

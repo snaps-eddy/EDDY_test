@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.snaps.mobile.presentation.editor.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/tray_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/empty_cd"
+        android:scaleType="centerCrop" />
+
+</com.snaps.mobile.presentation.editor.SquareFrameLayout>

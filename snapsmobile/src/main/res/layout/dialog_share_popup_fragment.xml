@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    android:id="@+id/layoutShare"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="67dp"
+    android:layout_height="wrap_content"
+    >
+    
+    <ImageView 
+        android:layout_width="67dp"
+   		android:layout_height="wrap_content"
+   		android:scaleType="fitXY"
+   		android:src="@drawable/bg_share_popup"
+        />
+    
+    <LinearLayout 
+        android:layout_width="67dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        
+        <!-- <ImageView 
+            android:tag="btn_share_kakaostory"
+            android:id="@+id/btn_share_kakaostory"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+           	android:src="@drawable/icon_share_kakaostory"
+           	android:onClick="onClick"
+            />
+        
+        <ImageView 
+            android:layout_width="65dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:src="@drawable/line_list_bottom"/> -->
+        
+        <ImageView 
+            android:tag="btn_share_kakaotalk"
+            android:id="@+id/btn_share_kakaotalk"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:src="@drawable/icon_share_kakaotalk"
+           	android:onClick="onClick"
+            />
+    </LinearLayout>
+</FrameLayout>

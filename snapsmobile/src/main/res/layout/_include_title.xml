@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_title_bar_height"
+    android:background="@drawable/top_bg" >
+
+    <RelativeLayout
+        android:id="@+id/btnTitleLeftLy"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:onClick="onClick"
+        android:paddingLeft="8dp"
+        android:paddingRight="33dp" >
+
+        <ImageView
+            android:id="@+id/btnTitleLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_prev" />
+    </RelativeLayout>
+
+    <font.FTextView
+        android:id="@+id/txtTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:textColor="#191919"
+        android:textSize="@dimen/title_size"
+        custom:customFont="@string/font_name_ygt_760"/>
+
+    <ImageView
+        android:id="@+id/btnPremium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        android:scaleType="centerInside"
+        android:layout_toLeftOf="@id/txtTitleText"
+        android:src="@drawable/icon_product_detail_premium" />
+
+    <RelativeLayout
+        android:id="@+id/btnTitleLeftBackLy"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:onClick="onClick"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <ImageView
+            android:id="@+id/btnTitleLeftBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+       		android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:visibility="invisible"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_prev" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btnTitleHamburgerMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:src="@drawable/selector_hamburger_menu_icon"/>
+
+    <ImageView
+        android:id="@+id/btnTitleClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:src="@drawable/selector_close_small"/>
+
+    <ImageView
+        android:id="@+id/btnTitleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:scaleType="centerInside"
+        android:visibility="invisible"
+        android:src="@drawable/selector_info_icon_for_sticky_title"/>
+
+    <!--<View-->
+        <!--android:id="@+id/TopLine"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="#c9c9c9" />-->
+
+</RelativeLayout>

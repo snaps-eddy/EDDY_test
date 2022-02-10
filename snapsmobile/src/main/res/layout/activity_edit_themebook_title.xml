@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_title_bar_height">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_title_bar_height"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!-- 타이틀바의 높이를 건드리면, 드래그앤 드랍뷰가 비정상 동작 할 수 있음. 같이 수정 할 것. -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="16dp">
+
+            <!-- 백키 -->
+
+            <RelativeLayout
+                android:id="@+id/ThemeTitleLeftLy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:paddingLeft="8dp"
+                android:paddingRight="3dp">
+
+                <ImageView
+                    android:id="@+id/ThemeTitleLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_edit_view_back" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnTitleLeftLy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- 디자인 변경 -->
+
+            <ImageView
+                android:id="@+id/theme_cover_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14dp"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_edit_design_btn" />
+
+            <!-- 제목 변경 -->
+
+            <ImageView
+                android:id="@+id/theme_text_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14dp"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_edit_title_btn" />
+
+            <!-- 미리보기 -->
+
+            <ImageView
+                android:id="@+id/theme_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14dp"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_edit_view_btn" />
+
+            <!-- 달력 -->
+
+            <ImageView
+                android:id="@+id/calendar_change_period_btn"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_calendar_period_modify_btn" />
+
+            <ImageView
+                android:id="@+id/theme_info"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14dp"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_edit_info_btn" />
+
+            <!-- 저장 -->
+
+            <ImageView
+                android:id="@+id/theme_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_edit_save_btn"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ThemecartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical" />
+
+                <font.FTextView
+                    android:id="@+id/ThemecartTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/cart"
+                    android:textColor="@color/selector_edit_save_text_btn"
+                    android:textSize="13dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c9c9c9" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/snaps_edit_activity_title_bar_blind_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.633">
+
+        <ImageView
+            android:id="@+id/smart_snaps_analysis_making_fragment_center_a_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/smart_snaps_analysis_making_fragment_center_b_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_making_fragment_memories_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_auto_title_memories"
+                android:visibility="invisible" />
+
+            <font.FTextView
+                android:id="@+id/smart_snaps_analysis_making_activity_fragment_user_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.8dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:visibility="invisible"
+                custom:customFont="@string/font_name_ygt_740" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/smart_snaps_analysis_making_fragment_sound_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/img_sound_on"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="14dp"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/smart_snaps_analysis_making_fragment_progress"-->
+        <!--style="@style/CustomProgressBarHorizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp" />-->
+    <ProgressBar
+        android:id="@+id/smart_snaps_analysis_making_fragment_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/transparent"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_for_smart_snaps_uploading" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.284"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <font.FTextView
+            android:id="@+id/smart_snaps_analysis_making_fragment_progress_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0%"
+            android:textColor="#191919"
+            android:textSize="13dp"
+            custom:customFont="@string/font_name_ygt_760" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:gravity="center">
+            <font.FTextView
+                android:id="@+id/smart_snaps_analysis_making_fragment_desc_a_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/auto_recommand_making_photobook_wait_msg"
+                android:textColor="#999999"
+                android:textSize="12dp"
+                custom:customFont="@string/font_name_ygt_740" />
+            <font.FTextView
+                android:id="@+id/smart_snaps_analysis_making_fragment_desc_b_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/smart_analysis_book_making_desc_b"
+                android:alpha="0"
+                android:textColor="#999999"
+                android:textSize="12dp"
+                custom:customFont="@string/font_name_ygt_740" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.08"
+        android:layout_gravity="center_horizontal"
+        android:gravity="top|center_horizontal">
+
+        <font.FTextView
+            android:id="@+id/smart_snaps_analysis_making_activity_fragment_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="@string/do_cancel"
+            android:textColor="#191919"
+            android:textSize="13dp"
+            android:visibility="visible"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <font.FTextView
+            android:id="@+id/smart_snaps_analysis_making_activity_fragment_retry_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="@string/retry_btn_text"
+            android:textColor="#e8625a"
+            android:textSize="13dp"
+            android:visibility="gone"
+            custom:customFont="@string/font_name_ygt_740" />
+    </RelativeLayout>
+
+</LinearLayout>

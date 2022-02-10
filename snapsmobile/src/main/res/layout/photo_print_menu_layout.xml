@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:id="@+id/count_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/photo_print_menu_item_bg" >
+
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_760"
+                android:id="@+id/count"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="5dp"
+                android:padding="0dp"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:textColor="#FF191919" />
+
+            <font.FTextView
+                android:id="@+id/count_text"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:padding="0dp"
+                android:textSize="8dp"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/photo_print_meun_text_color_on"
+                android:text="@string/photo_print_quantity"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_fit_type_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/photo_print_menu_item_bg" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="4dp" >
+                <ImageView
+                    android:id="@+id/image_fit_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_print_01_on"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/image_fit_type_text"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:padding="0dp"
+                android:textSize="8dp"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/photo_print_meun_text_color_on"
+                android:text="@string/paper_full"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_type_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/photo_print_menu_item_bg" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="4dp" >
+                <ImageView
+                    android:id="@+id/page_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_glossy_on"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/page_type_text"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:padding="0dp"
+                android:textSize="8dp"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/photo_print_meun_text_color_on"
+                android:text="@string/glossy"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/border_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/photo_print_menu_item_bg" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="4dp" >
+                <ImageView
+                    android:id="@+id/border"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_border_off"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/border_text"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:padding="0dp"
+                android:textSize="8dp"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/photo_print_meun_text_color_off"
+                android:text="@string/border"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adjust_brightness_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/photo_print_menu_item_bg" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="4dp" >
+                <ImageView
+                    android:id="@+id/adjust_brightness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_bright_off"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/adjust_brightness_text"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:padding="0dp"
+                android:textSize="8dp"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/photo_print_meun_text_color_off"
+                android:text="@string/adjust_brightness"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/photo_date_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/photo_print_menu_item_bg" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="4dp" >
+                <ImageView
+                    android:id="@+id/photo_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_date_off"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/photo_date_text"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:padding="0dp"
+                android:textSize="8dp"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/photo_print_meun_text_color_off"
+                android:text="@string/photo_date"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/menu_dim_area"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:src="#AA333333"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="#FFF4F4F4"
+        android:layout_below="@id/menu_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/change_count_layout"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_below="@id/line"
+        android:background="#FFFFFFFF"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp" >
+
+            <ImageView
+                android:id="@+id/minus_button"
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="19dp"
+                android:src="@drawable/icon_minus" />
+
+            <ImageView
+                android:id="@+id/plus_button"
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp"
+                android:src="@drawable/icon_plus" />
+
+            <font.FTextView
+                android:id="@+id/count_change_text"
+                custom:customFont="@string/font_name_ygt_760"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/plus_button"
+                android:layout_toRightOf="@id/minus_button"
+                android:gravity="center"
+                android:textColor="#FF191919"
+                android:background="#00FFFFFF"
+                android:textSize="12dp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:src="#FFF4F4F4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/line"
+        android:background="#FFFFFFFF" >
+
+        <font.FTextView
+            android:id="@+id/select_button"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:textSize="12dp"
+            android:textColor="#FF191919"
+            android:text="@string/select" />
+
+        <font.FTextView
+            android:id="@+id/cancel_button"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:textSize="12dp"
+            android:textColor="#FF191919"
+            android:text="@string/cancel"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/small_view_button"
+            android:layout_width="38dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/icon_module_small_off"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp" />
+
+        <ImageView
+            android:id="@+id/large_view_button"
+            android:layout_width="38dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/icon_module_large_on"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@id/small_view_button" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

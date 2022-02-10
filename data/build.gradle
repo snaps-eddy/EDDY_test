@@ -1,0 +1,68 @@
+plugins {
+    id "com.android.library"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "dagger.hilt.android.plugin"
+    id "kotlinx-serialization"
+}
+apply from: "../environments.gradle"
+
+android {
+    compileSdkVersion androidCompileSdkVersion
+    buildToolsVersion androidBuildToolVersion
+
+    defaultConfig {
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+        versionCode snapsVersionCode
+        versionName snapsVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+
+    // Rx
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
+
+    //di
+    implementation "javax.inject:javax.inject:$javaxInjectVersion"
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion" // for annotations
+
+    //network
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2Version"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofit2Version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpLoggingVersion"
+    //convertor
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2Version"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit2Version"
+
+    //xml-to-Json
+    api "com.github.smart-fun:XmlToJson:$xmltoJsonVersion"
+
+    //test
+    testImplementation "junit:junit:$jUnitVersion"
+    testImplementation "io.mockk:mockk:$mockkVersion"
+    testImplementation "io.kotest:kotest-runner-junit5:$kotestVersion"
+    testImplementation "io.kotest:kotest-assertions-core:$kotestVersion"
+
+    // Android instrument test
+    androidTestImplementation "androidx.test:core:1.4.0"
+    androidTestImplementation "androidx.test:runner:1.4.0"
+    androidTestImplementation "androidx.test:rules:1.4.0"
+    androidTestImplementation "io.kotest:kotest-assertions-core:$kotestVersion"
+
+    implementation project(":domain")
+    implementation project(":snapsconfig")
+}

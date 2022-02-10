@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="310dp"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_black_191919_border_rect"
+              android:minWidth="310dp"
+              android:orientation="vertical">
+
+    <font.FTextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="@string/smart_snaps_search_completed_popup_title"
+        android:textColor="#191919"
+        android:textSize="14dp"
+        custom:customFont="@string/font_name_ygt_760" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#eeeeee" />
+
+    <ImageView
+        android:id="@+id/smart_snaps_search_completed_dialog_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        android:baselineAligned="false"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <font.FTextView
+            android:id="@+id/smart_snaps_search_completed_dialog_text_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#191919"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/custom_dialog_confirm_btn"
+            android:layout_width="68dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="#e8625a"
+            android:orientation="horizontal">
+
+            <font.FTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="#ffffff"
+                android:textSize="11dp"
+                custom:customFont="@string/font_name_ygt_740" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<template type="calendar">
+    <scene type="page" width="720" height="720" multiform="SMTTMF1_hi" sub_type="" side="">
+        <layer name="background_layer">
+            <image>
+                <source type="color" bgcolor="00FFFFFF"/>
+                <regist name="background" value="0"/>
+            </image>
+        </layer>
+        <layer name="image_layer">
+            <image x="60" y="60" height="600" width="600" angleClip="0.00">
+                <source type="browse_file" fit="fit_in" maximize="on" bgcolor="ffffffff"/>
+                <modify_content move="on" border="inner_border" resize="on" rotate="on" flip="on" alpha="off"/>
+                <regist name="user_image" value="0"/>
+            </image>
+        </layer>
+        <layer name="form_layer"/>
+        <layer name="form_style"/>
+        <layer name="control_layer">
+            <hole x="0" y="0" height="18" width="18" angleClip="0.00"/>
+        </layer>
+    </scene>
+    <TmplInfo>
+        <F_PROD_CODE>00802300030001</F_PROD_CODE>
+        <F_PROD_NAME>스마트톡</F_PROD_NAME>
+        <F_PROD_SIZE>Smart Tok</F_PROD_SIZE>
+        <F_PROD_NICK_NAME>스마트톡</F_PROD_NICK_NAME>
+        <F_USE_ANALECTA>N</F_USE_ANALECTA>
+        <F_ENLARGE_IMG>N</F_ENLARGE_IMG>
+        <FEP>EXTENDED</FEP>
+        <F_PRNT_REF_HEIGHT>461</F_PRNT_REF_HEIGHT>
+        <F_PRNT_REF_WIDTH>461</F_PRNT_REF_WIDTH>
+        <F_PRNT_REAL_HEIGHT>390</F_PRNT_REAL_HEIGHT>
+        <F_PRNT_REAL_WIDTH>390</F_PRNT_REAL_WIDTH>
+        <F_USE_WATERMARK>N</F_USE_WATERMARK>
+        <F_PRNT_TYPE>PDF</F_PRNT_TYPE>
+        <F_TITLE_MM_WIDTH>39</F_TITLE_MM_WIDTH>
+        <F_TITLE_MM_HEIGHT>39</F_TITLE_MM_HEIGHT>
+        <F_PAGE_MM_WIDTH>39</F_PAGE_MM_WIDTH>
+        <F_PAGE_MM_HEIGHT>39</F_PAGE_MM_HEIGHT>
+        <F_PAGE_PIXEL_WIDTH>312</F_PAGE_PIXEL_WIDTH>
+        <F_PAGE_PIXEL_HEIGHT>312</F_PAGE_PIXEL_HEIGHT>
+        <F_UI_COVER>N</F_UI_COVER>
+        <F_UI_BACKGROUND>Y</F_UI_BACKGROUND>
+        <F_UI_LAYOUT>Y</F_UI_LAYOUT>
+        <F_UI_BORDER>Y</F_UI_BORDER>
+        <F_THUMBNAIL_STEP>3</F_THUMBNAIL_STEP>
+        <F_TEXT_SIZE_BASE>PRINT</F_TEXT_SIZE_BASE>
+        <F_PROD_TYPE>smart_tok</F_PROD_TYPE>
+        <F_RES_MIN>40</F_RES_MIN>
+        <F_RES_DISABLE>25</F_RES_DISABLE>
+        <F_PAGE_START_NUM>2</F_PAGE_START_NUM>
+        <F_CENTER_LINE>CHECK</F_CENTER_LINE>
+        <F_UNITTEXT>개</F_UNITTEXT>
+        <F_CALENDAR_BONUS_12>0</F_CALENDAR_BONUS_12>
+        <F_ALLOW_NO_FULL_IMAGE_YORN>N</F_ALLOW_NO_FULL_IMAGE_YORN>
+        <F_TMPL_TITLE>스마트톡</F_TMPL_TITLE>
+        <F_EDIT_PLATFORM>EXTENDED</F_EDIT_PLATFORM>
+        <F_TMPL_ID>SMTTMT1_hi</F_TMPL_ID>
+        <F_TMPL_CODE>045021014706</F_TMPL_CODE>
+        <F_TMPL_NAME>Full Image</F_TMPL_NAME>
+        <F_XML_ID>046001131346</F_XML_ID>
+        <F_REG_DATE>2999-12-31 23:59:59.0</F_REG_DATE>
+        <F_OUTER_YORN>N</F_OUTER_YORN>
+    </TmplInfo>
+    <TmplPrice>
+        <F_COMP_CODE>KOR0031</F_COMP_CODE>
+        <F_PROD_CODE>00802300030001</F_PROD_CODE>
+        <F_SELL_PRICE>8000</F_SELL_PRICE>
+        <F_ORG_PRICE>10000</F_ORG_PRICE>
+        <F_PRICE_NUM>1</F_PRICE_NUM>
+        <F_PRNT_BQTY>1</F_PRNT_BQTY>
+        <F_PRNT_EQTY>32767</F_PRNT_EQTY>
+        <F_PAGE_ADD_PRICE>0</F_PAGE_ADD_PRICE>
+        <F_ORG_PAGE_ADD_PRICE>0</F_ORG_PAGE_ADD_PRICE>
+        <F_DISC_RATE>20</F_DISC_RATE>
+        <F_FORM_PRICE>0</F_FORM_PRICE>
+        <F_FORM_ORG_PRICE>0</F_FORM_ORG_PRICE>
+        <F_FRAME_PRICE>0</F_FRAME_PRICE>
+        <F_SCREEN_PRICE>0</F_SCREEN_PRICE>
+        <F_FRAME_ORG_PRICE>0</F_FRAME_ORG_PRICE>
+        <F_SCREEN_ORG_PRICE>0</F_SCREEN_ORG_PRICE>
+    </TmplPrice>
+</template>

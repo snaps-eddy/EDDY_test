@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/main_menu_bar"
+            layout="@layout/include_title_web" />
+
+        <com.snaps.mobile.component.ObserveScrollingWebView
+            android:id="@+id/webview"
+            android:layout_below="@id/main_menu_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white" />
+
+        <!--<View-->
+	        <!--android:id="@+id/TopLine"-->
+	        <!--android:layout_width="match_parent"-->
+	        <!--android:layout_height="1px"-->
+	        <!--android:layout_below="@+id/main_menu_bar"-->
+	        <!--android:background="@color/title_line_color" />-->
+        
+        <include
+            android:id="@+id/la_network_error"
+            layout="@layout/include_network_error"
+            android:layout_below="@id/main_menu_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+<!--             style="?android:attr/progressBarStyle" -->
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:indeterminateDrawable="@drawable/rotate_progress"
+         	android:layout_width="@dimen/default_progress_dialog_size"
+      		android:layout_height="@dimen/default_progress_dialog_size"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/activity_uiwebview_ly"
+        layout="@layout/include_title_web"
+        android:visibility="invisible" />
+    
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0dp"
+        android:background="@android:color/transparent"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_webview"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/alpha50"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/alpha0"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

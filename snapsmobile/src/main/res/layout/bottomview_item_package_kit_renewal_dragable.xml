@@ -1,0 +1,108 @@
+<!--<com.snaps.common.customui.dragdrop.DSRelativeLayout -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/item_lay"
+        android:layout_marginTop="2dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true" >
+
+        <!--<ImageView-->
+        <!--android:id="@+id/item"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="@drawable/shape_image_border"-->
+        <!--android:scaleType="centerInside" />-->
+
+        <ImageView
+            android:id="@+id/item_outline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/item"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/item"
+            android:layout_alignLeft="@+id/item"
+            android:layout_alignRight="@+id/item"
+            android:layout_alignTop="@+id/item"
+            android:adjustViewBounds="true"
+            android:background="@drawable/skin_pageset_a4"
+            android:visibility="gone" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/iv_warning"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/alert_01" >
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/thumbanail_progress"
+            android:visibility="gone"
+            android:indeterminateDrawable="@drawable/thumb_rotate_progress"
+            android:layout_centerInParent="true"
+            android:layout_width="12dp"
+            android:layout_height="12dp" />
+    </RelativeLayout>
+
+    <font.FTextView
+        android:id="@+id/itemintroindex"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_below="@id/item_lay"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/color_rgb_bababa"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:textSize="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="22dp"
+        android:layout_below="@id/item_lay"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <font.FTextView
+            android:id="@+id/itemleft"
+            android:layout_width="0px"
+            android:layout_height="17dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/color_rgb_bababa"
+            android:textSize="12dp">
+        </font.FTextView>
+
+        <font.FTextView
+            android:id="@+id/itemright"
+            android:layout_width="0px"
+            android:layout_height="17dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/color_rgb_bababa"
+            android:textSize="12dp">
+        </font.FTextView>
+    </LinearLayout>
+
+</RelativeLayout>
+    <!--</com.snaps.common.customui.dragdrop.DSRelativeLayout>-->

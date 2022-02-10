@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!-- analytics string -->
+
+	<!-- 대분류는 이벤트 할 필요 없음. -->
+    <string name="category_photobook">홈<![CDATA[" - "]]>포토북</string>
+    <string name="category_print_picture">홈<![CDATA[" - "]]>사진인화</string>
+    <string name="category_gift">홈<![CDATA[" - "]]>기프트</string>
+    <string name="category_frame">홈<![CDATA[" - "]]>액자</string>
+    <string name="category_calendar">홈<![CDATA[" - "]]>달력</string>
+    
+    <string name="item_photobook">포토북<![CDATA[" - "]]>포토북</string>
+    <string name="item_instagrambook">포토북<![CDATA[" - "]]>인스타그램북</string>
+    <string name="item_facebookphotobook">포토북<![CDATA[" - "]]>페이스북포토북</string>
+    <string name="item_kakaostorybook">포토북<![CDATA[" - "]]>카카오스토리북</string>
+    <string name="item_theme_photobook">포토북<![CDATA[" - "]]>테마 포토북</string>
+    
+    <string name="item_normal_print">사진인화<![CDATA[" - "]]>일반사진인화</string>
+    <string name="item_3x5">일반사진인화<![CDATA[" - "]]>3 X 5</string>
+    <string name="item_4x6">일반사진인화<![CDATA[" - "]]>4 X 6</string>
+    <string name="item_5x7">일반사진인화<![CDATA[" - "]]>5 X 7</string>
+    <string name="item_8x10">일반사진인화<![CDATA[" - "]]>8 X 10</string>
+    <string name="item_11x14">일반사진인화<![CDATA[" - "]]>11 X 14</string>
+    <string name="item_wallet_picture">일반사진인화<![CDATA[" - "]]>지갑용사진</string>
+    <string name="item_polaroid">일반사진인화<![CDATA[" - "]]>폴라로이드</string>
+    <string name="item_square_printpackage">사진인화<![CDATA[" - "]]>스퀘어 프린트팩</string>
+    <string name="item_4x4">스퀘어 프린트팩<![CDATA[" - "]]>4 X 4</string>
+    <string name="item_5x5">스퀘어 프린트팩<![CDATA[" - "]]>5 X 5</string>
+    <string name="item_woodblock_print">사진인화<![CDATA[" - "]]>우드블럭<![CDATA["+"]]>프린트</string>
+    <string name="item_ddebooji_kit">사진인화<![CDATA[" - "]]>떼부지 킷</string>
+    <string name="item_postcard_package">사진인화<![CDATA[" - "]]>엽서 팩</string>
+    <string name="item_polaroid_print_package">사진인화<![CDATA[" - "]]>폴라로이드 프린트팩</string>
+    
+    <string name="item_phone_case">기프트<![CDATA[" - "]]>핸드폰케이스</string>
+    <string name="item_photo_stickerkit">기프트<![CDATA[" - "]]>포토 스티커킷</string>
+    <string name="item_photo_mugcup">기프트<![CDATA[" - "]]>포토 머그컵</string>
+    <string name="item_photo_tumbler">기프트<![CDATA[" - "]]>포토 텀블러</string>
+    <string name="item_design_note">기프트<![CDATA[" - "]]>디자인노트</string>
+    <string name="item_mouse_pad">기프트<![CDATA[" - "]]>마우스패드</string>
+    <string name="item_interior_frame">액자<![CDATA[" - "]]>인테리어액자</string>
+	<string name="item_metal_frame">액자<![CDATA[" - "]]>메탈액자</string>
+    <string name="item_wood_frame">액자<![CDATA[" - "]]>원목액자</string>
+    <string name="item_marble_frame">액자<![CDATA[" - "]]>마블액자</string>
+    <string name="item_hanging_frame">액자<![CDATA[" - "]]>행잉액자</string>
+    <string name="item_calendar_original_horizontal">탁상달력<![CDATA[" - "]]>오리지널 가로</string>
+	<string name="item_calendar_original_vertical">탁상달력<![CDATA[" - "]]>오리지널 세로</string>
+    <string name="item_calendar_large">탁상달력<![CDATA[" - "]]>라지</string>
+    <string name="item_calendar_mini">탁상달력<![CDATA[" - "]]>미니</string>
+    <string name="item_calendar_small_vertical">탁상달력<![CDATA[" - "]]>스몰 세로</string>
+    <string name="item_calendar_small_horizontal">탁상달력<![CDATA[" - "]]>스몰 가로</string>
+    <string name="item_calendar_table">달력<![CDATA[" - "]]>탁상달력</string>
+    <string name="item_calendar_wall_hanging">달력<![CDATA[" - "]]>벽걸이달력</string>
+    <string name="item_calendar_scheduler">달력<![CDATA[" - "]]>스케쥴러</string>
+    <string name="item_christmas_card">카드<![CDATA[" - "]]>크리스마스</string>
+    <string name="item_new_year_card">카드<![CDATA[" - "]]>신년</string>
+    <string name="item_wedding_invitation_card">카드<![CDATA[" - "]]>청첩장</string>
+    <string name="item_thanks_card">카드<![CDATA[" - "]]>감사</string>
+    <string name="item_congraturation_card">카드<![CDATA[" - "]]>축하</string>
+    <string name="item_invitation_card">카드<![CDATA[" - "]]>초대</string>
+    <string name="item_special_day_card">카드<![CDATA[" - "]]>발렌타인<![CDATA["/"]]>화이트데이</string>
+    
+    
+    <string name="action_event">이벤트</string>
+    <string name="action_cart_page">장바구니</string>
+    <string name="action_login">로그인</string>
+    <string name="action_diary">일기</string>
+    <string name="action_order">주문<![CDATA["/"]]>배송</string>
+    <string name="action_coupon">쿠폰 관리</string>
+    <string name="action_invite">친구초대</string>
+    <string name="action_notice">공지사항</string>
+    <string name="action_faq">고객센터</string>
+    <string name="action_setting">설정</string>
+    
+    <string name="action_faq_old">이용문의</string>
+    
+    <string name="join_complete">회원가입 완료</string>
+    <string name="order_complete">주문완료</string>
+</resources>

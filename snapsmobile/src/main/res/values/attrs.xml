@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="direction">
+        <enum name="rightToLeft" value="0" />
+        <enum name="bottomToTop" value="1" />
+        <enum name="leftToRight" value="2" />
+        <enum name="topToBottom" value="3" />
+    </attr>
+
+    <declare-styleable name="FlipView">
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+        <attr name="overFlipMode" format="enum">
+            <enum name="glow" value="0" />
+            <enum name="rubber_band" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CurlView">
+        <attr name="transparent" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="MultiDirectionSlidingDrawer">
+        <attr name="handle" format="reference" />
+        <attr name="content" format="reference" />
+        <attr name="direction" />
+        <attr name="bottomOffset" format="dimension" />
+        <attr name="topOffset" format="dimension" />
+        <attr name="allowSingleTap" format="boolean" />
+        <attr name="animateOnClick" format="boolean" />
+    </declare-styleable>
+
+    <!--
+         Specifies how to place the content of an object, both
+         on the x- and y-axis, within the object itself.
+    -->
+    <attr name="gravity">
+
+        <!-- Push object to the top of its container, not changing its size. -->
+        <flag name="top" value="0x30" />
+        <!-- Push object to the bottom of its container, not changing its size. -->
+        <flag name="bottom" value="0x50" />
+        <!-- Push object to the left of its container, not changing its size. -->
+        <flag name="left" value="0x03" />
+        <!-- Push object to the right of its container, not changing its size. -->
+        <flag name="right" value="0x05" />
+        <!-- Place object in the vertical center of its container, not changing its size. -->
+        <flag name="center_vertical" value="0x10" />
+        <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+        <flag name="fill_vertical" value="0x70" />
+        <!-- Place object in the horizontal center of its container, not changing its size. -->
+        <flag name="center_horizontal" value="0x01" />
+        <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+        <flag name="fill_horizontal" value="0x07" />
+        <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+        <flag name="center" value="0x11" />
+        <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+        <flag name="fill" value="0x77" />
+        <!--
+             Additional option that can be set to have the top and/or bottom edges of
+             the child clipped to its container's bounds.
+             The clip will be based on the vertical gravity: a top gravity will clip the bottom
+             edge, a bottom gravity will clip the top edge, and neither will clip both edges.
+        -->
+        <flag name="clip_vertical" value="0x80" />
+        <!--
+             Additional option that can be set to have the left and/or right edges of
+             the child clipped to its container's bounds.
+             The clip will be based on the horizontal gravity: a left gravity will clip the right
+             edge, a right gravity will clip the left edge, and neither will clip both edges.
+        -->
+        <flag name="clip_horizontal" value="0x08" />
+    </attr>
+    <!-- Default GridView style. -->
+    <attr name="gridViewStyle" format="reference" />
+
+    <declare-styleable name="TwoWayAbsListView">
+
+        <!-- Drawable used to indicate the currently selected item in the list. -->
+        <attr name="listSelector" format="color|reference" />
+        <!--
+             When set to true, the selector will be drawn over the selected item.
+             Otherwise the selector is drawn behind the selected item. The default
+             value is false.
+        -->
+        <attr name="drawSelectorOnTop" format="boolean" />
+        <!-- Used by ListView and GridView to stack their content from the bottom. -->
+        <attr name="stackFromBottom" format="boolean" />
+        <!--
+             When set to true, the list uses a drawing cache during scrolling.
+             This makes the rendering faster but uses more memory. The default
+             value is true.
+        -->
+        <attr name="scrollingCache" format="boolean" />
+        <!--
+             When set to true, the list will filter results as the user types. The
+             List's adapter must support the Filterable interface for this to work.
+        -->
+        <!-- <attr name="textFilterEnabled" format="boolean" /> -->
+        <!--
+             Sets the transcript mode for the list. In transcript mode, the list
+             scrolls to the bottom to make new items visible when they are added.
+        -->
+        <attr name="transcriptMode">
+
+            <!-- Disables transcript mode. This is the default value. -->
+            <enum name="disabled" value="0" />
+            <!--
+                 The list will automatically scroll to the bottom when
+                 a data set change notification is received and only if the last item is
+                 already visible on screen.
+            -->
+            <enum name="normal" value="1" />
+            <!--
+                 The list will automatically scroll to the bottom, no matter what items
+                 are currently visible.
+            -->
+            <enum name="alwaysScroll" value="2" />
+        </attr>
+        <!--
+             Indicates that this list will always be drawn on top of solid, single-color
+             opaque background. This allows the list to optimize drawing.
+        -->
+        <attr name="cacheColorHint" format="color" />
+        <!--
+             Enables the fast scroll thumb that can be dragged to quickly scroll through
+             the list.
+        -->
+        <!-- <attr name="fastScrollEnabled" format="boolean" /> -->
+        <!--
+             When set to true, the list will use a more refined calculation
+             method based on the pixels height of the items visible on screen. This
+             property is set to true by default but should be set to false if your adapter
+             will display items of varying heights. When this property is set to true and
+             your adapter displays items of varying heights, the scrollbar thumb will
+             change size as the user scrolls through the list. When set to fale, the list
+             will use only the number of items in the adapter and the number of items visible
+             on screen to determine the scrollbar's properties.
+        -->
+        <attr name="smoothScrollbar" format="boolean" />
+
+        <!--
+             Use this attribute to control which direction the GridView scrolls when in
+             portrait orientation
+        -->
+        <attr name="scrollDirectionPortrait">
+
+            <!-- Scroll up vertically. This is the default value. -->
+            <enum name="vertical" value="0" />
+            <!-- Scroll horizontally. -->
+            <enum name="horizontal" value="1" />
+        </attr>
+        <attr name="scrollDirectionLandscape">
+
+            <!-- Scroll up vertically. This is the default value. -->
+            <enum name="vertical" value="0" />
+            <!-- Scroll horizontally. -->
+            <enum name="horizontal" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="TwoWayGridView">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="stretchMode">
+            <enum name="none" value="0" />
+            <enum name="spacingWidth" value="1" />
+            <enum name="columnWidth" value="2" />
+            <enum name="spacingWidthUniform" value="3" />
+        </attr>
+        <attr name="columnWidth" format="dimension" />
+        <attr name="rowHeight" format="dimension" />
+        <attr name="numColumns" format="integer" min="0">
+            <enum name="auto_fit" value="-1" />
+        </attr>
+        <attr name="numRows" format="integer" min="0">
+            <enum name="auto_fit" value="-1" />
+        </attr>
+        <attr name="gravity" />
+    </declare-styleable>
+    <declare-styleable name="FTextViewAttrs">
+        <attr name="customFont" format="string" />
+    </declare-styleable>
+    <declare-styleable name="ProgressWebViewAttrs">
+        <attr name="progressType" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="WoodFrameImageView">
+        <attr name="frameType" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SnapsCircularProgressBar">
+        <attr name="hasShadow" format="boolean" />
+        <attr name="progressColor" format="string" />
+        <attr name="bgColor" format="string" />
+        <attr name="progresstitle" format="string" />
+        <attr name="titleColor" format="string" />
+        <attr name="progresssubtitle" format="string" />
+        <attr name="subtitleColor" format="string" />
+        <attr name="lineWidth" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsBackgroundColor" format="color" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+
+
+        <attr name="pstsDividerPaddingTopBottom" format="dimension" />
+        <attr name="pstsTextSelectedColor" format="color" />
+        <attr name="pstsScaleZoomMax" format="float" />
+
+    </declare-styleable>
+
+    <declare-styleable name="SnapsUnderlineTextView">
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="integer" />
+    </declare-styleable>
+
+    <!-- @marko StickyWebview 에서 사용하는 Attr 로 추정. 여기에 선언된 actionBarSize 때문에 Resource 중복 에러 발생해서 StickyWebview를 사용하지 않는 방향으로 코드 수정 -->
+    <!--<declare-styleable name="Theme"><attr format="boolean" name="windowActionBar"/><attr format="boolean" name="windowNoTitle"/><attr format="boolean" name="windowActionBarOverlay"/><attr format="boolean" name="windowActionModeOverlay"/><attr format="dimension|fraction" name="windowFixedWidthMajor"/><attr format="dimension|fraction" name="windowFixedHeightMinor"/><attr format="dimension|fraction" name="windowFixedWidthMinor"/><attr format="dimension|fraction" name="windowFixedHeightMajor"/><attr format="dimension|fraction" name="windowMinWidthMajor"/><attr format="dimension|fraction" name="windowMinWidthMinor"/><attr name="android:windowIsFloating"/><attr name="android:windowAnimationStyle"/><attr format="reference" name="actionBarTabStyle"/><attr format="reference" name="actionBarTabBarStyle"/><attr format="reference" name="actionBarTabTextStyle"/><attr format="reference" name="actionOverflowButtonStyle"/><attr format="reference" name="actionOverflowMenuStyle"/><attr format="reference" name="actionBarPopupTheme"/><attr format="reference" name="actionBarStyle"/><attr format="reference" name="actionBarSplitStyle"/><attr format="reference" name="actionBarTheme"/><attr format="reference" name="actionBarWidgetTheme"/><attr format="dimension" name="actionBarSize"><enum name="wrap_content" value="0"/></attr><attr format="reference" name="actionBarDivider"/><attr format="reference" name="actionBarItemBackground"/><attr format="reference" name="actionMenuTextAppearance"/><attr format="color|reference" name="actionMenuTextColor"/><attr format="reference" name="actionModeStyle"/><attr format="reference" name="actionModeCloseButtonStyle"/><attr format="reference" name="actionModeBackground"/><attr format="reference" name="actionModeSplitBackground"/><attr format="reference" name="actionModeCloseDrawable"/><attr format="reference" name="actionModeCutDrawable"/><attr format="reference" name="actionModeCopyDrawable"/><attr format="reference" name="actionModePasteDrawable"/><attr format="reference" name="actionModeSelectAllDrawable"/><attr format="reference" name="actionModeShareDrawable"/><attr format="reference" name="actionModeFindDrawable"/><attr format="reference" name="actionModeWebSearchDrawable"/><attr format="reference" name="actionModePopupWindowStyle"/><attr format="reference" name="textAppearanceLargePopupMenu"/><attr format="reference" name="textAppearanceSmallPopupMenu"/><attr format="reference" name="dialogTheme"/><attr format="dimension" name="dialogPreferredPadding"/><attr format="reference" name="listDividerAlertDialog"/><attr format="reference" name="actionDropDownStyle"/><attr format="dimension" name="dropdownListPreferredItemHeight"/><attr format="reference" name="spinnerDropDownItemStyle"/><attr format="reference" name="homeAsUpIndicator"/><attr format="reference" name="actionButtonStyle"/><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/><attr format="reference" name="selectableItemBackground"/><attr format="reference" name="selectableItemBackgroundBorderless"/><attr format="reference" name="borderlessButtonStyle"/><attr format="reference" name="dividerVertical"/><attr format="reference" name="dividerHorizontal"/><attr format="reference" name="activityChooserViewStyle"/><attr format="reference" name="toolbarStyle"/><attr format="reference" name="toolbarNavigationButtonStyle"/><attr format="reference" name="popupMenuStyle"/><attr format="reference" name="popupWindowStyle"/><attr format="reference|color" name="editTextColor"/><attr format="reference" name="editTextBackground"/><attr format="reference" name="textAppearanceSearchResultTitle"/><attr format="reference" name="textAppearanceSearchResultSubtitle"/><attr format="reference|color" name="textColorSearchUrl"/><attr format="reference" name="searchViewStyle"/><attr format="dimension" name="listPreferredItemHeight"/><attr format="dimension" name="listPreferredItemHeightSmall"/><attr format="dimension" name="listPreferredItemHeightLarge"/><attr format="dimension" name="listPreferredItemPaddingLeft"/><attr format="dimension" name="listPreferredItemPaddingRight"/><attr format="reference" name="dropDownListViewStyle"/><attr format="reference" name="listPopupWindowStyle"/><attr format="reference" name="textAppearanceListItem"/><attr format="reference" name="textAppearanceListItemSmall"/><attr format="reference" name="panelBackground"/><attr format="dimension" name="panelMenuListWidth"/><attr format="reference" name="panelMenuListTheme"/><attr format="reference" name="listChoiceBackgroundIndicator"/><attr format="color" name="colorPrimary"/><attr format="color" name="colorPrimaryDark"/><attr format="color" name="colorAccent"/><attr format="color" name="colorControlNormal"/><attr format="color" name="colorControlActivated"/><attr format="color" name="colorControlHighlight"/><attr format="color" name="colorButtonNormal"/><attr format="color" name="colorSwitchThumbNormal"/><attr format="reference" name="alertDialogStyle"/><attr format="reference" name="alertDialogButtonGroupStyle"/><attr format="boolean" name="alertDialogCenterButtons"/><attr format="reference" name="alertDialogTheme"/><attr format="reference|color" name="textColorAlertDialogListItem"/><attr format="reference" name="buttonBarPositiveButtonStyle"/><attr format="reference" name="buttonBarNegativeButtonStyle"/><attr format="reference" name="buttonBarNeutralButtonStyle"/><attr format="reference" name="autoCompleteTextViewStyle"/><attr format="reference" name="buttonStyle"/><attr format="reference" name="buttonStyleSmall"/><attr format="reference" name="checkboxStyle"/><attr format="reference" name="checkedTextViewStyle"/><attr format="reference" name="editTextStyle"/><attr format="reference" name="radioButtonStyle"/><attr format="reference" name="ratingBarStyle"/><attr format="reference" name="spinnerStyle"/><attr format="reference" name="switchStyle"/></declare-styleable>-->
+
+    <declare-styleable name="SnapsDiaryLimitLineTextViewStyle">
+        <attr name="maxLineCount" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="FadeTextView">
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+
+</resources>

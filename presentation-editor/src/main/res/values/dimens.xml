@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="title_size">14dp</dimen>
+
+    <dimen name="scene_cover_size_square_width">476dp</dimen>
+    <dimen name="scene_size_square_width">164dp</dimen>
+    <dimen name="editor_bottom_tool_bar_height">64dp</dimen>
+
+    <dimen name="drag_shadow_icon_size">24dp</dimen>
+    <dimen name="keyboard_height">230dp</dimen>
+
+</resources>

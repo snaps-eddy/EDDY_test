@@ -1,0 +1,31 @@
+package com.snaps.mobile.data.project
+
+data class ProjectOptionDto(
+    val projectCode: String,
+    val affxName: Any,
+    val albumType: Any,
+    val appType: Any,
+    val appVersion: Any,
+    val backCode: String?,
+    val colorCode: Any,
+    val countryCompanyCode: Any,
+    val deleteYN: Any,
+    val designCnt: Any,
+    val editUserNo: Any,
+    val finishStatus: Any,
+    val frameCode: String?,
+    val imageSequence: Any,
+    val imageYear: Any,
+    val lastUpdate: Any,
+    val osType: Any,
+    val paperCode: String?,
+    val productCode: String?,
+    val projectName: String?,
+    val quantity: Int,
+    val registrationDate: Any,
+    val templateCode: String?,
+    val usePhotoCount: Int,
+    val userNo: Any,
+    val xmlPath: Any,
+    val glossyType: String?
+)

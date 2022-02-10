@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.snaps.mobile.component.ObserveScrollingRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/custom_snaps_native_super_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/snaps_recycler_empty_view"
+        app:layout_moreProgress="@layout/snaps_recycler_view_more_progress"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        android:scrollbars="none"
+        android:background="#ffffff"
+        app:recyclerClipToPadding="false"/>
+
+    <include
+        android:id="@+id/la_network_error"
+        layout="@layout/include_network_error"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:indeterminateDrawable="@drawable/rotate_progress"
+      	android:layout_width="@dimen/default_progress_dialog_size"
+        android:layout_height="@dimen/default_progress_dialog_size"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

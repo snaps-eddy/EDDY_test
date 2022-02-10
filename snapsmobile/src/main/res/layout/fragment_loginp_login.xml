@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2363636"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <ImageView
+            android:id="@+id/fragment_loginp_login_back_iv"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_sticky_back"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fragment_loginp_login_logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_snaps_logo_white"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
+
+        <font.FEditText
+            android:id="@+id/editLoginId"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:background="#00000000"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical|left"
+            android:hint="@string/email_or_id"
+            android:inputType="textEmailAddress"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#999999"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740"></font.FEditText>
+
+        <ImageView
+            android:id="@+id/editLoginIdUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="center_horizontal"
+            android:background="#555555" />
+
+        <font.FEditText
+            android:id="@+id/editLoginPwd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="1dp"
+            android:background="#00000000"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#999999"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <ImageView
+            android:id="@+id/editLoginPwdUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="center_horizontal"
+            android:background="#555555" />
+
+        <font.FTextView
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/selector_black_btn"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="#ffffff"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkbox_push_agree"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:button="@drawable/checkbox_push_agree"
+                    android:checked="true" />
+
+                <font.FTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/push_alarm_receive_agreement"
+                    android:textColor="#999999"
+                    android:textSize="12dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <font.FTextView
+                    android:id="@+id/btnPwdFind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:text="@string/find_id_and_password"
+                    android:textColor="#999999"
+                    android:textSize="12dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+
+                <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginLeft="6.5dp"-->
+                <!--android:scaleType="centerInside"-->
+                <!--android:src="@drawable/img_login_find_pw_icon"/>-->
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <font.FTextView
+                android:id="@+id/btnJoin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/shape_gray_border_rect"
+                android:gravity="center"
+                android:text="@string/signup"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                custom:customFont="@string/font_name_ygt_740" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/color_rgb_ebe9e9"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="7.5dp"-->
+    <!--android:layout_marginRight="7.5dp"-->
+    <!--android:layout_marginTop="7.5dp"-->
+    <!--android:background="@drawable/shape_image_rounded_partial"-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingBottom="21dp"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:paddingTop="21dp" >-->
+
+    <!--<font.FEditText-->
+    <!--android:id="@+id/editLoginId"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:background="#00000000"-->
+    <!--android:ems="10"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:gravity="center_vertical|left"-->
+    <!--android:hint="@string/email_or_id"-->
+    <!--android:inputType="textEmailAddress"-->
+    <!--android:maxLength="100"-->
+    <!--android:maxLines="1"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textColorHint="#999999"-->
+    <!--android:textSize="17sp" >-->
+
+    <!--</font.FEditText>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:background="#f2f2f2" />-->
+
+    <!--<font.FEditText-->
+    <!--android:id="@+id/editLoginPwd"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="21dp"-->
+    <!--android:background="#00000000"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:hint="@string/password"-->
+    <!--android:inputType="textPassword"-->
+    <!--android:maxLines="1"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textColorHint="#999999"-->
+    <!--android:textSize="17sp" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:background="#f2f2f2" />-->
+
+    <!--<font.FTextView-->
+    <!--android:id="@+id/btnLogin"-->
+    <!--android:layout_width="304dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:layout_marginTop="25dp"-->
+    <!--android:background="@drawable/img_btn_medium_gray"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/login"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="16dp">-->
+    <!--<LinearLayout -->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_alignParentLeft="true">-->
+    <!--<CheckBox-->
+    <!--android:id="@+id/chkbox_push_agree"-->
+    <!--android:button="@drawable/checkbox_push_agree"-->
+    <!--android:checked="true"-->
+    <!--android:text="@string/push_alarm_receive_agreement"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:textColor="#b1b1b1"-->
+    <!--android:textSize="14sp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout -->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_alignParentRight="true">-->
+    <!--<font.FTextView-->
+    <!--android:id="@+id/btnPwdFind"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right|center_vertical"-->
+    <!--android:text="@string/find_password"-->
+    <!--android:textColor="#b1b1b1"-->
+    <!--android:textSize="14sp" />-->
+    <!-- -->
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginLeft="6.5dp"-->
+    <!--android:scaleType="centerInside"-->
+    <!--android:src="@drawable/img_login_find_pw_icon" />-->
+    <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="18dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal" >-->
+
+    <!--<font.FTextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/intro_join_sub_text"-->
+    <!--android:textColor="#757575"-->
+    <!--android:textSize="13sp" />-->
+    <!-- -->
+    <!--<font.FTextView-->
+    <!--android:id="@+id/btnJoin"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="9dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/signup"-->
+    <!--android:textColor="#333333"-->
+    <!--android:textSize="13sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>&lt;!&ndash;-->
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="@color/white" >-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="10dp" >-->
+
+    <!--<font.FEditText-->
+    <!--android:id="@+id/editLoginId"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textColorHint="#b4b4b4"-->
+    <!--android:background="@drawable/bg_input01"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:hint="@string/intro_id"-->
+    <!--android:inputType="textEmailAddress"-->
+    <!--android:maxLength="100"-->
+    <!--android:maxLines="1"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textSize="17sp" />-->
+
+    <!--<font.FEditText-->
+    <!--android:id="@+id/editLoginPwd"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:textColorHint="#b4b4b4"-->
+    <!--android:background="@drawable/bg_input03"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:hint="@string/intro_pwd"-->
+    <!--android:inputType="textPassword"-->
+    <!--android:maxLength="15"-->
+    <!--android:maxLines="1"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textSize="25sp" />-->
+
+    <!--<font.FTextView-->
+    <!--android:id="@+id/btnLogin"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@drawable/btn_black03"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/login_btn"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="17sp" />-->
+
+    <!--<font.FTextView-->
+    <!--android:id="@+id/btnPwdFind"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="@string/login_pwd_find"-->
+    <!--android:textColor="#6e6e6e"-->
+    <!--android:textSize="14sp" />-->
+
+    <!--<font.FTextView-->
+    <!--android:id="@+id/btnJoin"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:background="@drawable/btn_white"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/intro_join"-->
+    <!--android:textColor="@color/subtitle_color"-->
+    <!--android:textSize="16sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+    <!--&ndash;&gt;-->

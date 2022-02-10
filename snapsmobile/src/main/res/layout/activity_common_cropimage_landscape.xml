@@ -1,0 +1,263 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_edit_activity_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/_include_image_editor_landscape_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/bottom_view"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_before2"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@drawable/selector_image_editor_bottom_btn"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_before2"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="2dp"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/image_edit_act_prev_btn" />
+
+                <font.FTextView
+                    android:id="@+id/tv_before2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="@string/prev_photo"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_common_cropimage_effect_rotate_iv"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@drawable/selector_image_editor_bottom_btn"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/image_edit_act_rotate_btn" />
+
+                <font.FTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="@string/rotate"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_common_cropimage_effect_init_iv"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@drawable/selector_image_editor_bottom_btn"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/image_edit_act_reset_btn" />
+
+                <font.FTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="@string/reset"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_common_cropimage_effect_filter_iv"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@drawable/selector_image_editor_bottom_btn"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/image_edit_act_filter_btn" />
+
+                <font.FTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="@string/filter"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_next2"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@drawable/selector_image_editor_bottom_btn"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_next2"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="2dp"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/image_edit_act_next_btn" />
+
+                <font.FTextView
+                    android:id="@+id/tv_next2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="@string/next_photo"
+                    android:textColor="#ffffff"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_common_cropimage_effect_rotate_iv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0px"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="onClick"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/selector_btn_effect_rotate" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_common_cropimage_effect_filter_iv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0px"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="onClick"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/img_effect_filter" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_common_cropimage_effect_init_iv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0px"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="onClick"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/selector_btn_effect_init" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/btn_before2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0px"-->
+            <!--android:layout_weight="1"-->
+            <!--android:clickable="true"-->
+            <!--android:onClick="onClick"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/selector_btn_effect_move_prev_landscape" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/btn_next2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0px"-->
+            <!--android:layout_weight="1"-->
+            <!--android:clickable="true"-->
+            <!--android:onClick="onClick"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/selector_btn_effect_move_next_landscape" />-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#333333" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#333333">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.snaps.mobile.component.image_edit_componet.SnapsImageCropView
+                    android:id="@+id/imgOrigin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="matrix" />
+            </FrameLayout>
+
+            <ProgressBar
+                android:id="@+id/progressImg"
+                android:layout_width="@dimen/default_progress_dialog_size"
+                android:layout_height="@dimen/default_progress_dialog_size"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/rotate_progress"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/activity_commonimage_effect_filter_tmb_ly"
+                layout="@layout/activity_effectimage_vertical" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

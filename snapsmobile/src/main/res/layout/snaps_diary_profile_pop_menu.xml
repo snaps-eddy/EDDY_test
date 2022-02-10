@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/snaps_diary_mission_state_bar_thumbnail_popmenu_ly"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:gravity="left">
+
+        <ImageView
+            android:id="@+id/pop_menu_uparrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/pop_menu_ar"/>
+    </LinearLayout>
+
+    <font.FTextView
+        android:id="@+id/snaps_diary_mission_state_bar_thumbnail_select_photo"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pop_menu_bg_red01"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/diary_select_photo_from_album"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <View
+        android:id="@+id/snaps_diary_mission_state_bar_thumbnail_default_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/menu_bg_line"/>
+
+    <font.FTextView
+        android:id="@+id/snaps_diary_mission_state_bar_thumbnail_default"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pop_menu_bg_red_03"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/diary_change_photo_to_basic"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+</LinearLayout>

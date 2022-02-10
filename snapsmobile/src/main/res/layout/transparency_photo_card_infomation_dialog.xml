@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="326dp"
+    android:layout_height="476dp"
+    android:minWidth="310dp"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="244dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/m_clearphotocard_img"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="183dp"
+        android:paddingLeft="16dp"
+        android:orientation="vertical">
+        <font.FTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/jpg_file"
+            android:textColor="#191919"
+            android:textSize="12dp"
+            android:layout_marginTop="32dp"
+            custom:customFont="@string/font_name_ygt_760" />
+        <font.FTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/jpg_description"
+            android:textColor="#999999"
+            android:layout_marginTop="6dp"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+        <font.FTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/png_file"
+            android:textColor="#191919"
+            android:textSize="12dp"
+            android:layout_marginTop="16dp"
+            custom:customFont="@string/font_name_ygt_760" />
+        <font.FTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/png_description"
+            android:textColor="#999999"
+            android:layout_marginTop="6dp"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_not_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="16dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/checkBox_not_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/trans_checkbox_agree"/>
+            <font.FTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/back_to_back_surface"
+                android:layout_marginLeft="8dp"
+                android:textColor="#191919"
+
+                android:textSize="12dp"
+                custom:customFont="@string/font_name_ygt_740" />
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:id="@+id/btn_confim"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <font.FTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/confirm"
+                android:layout_marginLeft="8dp"
+                android:textColor="#191919"
+                android:layout_marginRight="16dp"
+                android:textSize="13dp"
+                custom:customFont="@string/font_name_ygt_740" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

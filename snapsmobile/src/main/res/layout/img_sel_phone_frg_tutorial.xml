@@ -1,0 +1,65 @@
+<RelativeLayout android:id="@+id/img_sel_frg_tutorial_parent_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99191919">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--<font.FTextView-->
+        <!--android:id="@+id/img_sel_frg_tutorial_title_tv"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textSize="17dp"-->
+        <!--android:textStyle="bold"-->
+        <!--custom:customFont="@string/font_name_ygt_760"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<font.FTextView-->
+        <!--android:id="@+id/img_sel_frg_tutorial_sub_title_tv"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textSize="17dp"-->
+        <!--custom:customFont="@string/font_name_ygt_760"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <ImageView
+            android:id="@+id/img_sel_frg_tutorial_gif_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <font.FTextView
+            android:id="@+id/img_sel_frg_tutorial_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+    </LinearLayout>
+
+    <font.FTextView
+        android:id="@+id/img_sel_frg_tutorial_album_desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/img_tutorial_speech_bubble"
+        android:paddingBottom="10dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="11dp"
+        android:text="@string/img_sel_phone_pic_tutorial_change_album"
+        android:textColor="#ffffff"
+        android:textSize="11dp"
+        android:visibility="gone"
+        custom:customFont="@string/font_name_ygt_740" />
+
+</RelativeLayout>

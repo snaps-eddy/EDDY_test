@@ -1,0 +1,902 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <HorizontalScrollView
+        android:id="@+id/activity_effectiamgeview_horizontal_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:background="#191919"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:scrollbars="@null"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 원본 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_origin_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_origin_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_origin_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_origin_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_origin_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/original"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 흑백 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_gray_scale_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_gray_scale_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_gray_scale_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_gray_scale_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_gray_scale_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/black_and_white"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 세피아 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_sephia_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_sephia_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_sephia_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_sephia_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_sephia_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/sepia"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 선명하게 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_sherpen_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_sherpen_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_sherpen_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_sherpen_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_sherpen_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/vivid"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 빈티지 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_vintage_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_vintage_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_vintage_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_vintage_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_vintage_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/vintage"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 따스한 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_warm_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_warm_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_warm_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_warm_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_warm_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/warmth"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 새벽녘 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_dawn_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_dawn_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_dawn_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_dawn_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_dawn_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/dawm"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 에머랄드 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_emerald_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_emerald_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_emerald_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_emerald_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_emerald_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/emerald"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 블랙캣 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_black_cat_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_black_cat_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_black_cat_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_black_cat_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_black_cat_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/blackcat"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!--필름-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_film_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_film_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_film_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_film_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_film_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/film_camera"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 눈꽃송이 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_snow_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_snow_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_snow_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_snow_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_snow_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/snowflakes"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!--&lt;!&ndash; 물방울 &ndash;&gt;-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<FrameLayout-->
+            <!--android:id="@+id/activity_effectimage_tmb_water_ly"-->
+            <!--android:layout_width="52dp"-->
+            <!--android:layout_height="34dp" >-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_effectimage_tmb_water_iv"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_effectimage_tmb_water_outline_iv"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:visibility="invisible"-->
+            <!--android:src="@drawable/img_edit_view_thumbnail_outline"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+            <!--<ProgressBar-->
+            <!--android:id="@+id/activity_effectimage_tmb_water_progress"-->
+            <!--android:indeterminateDrawable="@drawable/rotate_progress"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"/>-->
+
+            <!--</FrameLayout>-->
+
+            <!--<font.FTextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--custom:customFont="@string/font_name_ygt_740"-->
+            <!--android:text="@string/water_drop"-->
+            <!--android:textSize="8dp" />-->
+            <!--</LinearLayout>-->
+
+            <!--&lt;!&ndash; 보케 &ndash;&gt;-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<FrameLayout-->
+            <!--android:id="@+id/activity_effectimage_tmb_boke_ly"-->
+            <!--android:layout_width="52dp"-->
+            <!--android:layout_height="34dp" >-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_effectimage_tmb_boke_iv"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_effectimage_tmb_boke_outline_iv"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:visibility="invisible"-->
+            <!--android:src="@drawable/img_edit_view_thumbnail_outline"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+            <!--<ProgressBar-->
+            <!--android:id="@+id/activity_effectimage_tmb_boke_progress"-->
+            <!--android:indeterminateDrawable="@drawable/rotate_progress"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"/>-->
+
+            <!--</FrameLayout>-->
+
+            <!--<font.FTextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--custom:customFont="@string/font_name_ygt_740"-->
+            <!--android:text="@string/boke"-->
+            <!--android:textSize="8dp" />-->
+            <!--</LinearLayout>-->
+
+            <!-- 빛바랜 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_old_light_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_old_light_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_old_light_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_old_light_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_old_light_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/faded"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 오로라 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_aurora_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_aurora_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_aurora_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_aurora_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_aurora_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/aurora"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 추억 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_memory_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_memory_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_memory_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_memory_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_memory_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/memory"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 그겨울 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_winter_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_winter_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_winter_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_winter_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_winter_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/the_winter"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+
+            <!-- 그늘진 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/activity_effectimage_tmb_shady_ly"
+                    android:layout_width="52dp"
+                    android:layout_height="34dp">
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_shady_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/activity_effectimage_tmb_shady_outline_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit_view_thumbnail_outline"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_effectimage_tmb_shady_progress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:indeterminateDrawable="@drawable/rotate_progress" />
+
+                </FrameLayout>
+
+                <font.FTextView
+                    android:id="@+id/activity_effectimage_tmb_shady_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/shade"
+                    android:textColor="#555555"
+                    android:textSize="8dp"
+                    custom:customFont="@string/font_name_ygt_740" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</merge><!--
+ <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+     <Button
+        android:id="@+id/effect_origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:onClick="buttonClicked"
+        android:text="origin"/>
+     
+     <Button
+        android:id="@+id/effect_commit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_alignParentRight="true"
+        android:onClick="buttonClicked"
+        android:text="commit"/>
+     
+     </LinearLayout>
+
+ <ImageView
+       android:id="@+id/effect_main"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_above="@+id/button_layout"
+        android:layout_below="@+id/phototitlelayout" />
+-->
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFFFFFFF">
+
+        <RelativeLayout
+            android:id="@+id/back_button_area"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_back_b" />
+        </RelativeLayout>
+
+
+        <font.FTextView
+            android:id="@+id/cart_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/cart"
+            android:textColor="#FF191919"
+            android:textSize="13dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+    </RelativeLayout>
+
+    <com.snaps.mobile.activity.photoprint.view.ScrollObserveRecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:overScrollMode="never" />
+
+    <ImageView
+        android:id="@+id/dim_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout"
+        android:src="#4D333333"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_layout">
+
+        <com.snaps.mobile.activity.photoprint.view.PhotoPrintMenuLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <font.FTextView
+        android:id="@+id/delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E6E36A63"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="@string/photo_print_delete"
+        android:textColor="#E6FFFFFF"
+        android:textSize="13dp"
+        android:visibility="gone"
+        custom:customFont="@string/font_name_ygt_740" />
+
+    <LinearLayout
+        android:id="@+id/apply_change_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <font.FTextView
+            android:id="@+id/apply_change_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F2191919"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/cancel"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <font.FTextView
+            android:id="@+id/apply_change_confirm_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F2E36A63"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/apply_all_2"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/dummy_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/dummy_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+    </FrameLayout>
+
+<!--    <com.snaps.mobile.component.SnapsCircularProgressBar-->
+<!--        android:id="@+id/progress"-->
+<!--        android:layout_width="181dp"-->
+<!--        android:layout_height="181dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:visibility="gone" />-->
+</RelativeLayout>

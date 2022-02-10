@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/upload_failed_org_img_list_popup_parent_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+    <font.FTextView
+        android:id="@+id/upload_failed_org_img_list_popup_title"
+        custom:customFont="@string/font_name_ygt_760"
+        android:layout_marginTop="14dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/upload_failed_org_img_popup_title"
+        android:textColor="#191919"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/icon_upload_fail_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <font.FTextView
+            android:id="@+id/upload_failed_org_img_list_popup_desc"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/upload_failed_org_img_popup_desc"
+            android:textColor="#999999"
+            android:textSize="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:background="#eeeeee"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <font.FTextView
+            custom:customFont="@string/font_name_ygt_760"
+            android:text="@string/upload_failed_org_img_popup_count_title"
+            android:textColor="#191919"
+            android:textSize="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <font.FTextView
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_marginLeft="4dp"
+            android:text="@string/upload_failed_org_img_popup_total_left_text"
+            android:textColor="#666666"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <font.FTextView
+            android:id="@+id/upload_failed_org_img_list_popup_count"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_marginLeft="2dp"
+            android:textColor="#e5362c"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <font.FTextView
+            custom:customFont="@string/font_name_ygt_740"
+            android:text="@string/upload_failed_org_img_popup_total_right_text"
+            android:textColor="#666666"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.snaps.mobile.activity.diary.customview.SnapsSuperRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/upload_failed_org_img_list_popup_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_moreProgress="@layout/snaps_recycler_view_more_progress"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        android:scrollbars="none"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        app:recyclerClipToPadding="false"/>
+
+    </LinearLayout>
+
+    <font.FTextView
+    android:id="@+id/upload_failed_org_img_list_popup_perform_btn"
+    custom:customFont="@string/font_name_ygt_740"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="center_horizontal"
+    android:background="#e5191919"
+    android:text="@string/do_edit"
+    android:gravity="center"
+    android:textSize="13dp"
+    android:textColor="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="48dp" />
+
+</RelativeLayout>

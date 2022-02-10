@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/appbar"
+        android:layout_width="0dp"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:contentDescription="@string/empty_cd"
+        android:elevation="1dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="1dp"
+        android:paddingBottom="14dp"
+        android:src="@drawable/ic_before"
+        app:layout_constraintBottom_toBottomOf="@id/appbar"
+        app:layout_constraintStart_toStartOf="@id/appbar"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintTop_toTopOf="@id/appbar" />
+
+    <CheckBox
+        android:id="@+id/tv_current_album"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:button="@null"
+        android:drawableEnd="@drawable/selector_album_arrow"
+        android:drawablePadding="3dp"
+        android:elevation="1dp"
+        android:gravity="center_vertical"
+        android:minWidth="0dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/appbar"
+        app:layout_constraintEnd_toEndOf="@id/appbar"
+        app:layout_constraintStart_toStartOf="@id/appbar"
+        app:layout_constraintTop_toTopOf="@id/appbar"
+        tools:checked="false"
+        tools:text="모든 사진" />
+
+
+    <Button
+        android:id="@+id/btn_add_image_done"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="1dp"
+        android:text="@string/add_bucket"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/appbar"
+        app:layout_constraintEnd_toEndOf="@id/appbar"
+        app:layout_constraintTop_toTopOf="@id/appbar" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rv_selections"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.13125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rv_photos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_selections" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rv_albums"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/appbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

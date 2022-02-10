@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/snaps_diary_main_act_parent_ly"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/color_diary_list_bg">
+
+    <LinearLayout
+        android:id="@+id/snaps_diary_title_include"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_title_bar_height"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_edittitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_title_bar_height"
+            android:background="@drawable/top_bg"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/ThemeTitleLeftLy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/ThemeTitleLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="onClick"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_prev" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/ThemeTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:textColor="#333333"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_760" />
+
+            <ImageView
+                android:id="@+id/snaps_diary_main_act_hamburger_menu_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_hamburger_menu_icon"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/ThemecartBtnLy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ThemecartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/selector_info_icon_for_sticky_title" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--<View-->
+    <!--android:id="@+id/snaps_diary_title_line"-->
+    <!--android:layout_below="@id/snaps_diary_title_include"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:background="#c9c9c9"/>-->
+
+    <FrameLayout
+        android:id="@+id/snaps_diary_recycler_fragment_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/snaps_diary_title_include"
+        android:layout_marginBottom="@dimen/snaps_diary_bottom_btn_are_height" />
+
+    <RelativeLayout
+        android:id="@+id/snaps_diary_empty_list_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/snaps_diary_title_include"
+        android:layout_marginBottom="@dimen/snaps_diary_bottom_btn_are_height"
+        android:layout_marginTop="@dimen/snaps_diary_main_act_list_height"
+        android:background="#ededed"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/snaps_diary_empty_btn_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_diary_list_round"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_diary_empty_btn" />
+
+            <font.FTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="@string/diary_empty_btn_text"
+                android:textColor="#cccccc"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/snaps_diary_bottom_btn_are_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <font.FTextView
+            android:id="@+id/snaps_diary_write_diary_btn"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_diary_black_btn"
+            android:gravity="center"
+            android:text="@string/snaps_diary_write"
+            android:textColor="#FFFFFF"
+            android:textSize="13dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#fa191919">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:background="#fa191919" />
+        </RelativeLayout>
+
+        <font.FTextView
+            android:id="@+id/snaps_diary_publish_diary_btn"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_diary_black_btn"
+            android:gravity="center"
+            android:text="@string/snaps_diary_publish"
+            android:textColor="#FFFFFF"
+            android:textSize="13dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+    </LinearLayout>
+
+</RelativeLayout>

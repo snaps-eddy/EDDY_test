@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_title_bar_height"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <!-- 타이틀바의 높이를 건드리면, 드래그앤 드랍뷰가 비정상 동작 할 수 있음. 같이 수정 할 것. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="16dp" >
+
+        <!-- 백키 -->
+
+	    <RelativeLayout
+	        android:id="@+id/ThemeTitleLeftLy"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+	        <ImageView
+	            android:id="@+id/ThemeTitleLeft"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:onClick="onClick"
+	            android:scaleType="centerInside"
+	            android:src="@drawable/btn_prev" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnTitleLeftLy"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 디자인 변경 -->
+
+        <ImageView
+            android:id="@+id/theme_cover_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_cardchange" />
+
+        <!-- 제목 변경 -->
+
+        <ImageView
+            android:id="@+id/theme_text_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:visibility="gone"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_edit_title_btn" />
+
+        <!-- 미리보기 -->
+
+        <ImageView
+            android:id="@+id/theme_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_edit_view_btn" />
+
+        <!-- 저장 -->
+
+        <ImageView
+            android:id="@+id/theme_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:src="@drawable/selector_edit_save_btn" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/ThemecartBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical" />
+
+            <font.FTextView
+                android:id="@+id/ThemecartTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/cart"
+                android:textColor="@color/selector_edit_save_text_btn"
+                android:textSize="13dp"
+                custom:customFont="@string/font_name_ygt_760" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topView"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <font.FTextView
+            android:id="@+id/ThemeTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/photo_card_title"
+            android:textColor="#191919"
+            android:textSize="@dimen/title_size"
+            custom:customFont="@string/font_name_ygt_760"/>
+        <LinearLayout
+            android:id="@+id/linearLayoutCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_740"
+                android:text="("
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size" />
+            <font.FTextView
+                android:id="@+id/photo_count_current_index_tv"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#e36a63"
+                android:textSize="@dimen/title_size" />
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_740"
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size" />
+            <font.FTextView
+                android:id="@+id/photo_count_current_total_count_tv"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size" />
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_740"
+                android:text=")"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/snaps_edit_activity_title_bar_blind_view"
+        android:visibility="gone"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="328dp"
+    android:minHeight="494dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:src="@drawable/access_popup"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <font.FTextView
+        android:id="@+id/access_app_dialog_ok_tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom"
+        android:background="@color/transparent"
+        android:gravity="center"
+        custom:customFont="@string/font_name_ygt_740"
+        android:textSize="13dp" />
+
+</FrameLayout>

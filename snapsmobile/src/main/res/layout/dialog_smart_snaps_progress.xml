@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/dialog_smart_snaps_progress_first_load_ly"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/icon_smart_upload" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.snaps.mobile.utils.text_animation.HTextView
+                        android:id="@+id/dialog_smart_snaps_progress_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#2c313a"
+                        android:textSize="12dp" />
+
+                    <font.FTextView
+                        android:id="@+id/dialog_smart_snaps_progress_value_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="1"
+                        android:text="@string/smart_uploading_title_value_format"
+                        android:textColor="#999999"
+                        android:textSize="12dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dialog_smart_snaps_progress_suspend_ly"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical">
+
+                    <font.FTextView
+                        android:id="@+id/dialog_smart_snaps_progress_suspend_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/cancel"
+                        android:textColor="#191919"
+                        android:textSize="13dp"
+                        custom:customFont="@string/font_name_ygt_740" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <ProgressBar
+                    android:id="@+id/dialog_smart_snaps_progress_progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/transparent"
+                    android:max="100"
+                    android:progressDrawable="@drawable/progressbar_for_smart_snaps_uploading"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <com.snaps.mobile.activity.edit.view.SnapsClippingDimLayout
+            android:id="@+id/dialog_smart_snaps_progress_dim_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--android:background="#33363636"-->
+    <LinearLayout
+        android:id="@+id/dialog_smart_snaps_progress_normal_load_ly"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ProgressBar
+            android:layout_width="@dimen/default_progress_dialog_size"
+            android:layout_height="@dimen/default_progress_dialog_size"
+            android:indeterminateDrawable="@drawable/rotate_progress"
+            android:id="@+id/progress"/>
+    </LinearLayout>
+
+</RelativeLayout>

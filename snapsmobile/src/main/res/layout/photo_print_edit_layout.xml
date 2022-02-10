@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF333333">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" >
+        <font.FTextView
+            custom:customFont="@string/font_name_ygt_740"
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="13dp"
+            android:padding="0dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:textColor="#FFFFFFFF"
+            android:text="@string/cancel" />
+
+        <font.FTextView
+            custom:customFont="@string/font_name_ygt_740"
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:textSize="13dp"
+            android:padding="0dp"
+            android:gravity="center"
+            android:textColor="#FFFFFFFF"
+            android:layout_alignParentRight="true"
+            android:text="@string/confirm" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <font.FTextView
+                android:id="@+id/page_count_text"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFFFF"
+                android:textSize="11dp"
+                android:padding="0dp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/prev_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_prev_b"
+                    android:layout_marginRight="8dp"/>
+
+                <font.FTextView
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#FF777777"
+                    android:textSize="12dp"
+                    android:padding="0dp"
+                    android:gravity="center"
+                    android:text="@string/prev_photo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp">
+                <font.FTextView
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#FF777777"
+                    android:textSize="12dp"
+                    android:layout_marginRight="8dp"
+                    android:padding="0dp"
+                    android:gravity="center"
+                    android:text="@string/next_photo" />
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_next_b" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_menu_layout"
+            android:layout_width="match_parent"
+            android:background="#FF191919"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:weightSum="6" >
+
+            <LinearLayout
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:drawable="@drawable/selector_photo_print_detail_menu_button" >
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_print_01_w_off" />
+
+                <font.FTextView
+                    android:id="@+id/text1"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:textSize="8dp"
+                    android:textColor="#FF555555"
+                    android:padding="0dp"
+                    android:gravity="center_horizontal|top"
+                    android:text="@string/paper_full" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:drawable="@drawable/selector_photo_print_detail_menu_button" >
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_print_02_w_off" />
+
+                <font.FTextView
+                    android:id="@+id/text2"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:textSize="8dp"
+                    android:textColor="#FF555555"
+                    android:padding="0dp"
+                    android:gravity="center_horizontal|top"
+                    android:text="@string/image_full" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:drawable="@drawable/selector_photo_print_detail_menu_button" >
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_rotation_w_on" />
+
+                <font.FTextView
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:textSize="8dp"
+                    android:textColor="#FFFFFFFF"
+                    android:padding="0dp"
+                    android:gravity="center_horizontal|top"
+                    android:text="@string/rotate" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:drawable="@drawable/selector_photo_print_detail_menu_button" >
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_border_w_off" />
+
+                <font.FTextView
+                    android:id="@+id/text4"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:textSize="8dp"
+                    android:textColor="#FF555555"
+                    android:padding="0dp"
+                    android:gravity="center_horizontal|top"
+                    android:text="@string/border" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:drawable="@drawable/selector_photo_print_detail_menu_button" >
+
+                <ImageView
+                    android:id="@+id/image5"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_bright_w_off" />
+
+                <font.FTextView
+                    android:id="@+id/text5"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:textSize="8dp"
+                    android:textColor="#FF555555"
+                    android:padding="0dp"
+                    android:gravity="center_horizontal|top"
+                    android:text="@string/adjust_brightness" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:drawable="@drawable/selector_photo_print_detail_menu_button" >
+
+                <ImageView
+                    android:id="@+id/image6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_date_w_off" />
+
+                <font.FTextView
+                    android:id="@+id/text6"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:textColor="#FF555555"
+                    android:textSize="8dp"
+                    android:padding="0dp"
+                    android:gravity="center_horizontal|top"
+                    android:text="@string/photo_date" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.snaps.mobile.activity.ui.menu.renewal.viewpager.TouchCustomLoopRecyclerViewPager
+        android:layout_below="@id/title_layout"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp" />
+
+</RelativeLayout>

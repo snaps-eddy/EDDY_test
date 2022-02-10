@@ -1,0 +1,104 @@
+plugins {
+    id "com.android.library"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "kotlin-parcelize"
+    id "dagger.hilt.android.plugin"
+}
+
+android {
+    compileSdkVersion androidCompileSdkVersion
+    buildToolsVersion androidBuildToolVersion
+
+    defaultConfig {
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+        versionCode snapsVersionCode
+        versionName snapsVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    kapt {
+        correctErrorTypes = true
+    }
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+    implementation "androidx.core:core-ktx:$coreKtxVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion"
+    implementation "androidx.annotation:annotation:$annotationVersion"
+    implementation "androidx.exifinterface:exifinterface:1.3.2"
+    implementation "androidx.fragment:fragment-ktx:$fragmentExtVersion"
+
+    //material
+    implementation "com.google.android.material:material:$materialDesignVersion"
+
+    //di
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltExtVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltExtVersion"
+
+    // Rx
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
+    implementation "com.jakewharton.rxbinding4:rxbinding-core:$rxBindingVersion"
+    implementation "com.jakewharton.rxbinding4:rxbinding-recyclerview:$rxBindingVersion"
+
+    // epoxy
+    implementation "com.airbnb.android:epoxy:$epoxyVersion"
+    implementation "com.airbnb.android:epoxy-databinding:$epoxyVersion"
+    implementation "com.airbnb.android:epoxy-glide-preloading:$epoxyVersion"
+    kapt "com.airbnb.android:epoxy-processor:$epoxyVersion"
+
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // state machine
+    implementation "com.tinder.statemachine:statemachine:0.2.0"
+
+    // spannable text
+    implementation 'lt.neworld:spanner:1.1.0'
+
+    // Lottie
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //test
+    testImplementation "junit:junit:$jUnitVersion"
+    testImplementation "io.mockk:mockk:$mockkVersion"
+    testImplementation "org.assertj:assertj-core:$assertJVersion"
+    testImplementation "io.kotest:kotest-runner-junit5:$kotestVersion"
+    testImplementation "io.kotest:kotest-assertions-core:$kotestVersion"
+
+    implementation project(":domain")
+    implementation project(":snapsconfig")
+}

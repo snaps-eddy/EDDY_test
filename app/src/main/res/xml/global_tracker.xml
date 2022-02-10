@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <string name="ga_appName">스냅스</string>
+    <!-- The screen names that will appear in reports -->
+
+   <!--  <screenName name=".PreSplashActivity">PreSplashActivity</screenName>
+    <screenName name="com.snaps.mobile.activity.intro.IntroActivity">IntroActivity</screenName>
+    <screenName name="com.snaps.mobile.activity.intro.LoginProcessActivity">LoginProcessActivity</screenName>
+    <screenName name="com.snaps.mobile.activity.home.HomeActivity">HomeActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.service.NotificationActivity">NotificationActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.service.PushDialogImageActivity">PushDialogImageActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.service.PushDialogTextActivity">PushDialogTextActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.service.KakaoTransferDialogActivity">KakaoTransferDialogActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.selectimage.PhotoPrintImageSelectActivity">PhotoPrintImageSelectActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.selectimage.SnapsImageSelectActivity">SnapsImageSelectActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.selectimage.ImageSelectActivity">ImageSelectActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.selectimage.ImageDetailEditActivity">ImageDetailEditActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.selectimage.FacebookIntroPhotoActivity">FacebookIntroPhotoActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.photoprint.SelectPhotoPrintActivity">SelectPhotoPrintActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.cartorder.PhotoPrintDetailActivity">PhotoPrintDetailActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.EditThemeBookActivity">EditThemeBookActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.ThemeTitleActivity">ThemeTitleActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.ThemeCoverActivity">ThemeCoverActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.ThemeDesignListActivity">ThemeDesignListActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.ThemeCategoryActivity">ThemeCategoryActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.ThemeContensActivity">ThemeContensActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.CropImageActivity4">CropImageActivity4 Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.ImageEditActivity">ImageEditActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.EditThemeContextActivity">EditThemeContextActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.SimplePhotoBookActivity">SimplePhotoBookActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.themebook.FrameEditActivity">FrameEditActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.calendar.CalendarActivity">CalendarActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.board.NoticeActivity">NoticeActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.setting.SnapsSettingActivity">SnapsSettingActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.board.MyArtworkListActivity">MyArtworkListActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.board.MyArtworkCurlActivity">MyArtworkCurlActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.board.MyArtworkFlipCurlActivity">MyArtworkFlipCurlActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.board.MyArtworkDetailActivity">MyArtworkDetailActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.cartorder.PhotoCountChangeActivity">PhotoCountChangeActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.cartorder.MyOrderListActivity">MyOrderListActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.cartorder.MyOrderDetailActivity">MyOrderDetailActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.book.StoryBookFragmentActivity">StoryBookFragmentActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.EditPhotoPrintActivity">EditPhotoPrintActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.EditActivity">EditActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.CropImageActivity">CropImageActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.CropImageActivity2">CropImageActivity2 Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.CropImageActivity3">CropImageActivity3 Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.CollageFlipCurlActivity">CollageFlipCurlActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.FBBookFlipCurlActivity">FBBookFlipCurlActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.FBBookCurlActivity">FBBookCurlActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.KakaoBookFlipCurlActivity">KakaoBookFlipCurlActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.KakaoBookCurlActivity">KakaoBookCurlActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.edit.EffectImageActivity">EffectImageActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.event.LoginEventActivtiy">LoginEventActivtiy Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.coupon.CouponActivity">CouponActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.webview.WebviewActivity">WebviewActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.webview.ProductWebviewActivity">ProductWebviewActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.utils.kakao.KakaoLoginActivity">KakaoLoginActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.utils.kakao.KakaoSignupActivity">KakaoSignupActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.webview.UIWebviewActivity">UIWebviewActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.webview.KakaoEventActivity">KakaoEventActivity Screen</screenName>
+    <screenName name="com.snaps.mobile.activity.webview.PaymentResultActivity">PaymentResultActivity Screen</screenName>
+    <screenName name="com.facebook.LoginActivity">LoginActivity Screen</screenName>
+    <screenName name="com.kakao.LoginActivity">LoginActivity Screen</screenName> -->
+    
+
+    <!-- The following value should be replaced with correct property id. -->
+    <string name="ga_trackingId">UA-62310709-2</string>
+
+</resources>

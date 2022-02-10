@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+    
+	<com.snaps.mobile.component.ObserveScrollingScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >   
+        
+	    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+		    <!-- 계정 관리 -->
+		    
+			<RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="@dimen/home_title_bar_height" />
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:paddingBottom="20dp"
+		        android:paddingLeft="21dp"
+		        android:paddingRight="21dp"
+		        android:paddingTop="20dp" >
+		
+		        <font.FTextView
+		            style="bold"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginBottom="10dp"
+		            android:text="@string/setting_account_manager"
+		            android:textColor="#303030"
+		             android:textSize="@dimen/title_size" />
+		
+		        <font.FTextView
+		            android:id="@+id/txtUserId"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="0.1dp"
+		            android:textColor="@color/between_setting_text_sub_title"
+		            android:textSize="@dimen/sub_title_size" />
+		
+		        <font.FTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="2dp"
+		            android:layout_marginLeft="0.1dp"
+		            android:text="@string/setting_account_manager_desc"
+		            android:textColor="@color/between_setting_text_desc"
+		            android:textSize="@dimen/sub_title_size" />
+		    </LinearLayout>
+		
+		    <View
+		        android:layout_width="fill_parent"
+		        android:layout_height="1px"
+		        android:background="#e5e5e5" />
+		
+		    <!-- 알림 설정-->
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical"
+		            android:paddingBottom="20dp"
+		            android:paddingLeft="21dp"
+		            android:paddingRight="21dp"
+		            android:paddingTop="20dp" >
+		
+		            <font.FTextView
+		                style="bold"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/notification_setting"
+		                android:textColor="@color/between_setting_text_title"
+		                   android:textSize="@dimen/title_size" />
+		
+		            <font.FTextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="10dp"
+		                android:layout_marginLeft="0.1dp"
+		                android:text="@string/notification_setting"
+		                android:textColor="@color/between_setting_text_sub_title"
+		                android:textSize="@dimen/sub_title_size" />
+		
+		            <font.FTextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="2dp"
+		                android:layout_marginLeft="0.1dp"
+		                android:text="@string/setting_alarm_desc"
+		                android:textColor="@color/between_setting_text_desc"
+		                android:textSize="@dimen/sub_title_size" />
+		        </LinearLayout>
+		        
+		        <RelativeLayout
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentRight="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginRight="20dp" >
+				
+				    <ImageView
+				        android:id="@+id/btnPushReceive"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:clickable="true"
+				        android:onClick="onClick"
+				        android:src="@drawable/switch_bg" />
+				
+				    <ImageView
+				        android:id="@+id/btnPushReceive_sub"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:src="@drawable/switch_btn" />
+				</RelativeLayout>
+		        
+		    </RelativeLayout>
+		
+		    <View
+		        android:layout_width="fill_parent"
+		        android:layout_height="1px"
+		        android:background="#e5e5e5" />
+		    
+		    <!-- 버전 정보 -->
+		
+		    <LinearLayout
+		        android:id="@+id/laylogin"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:onClick="onClick"
+		        android:orientation="vertical"
+		        android:paddingBottom="20dp"
+		        android:paddingLeft="21dp"
+		        android:paddingRight="21dp"
+		        android:paddingTop="20dp" >
+		
+		        <font.FTextView
+		            style="bold"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/service_setting"
+		            android:textColor="@color/between_setting_text_title"
+		               android:textSize="@dimen/title_size" />
+		
+		        <font.FTextView
+		            android:id="@+id/btnSettingLogout"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="0.1dp"
+		            android:textColor="@color/between_setting_text_sub_title"
+		            android:textSize="@dimen/sub_title_size" />
+		
+		        <font.FTextView
+		            android:id="@+id/activity_between_setting_login_out_desc_tv"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="2dp"
+		            android:layout_marginLeft="0.1dp"
+		            android:text="@string/setting_service_logout_desc"
+		            android:textColor="@color/between_setting_text_desc"
+		            android:textSize="@dimen/sub_title_size" />
+		    </LinearLayout>
+		
+		    <View
+		        android:layout_width="fill_parent"
+		        android:layout_height="1px"
+		        android:background="#e5e5e5" />
+		    
+		    <!-- 버전 정보 -->
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:paddingBottom="20dp"
+		        android:paddingLeft="21dp"
+		        android:paddingRight="21dp"
+		        android:paddingTop="20dp" >
+		
+		        <font.FTextView
+		            style="bold"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/version_info"
+		            android:textColor="@color/between_setting_text_title"
+		            android:textSize="@dimen/title_size" />
+		
+		        <font.FTextView
+		            android:id="@+id/txtSettingVersion"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="0.1dp"
+		            android:textColor="@color/between_setting_text_sub_title"
+		            android:textSize="@dimen/sub_title_size" />
+		
+		    </LinearLayout>
+		    
+		</LinearLayout>
+	</com.snaps.mobile.component.ObserveScrollingScrollView>
+	
+	<include layout="@layout/_include_title_with_back" />
+
+</RelativeLayout>

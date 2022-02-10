@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/enter_title"
+            android:textColor="@color/cod_gray" />
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="@string/empty_cd"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingStart="16dp"
+            android:paddingEnd="15dp"
+            android:src="@drawable/ic_before" />
+
+        <Button
+            android:id="@+id/btn_enter_done"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:paddingLeft="15dp"
+            android:text="@string/next"
+            android:textColor="@color/cod_gray" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="26dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_snapsphoto" />
+
+    <EditText
+        android:id="@+id/title_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="16dp"
+        android:background="#00000000"
+        android:gravity="center"
+        android:hint="@string/please_enter_title"
+        android:inputType="text"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:textColor="#191919"
+        android:textColorHint="#999999"
+        android:textSize="13dp" />
+
+    <View
+        android:id="@+id/title_line_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#191919" />
+
+    <TextView
+        android:id="@+id/title_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="16dp"
+        android:gravity="left"
+        android:text="@string/input_title_desc_for_recommend_photobook"
+        android:textColor="#999999"
+        android:textSize="11dp" />
+
+    <TextView
+        android:id="@+id/btn_enter_done_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#e36a63"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="#ffffff"
+        android:textSize="13dp" />
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="38dp"
+    android:background="#333333"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_edittitle"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/ThemeTitleLeftLy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp" >
+
+            <font.FTextView
+                android:id="@+id/ThemeTitleLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textColor="@drawable/selector_image_editor_top_title_text"
+                android:text="@string/cancel"
+                android:textSize="13dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:id="@+id/ThemeTitleLeftText"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginLeft="8dp"
+                custom:customFont="@string/font_name_ygt_740"
+                android:textColor="#191919"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/topView"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <font.FTextView
+                android:id="@+id/ThemeTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/edit_photo"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_740"/>
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_740"
+                android:text="("
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/title_size" />
+            <font.FTextView
+                android:id="@+id/photo_count_current_index_tv"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#E36A63"
+                android:textSize="@dimen/title_size" />
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_740"
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/title_size" />
+            <font.FTextView
+                android:id="@+id/photo_count_current_total_count_tv"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/title_size" />
+            <font.FTextView
+                custom:customFont="@string/font_name_ygt_740"
+                android:text=")"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/title_size" />
+        </LinearLayout>
+
+
+        <font.FTextView
+            android:id="@+id/ThemebtnTopNext"
+            android:layout_width="54dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@drawable/selector_image_editor_top_title_text"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+</LinearLayout>

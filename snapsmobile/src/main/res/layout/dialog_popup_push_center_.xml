@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:indeterminateDrawable="@drawable/rotate_progress"
+		android:layout_width="@dimen/default_progress_dialog_size"
+        android:layout_height="@dimen/default_progress_dialog_size"
+        android:layout_centerInParent="true" />
+
+    <com.snaps.mobile.component.ObserveScrollingWebView
+        android:id="@+id/webview"
+        android:layout_width="300dp"
+        android:layout_height="230dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_push_bar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/webview"
+        android:layout_alignRight="@+id/webview"
+        android:layout_below="@+id/webview"
+        android:background="@drawable/push_bg_popup_b" >
+
+        <ImageView
+            android:id="@+id/push_center_bottom_check"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/push_inner_chk_none" />
+
+        <font.FTextView
+            android:id="@+id/push_bottom_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/push_center_bottom_check"
+            android:gravity="center_vertical"
+            android:text="@string/today_do_not_see"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/push_center_close"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/push_bottom_close_title"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_close_botton" />
+
+        <font.FTextView
+            android:id="@+id/push_bottom_close_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/close"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

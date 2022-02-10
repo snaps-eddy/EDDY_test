@@ -1,0 +1,95 @@
+<RelativeLayout android:id="@+id/rl_edittitle"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_title_bar_height"
+                android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/ThemeTitleLeftLy"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:onClick="onClick"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:id="@+id/ThemeTitleLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_prev" />
+    </RelativeLayout>
+
+    <font.FTextView
+        android:id="@+id/ThemeTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:textColor="#191919"
+        android:textSize="@dimen/title_size"
+        custom:customFont="@string/font_name_ygt_740" />
+
+    <font.FTextView
+        android:id="@+id/ThemebtnTopNext"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="#191919"
+        android:textSize="13dp"
+        custom:customFont="@string/font_name_ygt_740" />
+
+    <ImageView
+        android:id="@+id/ThemecartBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/selector_cart_icon"
+        android:visibility="gone" />
+
+    <font.FTextView
+        android:id="@+id/ThemecartTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="@string/cart"
+        android:textColor="#191919"
+        android:textSize="13dp"
+        android:visibility="gone"
+        custom:customFont="@string/font_name_ygt_740" />
+
+    <font.FTextView
+        android:id="@+id/txtCartBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/count_cart"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/snaps_edit_activity_title_bar_blind_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:visibility="gone" />
+</RelativeLayout>

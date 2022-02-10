@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="280dp"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/pos_x"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#FFFF0000"
+                android:textColorHint="#44000000"
+                android:hint="x position"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="number"
+                android:background="#22000000"/>
+            <EditText
+                android:id="@+id/pos_y"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#FFFF0000"
+                android:textColorHint="#44000000"
+                android:hint="y position"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="number"
+                android:background="#FFFFFFFF" />
+            <EditText
+                android:id="@+id/width"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#FFFF0000"
+                android:textColorHint="#44000000"
+                android:hint="text area width"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="number"
+                android:background="#22000000" />
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#FFFF0000"
+                android:textColorHint="#44000000"
+                android:hint="text area height"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="number"
+                android:background="#FFFFFFFF" />
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#FFFF0000"
+                android:textColorHint="#44000000"
+                android:hint="text"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="text"
+                android:background="#22000000" />
+            <EditText
+                android:id="@+id/orientation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#FFFF0000"
+                android:textColorHint="#44000000"
+                android:hint="l(left) or c(center) or r(right)"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="text"
+                android:background="#FFFFFFFF" />
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#FFFFFFFF"
+                android:text="confirm"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:background="#FF000000" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

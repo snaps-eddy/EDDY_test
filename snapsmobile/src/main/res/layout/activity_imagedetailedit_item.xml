@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.snaps.common.customui.RecyclingImageView
+        android:id="@+id/imgDetailEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true" />
+
+    <ProgressBar
+        android:id="@+id/progressImg"
+        android:indeterminateDrawable="@drawable/rotate_progress"
+        android:layout_width="@dimen/default_progress_dialog_size"
+        android:layout_height="@dimen/default_progress_dialog_size"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.snaps.mobile.presentation.editor.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/empty_cd"
+        android:scaleType="fitStart" />
+
+    <View
+        android:id="@+id/view_select_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_default_select" />
+
+    <CheckBox
+        android:id="@+id/cb_select_indicator"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/selector_gallery_item_selected"
+        android:button="@null"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+</com.snaps.mobile.presentation.editor.SquareFrameLayout>

@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/snaps_text_write_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_title_bar_height"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_edittitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_title_bar_height"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/ThemeTitleLeftLy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/ThemeTitleLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="onClick"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_prev" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true">
+                <font.FTextView
+                    android:id="@+id/ThemeTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="#191919"
+                    android:textSize="@dimen/title_size"
+                    custom:customFont="@string/font_name_ygt_760" />
+                <font.FTextView
+                    android:id="@+id/ThemeSelectCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="#191919"
+                    android:textSize="@dimen/title_size"
+                    custom:customFont="@string/font_name_ygt_760" />
+            </LinearLayout>
+            <font.FTextView
+                android:id="@+id/ThemebtnTopNext"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:gravity="center"
+                android:minWidth="52dp"
+                android:textColor="#191919"
+                android:textSize="14dp"
+                custom:customFont="@string/font_name_ygt_760" />
+
+            <ImageView
+                android:id="@+id/ThemecartBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_cart_icon"
+                android:visibility="gone" />
+
+            <font.FTextView
+                android:id="@+id/ThemecartTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/cart"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:visibility="gone"
+                custom:customFont="@string/font_name_ygt_760" />
+
+            <font.FTextView
+                android:id="@+id/txtCartBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/count_cart"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- edit Text -->
+    <RelativeLayout
+        android:id="@+id/layout_edittext"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="0px"
+        android:layout_weight="1">
+        <com.snaps.mobile.component.SnapsEditText
+            android:id="@+id/content_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textMultiLine"
+            android:hint="@string/initial_text"
+            android:textCursorDrawable="@drawable/snaps_text_wrtie_cursor"
+            android:textColor="#999999"
+            android:textSize="14dp"
+            android:background="#00000000" />
+        <com.snaps.mobile.component.SnapsEditText
+            android:id="@+id/content_edit_kt"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textMultiLine"
+            android:hint="@string/initial_text"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            android:background="#FFFFFF" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/snaps_text_write_option_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/_include_text_write_option_layout"/>
+
+    <View
+        android:id="@+id/snaps_text_write_option_layout_footer_for_hide_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/keyboard_height"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+</LinearLayout>

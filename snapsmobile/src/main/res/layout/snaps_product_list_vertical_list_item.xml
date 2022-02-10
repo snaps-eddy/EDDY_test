@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/snaps_product_list_vertical_list_item_parent_ly"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+
+        <com.snaps.mobile.activity.ui.menu.renewal.view.ReloadableImageView
+            android:id="@+id/snaps_product_list_vertical_list_item_thumbnail_iv"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <font.FTextView
+                android:id="@+id/snaps_product_list_vertical_list_item_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:textColor="#191919"
+                android:textSize="16dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:id="@+id/snaps_product_list_vertical_list_item_sub_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left|center_vertical"
+                android:textColor="#999999"
+                android:textSize="12dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <font.FTextView
+                    android:id="@+id/snaps_product_list_vertical_list_item_origin_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#999999"
+                    android:textSize="12dp"
+                    custom:customFont="@string/font_name_ygt_740"/>
+
+                <font.FTextView
+                    android:id="@+id/snaps_product_list_vertical_list_item_sale_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:textColor="#191919"
+                    android:textSize="12dp"
+                    custom:customFont="@string/font_name_ygt_740"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/snaps_product_list_vertical_list_item_sale_arrow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_arrow"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/snaps_product_list_vertical_list_item_sale_under_line_iv"
+        android:visibility="gone"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

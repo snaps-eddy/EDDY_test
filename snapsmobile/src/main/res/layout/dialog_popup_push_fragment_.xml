@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <com.snaps.mobile.component.ObserveScrollingWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_push_bar" />
+
+<!--         style="?android:attr/progressBarStyle" -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:indeterminateDrawable="@drawable/rotate_progress"
+        android:layout_width="@dimen/default_progress_dialog_size"
+        android:layout_height="@dimen/default_progress_dialog_size"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_push_bar"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#191919" >
+
+        <ImageView
+            android:id="@+id/push_bottom_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/push_inner_chk_none" />
+
+        <font.FTextView
+            android:id="@+id/push_bottom_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/push_bottom_check"
+            android:layout_centerVertical="true"
+            custom:customFont="@string/font_name_ygt_760"
+            android:text="@string/today_do_not_see"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/push_bottom_close"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:scaleType="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/selector_close_for_menu" />
+
+        <font.FTextView
+            android:id="@+id/push_bottom_close_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/section_parent_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="horizontal"
+    android:paddingTop="3dp">
+    <!-- 48dp가 아닌 이유는 데코레이션으로 탑 마진을 주기 때문이다. -->
+    <View
+        android:layout_width="16dp"
+        android:layout_height="match_parent" />
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/chkbox_push_agree_ly"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_width="26dp"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<CheckBox-->
+    <!--android:id="@+id/chkbox_push_agree"-->
+    <!--android:clickable="false"-->
+    <!--android:focusable="false"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:button="@drawable/checkbox_google_photo_style_circle_shape"-->
+    <!--android:checked="false" />-->
+    <!--<Button-->
+    <!--android:id="@+id/chkbox_push_agree_btn"-->
+    <!--android:background="#00000000"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+    <!--</FrameLayout>-->
+    <LinearLayout
+        android:id="@+id/linearLayoutSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/imageButtonSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:background="@null"
+            android:clickable="false"
+            android:src="@drawable/checkbox_pic_select"
+            android:visibility="gone" />
+
+        <font.FTextView
+            android:id="@+id/img_select_tray_section_title_item_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textColor="#191919"
+            android:textSize="13dp"
+            custom:customFont="@string/font_name_ygt_740" />
+    </LinearLayout>
+
+</LinearLayout>

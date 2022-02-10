@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SnapsKakao</string>
+    <string name="app_name_devleop">SnapsKakao_D</string>
+    <string name="kakao_app_key">acd18dd4945db7ee0a3ee5c2bc9204dd</string>
+</resources>

@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/snaps_diary_main_act_list_height"
+                android:background="@color/color_diary_list_bg">
+
+    <LinearLayout
+        android:id="@+id/snaps_diary_mission_sate_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/snaps_diary_mission_sate_bar_thumbnail_iv"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_snaps_diary_default_profile"/>
+
+            <!-- 마스크 -->
+            <ImageView
+                android:id="@+id/snaps_diary_mission_sate_bar_thumbnail_mask_iv"
+                android:visibility="gone"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_snaps_diary_mask_profile"/>
+
+            <font.FTextView
+                android:id="@+id/snaps_diary_mission_name_tv"
+                android:layout_below="@id/snaps_diary_mission_sate_bar_thumbnail_iv"
+                android:layout_marginTop="8dp"
+                android:textSize="13dp"
+                android:textColor="#040404"
+                android:singleLine="true"
+                android:ellipsize="none"
+                android:maxLength="6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal|bottom"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/snaps_diary_mission_state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/snaps_diary_mission_sate_bar_horizontal_line"
+        android:layout_below="@id/snaps_diary_mission_sate_bar_layout"
+        android:background="#c9c9c9"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/snaps_diary_mission_sate_bar_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/snaps_diary_mission_sate_bar_strip_list_btn"
+            android:src="@drawable/img_diary_header_list"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"/>
+        <View
+            android:background="#c9c9c9"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/snaps_diary_mission_sate_bar_strip_grid_btn"
+            android:src="@drawable/img_diary_header_grid"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

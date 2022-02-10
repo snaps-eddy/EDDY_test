@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="142dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <font.FTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="0dp"
+        android:gravity="center_vertical|left"
+        custom:customFont="@string/font_name_ygt_740"
+        android:textSize="12dp"
+        android:textColor="#FF191919" />
+
+    <LinearLayout
+        android:id="@+id/pages"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        >
+        <RelativeLayout
+            android:id="@+id/item1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/page_image_layout1"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/pageTypeImageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_book_flat"
+                    android:scaleType="fitCenter" />
+                <ImageView
+                    android:id="@+id/page_border1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/border_e36a63"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/page_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:padding="0dp"
+                android:gravity="center_horizontal|top"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/page_image_layout1"
+                custom:customFont="@string/font_name_ygt_740"
+                android:textSize="10dp"
+                android:textColor="#FF191919" />
+            
+            <ImageView
+                android:id="@+id/page_check1"
+                android:layout_width="11dp"
+                android:layout_height="8dp"
+                android:layout_alignTop="@id/page_text1"
+                android:layout_toLeftOf="@id/page_text1"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/icon_ck_b"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/item2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/page_image_layout2"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/pageTypeImageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_book_gloss"
+                    android:scaleType="fitCenter" />
+                <ImageView
+                    android:id="@+id/page_border2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/border_e36a63"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/page_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:padding="0dp"
+                android:gravity="center_horizontal|top"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/page_image_layout2"
+                custom:customFont="@string/font_name_ygt_740"
+                android:textSize="10dp"
+                android:textColor="#FF191919" />
+
+            <ImageView
+                android:id="@+id/page_check2"
+                android:layout_width="11dp"
+                android:layout_height="8dp"
+                android:layout_alignTop="@id/page_text2"
+                android:layout_toLeftOf="@id/page_text2"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/icon_ck_b"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/item3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/page_image_layout3"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/pageTypeImageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_book_flat_ray"
+                    android:scaleType="fitCenter" />
+                <ImageView
+                    android:id="@+id/page_border3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/border_e36a63"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/page_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:padding="0dp"
+                android:gravity="center_horizontal|top"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/page_image_layout3"
+                custom:customFont="@string/font_name_ygt_740"
+                android:textSize="10dp"
+                android:textColor="#FF191919" />
+
+            <ImageView
+                android:id="@+id/page_check3"
+                android:layout_width="11dp"
+                android:layout_height="8dp"
+                android:layout_alignTop="@id/page_text3"
+                android:layout_toLeftOf="@id/page_text3"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/icon_ck_b"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFEEEEEE" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <com.snaps.mobile.component.ObserveScrollingWebView
+        android:id="@+id/webview"
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/la_network_error"
+        layout="@layout/include_network_error"
+        android:visibility="gone" />
+
+<!--     <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0dp"
+        android:background="@android:color/transparent"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_webview"
+        android:visibility="gone" /> -->
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+      	android:layout_width="@dimen/default_progress_dialog_size"
+        android:layout_height="@dimen/default_progress_dialog_size"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    <!--android:indeterminateDrawable="@drawable/rotate_progress"-->
+
+</RelativeLayout>

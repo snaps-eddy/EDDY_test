@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <!-- android:background="@drawable/bg_main_wood"> -->
+
+
+    <!-- Title Bar -->
+    <include
+        layout="@layout/_include_theme_title_no_background" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/btnEditBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:src="@drawable/selector_edit_back" />
+
+        <LinearLayout
+            android:id="@+id/bg_user_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/btnEditBack"
+            android:background="@drawable/bg_my_view_user" >
+
+            <!--
+                 <ImageView
+	            android:id="@+id/imgProfile"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:onClick="onClick"
+	            android:background="@drawable/bg_profile_photo_rounded_white"
+	            android:padding="2dp"
+	            android:src="@drawable/img_default_pic"/>
+            -->
+
+            <font.FTextView
+                android:id="@+id/txtProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <ImageView
+                android:id="@+id/btnTopShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:src="@drawable/selector_edit_share"
+                android:visibility="gone" />
+
+            <!--
+                 <ImageView 
+	            android:id="@+id/btnTopShare"
+	            android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+		    	android:src="@drawable/selector_edit_share"
+		    	android:onClick="onClick"/>
+            -->
+
+            <ImageView
+                android:id="@+id/btnTopOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:onClick="onClick"
+                android:src="@drawable/selector_cart"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1">
+        <FrameLayout
+            android:id="@+id/frameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false" />
+
+        <View
+            android:background="#eeeeee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.snaps.mobile.activity.edit.PagerContainer
+            android:id="@+id/pager_container"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <com.snaps.mobile.utils.custom_layouts.InterceptTouchableViewPager
+                android:id="@+id/vpagerMyArtworkDetail"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:overScrollMode="never" />
+        </com.snaps.mobile.activity.edit.PagerContainer>
+    </RelativeLayout>
+
+</LinearLayout>

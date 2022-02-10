@@ -1,0 +1,73 @@
+<RelativeLayout
+    android:id="@+id/snaps_diary_mission_sate_bar_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="32dp">
+
+            <font.FTextView
+                android:id="@+id/snaps_diary_mission_text_subject_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="#e54736"
+                android:textSize="15dp"/>
+
+            <font.FTextView
+                android:id="@+id/snaps_diary_mission_text_desc_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginTop="3dp"
+                android:gravity="left"
+                android:textColor="#333333"
+                android:textSize="13.5dp"/>
+
+            <font.FTextView
+                android:id="@+id/snaps_diary_mission_text_sub_desc_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="left"
+                android:textColor="#999999"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/snaps_diary_mission_sate_bar_star_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/img_snaps_diary_star_left"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/img_snaps_diary_star_right"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+
+        <font.FTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:gravity="center_vertical|left"
+            custom:customFont="@string/font_name_ygt_740"
+            android:textSize="12dp"
+            android:textColor="#FF191919" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <font.FTextView
+                android:id="@+id/ori_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:gravity="right"
+                custom:customFont="@string/font_name_ygt_760"
+                android:textSize="12dp"
+                android:textColor="#FF999999"
+                android:layout_marginBottom="2dp" />
+
+            <font.FTextView
+                android:id="@+id/new_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:gravity="right"
+                custom:customFont="@string/font_name_ygt_760"
+                android:textSize="14dp"
+                android:textColor="#FFF4706C" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#FFF9F9F9">
+
+            <font.FTextView
+                android:id="@+id/info_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="center_vertical|left"
+                custom:customFont="@string/font_name_ygt_740"
+                android:textSize="11dp"
+                android:textColor="#FF191919" />
+
+            <ImageView
+                android:id="@+id/info_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/btn_question_w" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/accessory_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#FFF9F9F9"
+        android:visibility="gone">
+
+        <font.FTextView
+            android:id="@+id/accessory_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:gravity="center"
+            custom:customFont="@string/font_name_ygt_740"
+            android:textSize="11dp"
+            android:textColor="#FF191919" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/bottom_space"
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+</LinearLayout>

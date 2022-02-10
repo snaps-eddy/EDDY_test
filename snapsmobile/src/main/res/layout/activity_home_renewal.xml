@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/snaps_home_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0dp"
+        android:background="@android:color/transparent"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_webview"
+        android:visibility="gone" />
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/surface_layout"-->
+    <!--android:layout_width="1dp"-->
+    <!--android:layout_height="1dp" />-->
+
+    <!--<font.FTextView-->
+    <!--android:id="@+id/activity_home_develop_menu_btn"-->
+    <!--android:visibility="gone"-->
+    <!--android:background="@drawable/selector_transparent_rounded_red_btn"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="14dp"-->
+    <!--android:text="DEVELOP MENU"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:layout_width="138dp"-->
+    <!--android:layout_height="48dp"/>-->
+
+    <LinearLayout
+        android:id="@+id/webviewProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/webViewProgressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

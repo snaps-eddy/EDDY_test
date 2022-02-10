@@ -1,0 +1,196 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:ignore="SpUsage">
+
+    <View
+        android:id="@+id/view_top_background"
+        android:layout_width="0dp"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tv_top_menu_left"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="left|center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_top_background"
+        app:layout_constraintStart_toStartOf="@id/view_top_background"
+        app:layout_constraintTop_toTopOf="@id/view_top_background"
+        app:rippleColor="@color/transparentGray" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_top_background"
+        app:layout_constraintEnd_toEndOf="@id/view_top_background"
+        app:layout_constraintStart_toStartOf="@id/view_top_background"
+        app:layout_constraintTop_toTopOf="@id/view_top_background"
+        tools:text="12/31" />
+
+
+    <Button
+        android:id="@+id/tv_top_menu_right"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:minWidth="0dp"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_top_background"
+        app:layout_constraintEnd_toEndOf="@id/view_top_background"
+        app:layout_constraintTop_toTopOf="@id/view_top_background"
+        app:rippleColor="@color/transparentGray" />
+
+    <com.snaps.mobile.presentation.editor.imageEdit.CropImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="matrix"
+        app:layout_constraintBottom_toTopOf="@id/btn_previous_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_background" />
+
+    <!-- Filter View -->
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rv_filters"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <!-- Bottom Button Group -->
+
+    <Button
+        android:id="@+id/btn_previous_photo"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="10dp"
+        android:text="@string/prev_photo"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_image_editor_menu_before"
+        app:iconGravity="top"
+        app:iconPadding="6dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_rotate_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/NoCornerRound" />
+
+    <Button
+        android:id="@+id/btn_rotate_photo"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="10dp"
+        android:text="@string/rotate"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_image_editor_menu_rotation"
+        app:iconGravity="top"
+        app:iconPadding="6dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_photo_filter"
+        app:layout_constraintStart_toEndOf="@id/btn_previous_photo"
+        app:shapeAppearance="@style/NoCornerRound" />
+
+    <Button
+        android:id="@+id/btn_photo_filter"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="10dp"
+        android:text="@string/filter"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_image_edit_menu_filter"
+        app:iconGravity="top"
+        app:iconPadding="6dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_reset_edit"
+        app:layout_constraintStart_toEndOf="@id/btn_rotate_photo"
+        app:shapeAppearance="@style/NoCornerRound" />
+
+    <Button
+        android:id="@+id/btn_reset_edit"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="10dp"
+        android:text="@string/reset_changes"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_image_edit_menu_reset"
+        app:iconGravity="top"
+        app:iconPadding="6dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_next_photo"
+        app:layout_constraintStart_toEndOf="@id/btn_photo_filter"
+        app:shapeAppearance="@style/NoCornerRound" />
+
+    <Button
+        android:id="@+id/btn_next_photo"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="10dp"
+        android:text="@string/next_photo"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_image_editor_menu_next"
+        app:iconGravity="top"
+        app:iconPadding="6dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_reset_edit"
+        app:shapeAppearance="@style/NoCornerRound" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circular="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff363636">
+
+
+        <com.snaps.mobile.component.SnapsCircularProgressBar
+            android:id="@+id/snaps_circluar_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            circular:title="0" />
+
+        <font.FTextView
+            android:id="@+id/snaps_circluar_progress_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/snaps_circluar_progress_bar"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="@string/kakaostory_book_making_msg"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <font.FTextView
+            android:id="@+id/snaps_circluar_progress_desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/snaps_circluar_progress_bar"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:text="@string/kakaostory_book_making_msg_sub"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp" />
+
+        <font.FTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="45dp"
+            android:gravity="center"
+            android:text="@string/kakaostory_book_making_msg_sub2"
+            android:textColor="#9E9B98"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

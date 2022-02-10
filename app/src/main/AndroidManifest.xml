@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.snaps.mobile.kr">
+
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 롱탭 시 진동 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- GCM 받기 -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- 메시지 받을 때 wake up 하기 위해 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- GCM 관련 퍼미션 -->
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
+    <!-- android:hardwareAccelerated="true" -->
+
+    <application
+        android:name=".SnapsApplication"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${appLabel}"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseThemeNoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label,android:fullBackupContent">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!-- 네트워크 상태 변화 리시버 -->
+        <receiver android:name="com.snaps.mobile.order.order_v2.util.NetworkStateChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- 서비스명 변경하면 안됨 -->
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter android:priority="400">
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.google.ads.conversiontracking.InstallReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- AI 사진 동기화 서비스 -->
+        <service
+            android:name="com.snaps.mobile.service.ai.SyncPhotoService"
+            android:exported="false"
+            android:process=":remoteSyncPhoto"
+            android:stopWithTask="false" />
+
+        <!-- refferrer 리시버 등록 -->
+        <receiver
+            android:name=".ReferrerReceiver"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <!--앱스플라이어 리시버-->
+        <receiver
+            android:name="com.appsflyer.MultipleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 인트로,로그인,회원가입 -->
+        <activity
+            android:name=".SplashActivity"
+            android:label="${appLabel}"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SnapsLaunchAppBaseThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="@string/kakaostory_host"
+                    android:scheme="@string/kakao_scheme" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="exec"
+                    android:scheme="snapsmobilekr" />
+
+                <data
+                    android:host="exec_goto"
+                    android:scheme="snapsmobilekr" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.snaps.mobile.activity.intro.IntroActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <!--<activity-->
+        <!--android:name="com.igaworks.liveops.pushservice.IgawLiveOpsPushMessageLauncherActivity"-->
+        <!--android:noHistory="true"-->
+        <!--android:permission="${applicationId}.permission.C2D_MESSAGE" />-->
+
+        <!-- 홈 -->
+        <activity
+            android:name="com.snaps.mobile.activity.home.RenewalHomeActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.service.NotificationActivity"
+            android:label="@string/app_name"
+            android:theme="@style/push_dialog" />
+        <activity
+            android:name="com.snaps.mobile.service.PushDialogImageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/push_dialog" />
+        <activity
+            android:name="com.snaps.mobile.service.PushDialogTextActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/push_dialog" />
+        <!--        <activity-->
+        <!--            android:name="com.snaps.mobile.service.KakaoTransferDialogActivity"-->
+        <!--            android:label="@string/app_name"-->
+        <!--            android:launchMode="singleTask"-->
+        <!--            android:screenOrientation="portrait"-->
+        <!--            android:theme="@style/TranslucentTheme" />-->
+        <activity
+            android:name="com.snaps.mobile.activity.google_style_image_selector.activities.ImageSelectActivityV2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.snaps.mobile.utils.sns.GoogleSignInActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.snaps.mobile.activity.google_style_image_selector.activities.ImageSelectActivityTrayAllView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.snaps.mobile.activity.selectimage.ImageDetailEditActivity"
+            android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.selectimage.FacebookIntroPhotoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 사진인화 -->
+        <activity
+            android:name="com.snaps.mobile.activity.photoprint.SelectPhotoPrintActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.cartorder.PhotoPrintDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- FIXME 가로 전환 모드 지원 시,  android:screenOrientation="portrait" -->
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.ThemeTitleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.SmartSnapsTypeSelectActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.SmartRecommendBookMakingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.SmartRecommendAIMakingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.name_sticker.NameStickerWriteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.SmartRecommendBookPageEditActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.ThemeCoverActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.ThemeDesignListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.ThemeProductListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.design_list.NewThemeDesignListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.ThemeCategoryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <!-- android:screenOrientation="portrait" -->
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.ThemeContensActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.CropImageActivity4"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.ImageEditActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.snaps.mobile.activity.themebook.SnapsTextWriteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/DimaTheme" />
+
+        <activity
+            android:name="com.snaps.mobile.activity.common.SnapsEditActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="fullUser"
+            android:windowSoftInputMode="adjustNothing" />
+        <!--android:hardwareAccelerated="false"-->
+        <activity
+            android:name="com.snaps.mobile.activity.common.SmartRecommendBookMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <!--android:hardwareAccelerated="false"-->
+
+        <!-- FIXME 가로 모드 지원 시,  android:screenOrientation="portrait" -->
+        <!-- 설정 -->
+        <activity
+            android:name="com.snaps.mobile.activity.setting.SnapsSettingActivity"
+            android:label="${appLabel}"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.snaps.mobile.cseditor.view.CSEditorHomeActivity"
+            android:label="${appLabel}"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- 내작품함 -->
+        <!--<activity-->
+        <!--android:name="com.snaps.mobile.activity.board.MyArtworkListActivity"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.snaps.mobile.activity.board.MyArtworkDetailActivity"
+            android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.snaps.mobile.edit_activity_tools.EditActivityPreviewActivity"
+            android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+
+        <!-- 편집 -->
+        <activity
+            android:name="com.snaps.mobile.activity.book.FacebookPhotobookFragmentActivity"
+            android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.snaps.mobile.activity.book.StoryBookFragmentActivity"
+            android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.snaps.mobile.activity.photoprint.NewPhotoPrintListActivity"
+            android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.snaps.mobile.activity.edit.CropImageActivity"
+            android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.edit.CropImageActivity2"
+            android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:screenOrientation="portrait" />
+
+        <!-- 이벤트 -->
+        <!--        <activity-->
+        <!--            android:name="com.snaps.mobile.activity.event.LoginEventActivtiy"-->
+        <!--            android:label="@string/app_name"-->
+        <!--            android:theme="@android:style/Theme.Translucent" />-->
+
+        <!-- Webview -->
+        <activity
+            android:name="com.snaps.mobile.activity.webview.WebviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <!--<activity-->
+        <!--android:name="com.snaps.common.customui.sticky.StickyStyleWebviewActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--android:hardwareAccelerated="false"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:screenOrientation="portrait" />-->
+
+        <activity
+            android:name="com.snaps.mobile.activity.list.ListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.list.ListSubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.webview.DetailProductWebviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!--        <activity-->
+        <!--            android:name="com.snaps.mobile.activity.detail.DetailProductNativeActivity"-->
+        <!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--            android:label="@string/app_name"-->
+        <!--            android:screenOrientation="portrait"-->
+        <!--            android:theme="@style/SnapsLaunchAppBaseThemeNoActionBar" />-->
+        <activity
+            android:name="com.snaps.mobile.activity.webview.PopupWebviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.mobile.activity.webview.ZoomProductWebviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.kakao.utils.kakao.KakaoLoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.snaps.kakao.utils.kakao.KakaoSignupActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="errorhandle.FontTestActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="errorhandle.ViewPositionTestActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- Webview -->
+        <activity
+            android:name="com.snaps.mobile.activity.webview.UIWebviewActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.snaps.mobile.activity.webview.KakaoEventActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.snaps.mobile.activity.webview.PaymentResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="payment"
+                    android:scheme="snapskr" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.snaps.mobile.presentation.editor.EditorActivity"
+            android:theme="@style/Theme.Snaps"
+            android:screenOrientation="portrait" />
+
+        <!-- Facebook -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.snaps.mobile.activity.ui.menu.renewal.CustomGlideModule"
+            android:value="GlideModule" />
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_appid_kr" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="${fbAuth}"
+            android:exported="true" />
+
+        <!--        <meta-data-->
+        <!--            android:name="igaworks_app_key"-->
+        <!--            android:value="557181374" />-->
+        <!--        <meta-data-->
+        <!--            android:name="igaworks_hash_key"-->
+        <!--            android:value="5fb206220d214677" />-->
+
+        <!--        <meta-data-->
+        <!--            android:name="io.fabric.ApiKey"-->
+        <!--            android:value="43ba5722fdf356baf15c52a39bf3a22117e48b1c" />-->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+
+    </application>
+
+</manifest>

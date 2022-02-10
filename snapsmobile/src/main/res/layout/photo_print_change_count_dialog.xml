@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:minWidth="300dp"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              android:background="@drawable/shape_black_191919_border_rect"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp">
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/change_quantity"
+            android:textColor="#191919"
+            android:textSize="14dp"
+            custom:customFont="@string/font_name_ygt_760"/>
+
+        <ImageView
+            android:id="@+id/photo_print_change_count_dialog_close_iv"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_close_s"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp">
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/quantity"
+            android:textColor="#191919"
+            android:textSize="14dp"
+            custom:customFont="@string/font_name_ygt_740"/>
+
+        <font.FTextView
+            android:id="@+id/photo_print_change_count_dialog_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/paper_count_unit"
+            android:textColor="#191919"
+            android:textSize="14dp"
+            custom:customFont="@string/font_name_ygt_740"/>
+
+        <EditText
+            android:id="@+id/photo_print_change_count_dialog_count_et"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="3"
+            android:selectAllOnFocus="true"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/photo_print_change_count_dialog_count_tv"
+            android:background="#00000000"
+            android:gravity="right|center_vertical"
+            android:textColor="#191919"
+            android:textSize="14dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee"/>
+
+    <font.FTextView
+        android:id="@+id/photo_print_change_count_dialog_apply_tv"
+        android:background="#FFE8625A"
+        custom:customFont="@string/font_name_ygt_740"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:text="@string/apply"
+        android:textSize="11dp"
+        android:textColor="@color/white"
+        android:layout_width="68dp"
+        android:layout_height="38dp"/>
+
+</LinearLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="26dp"-->
+    <!--android:layout_marginBottom="21dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/custom_dialog_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="12dp"-->
+    <!--android:paddingRight="12dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="#474747"-->
+    <!--android:textSize="16dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/custom_dialog_sub_title"-->
+    <!--android:visibility="gone"-->
+    <!--android:paddingLeft="12dp"-->
+    <!--android:paddingRight="12dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="6dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="#999999"-->
+    <!--android:textSize="13dp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:background="#DEDEDE" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="47.5dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal" >-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/custom_dialog_cancel_btn"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal" >-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/custom_dialog_cancel_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="#474747"-->
+    <!--android:textSize="15dp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/custom_dialog_ok_btn"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="horizontal" >-->
+
+    <!--<View-->
+    <!--android:layout_width="1px"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#DEDEDE" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/custom_dialog_ok_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="#e54736"-->
+    <!--android:textSize="15dp" />-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->

@@ -1,0 +1,328 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/drag_layer_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frameMain_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <include layout="@layout/activity_edit_photo_card_title" />
+
+            <RelativeLayout
+                android:id="@+id/rootLayout_v"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/activity_edit_themebook_gallery_ly_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="131dp"
+                    android:layout_alignParentBottom="true" >
+
+                    <!--<com.snaps.common.customui.HDraggableGridViewBottom-->
+                        <!--android:id="@+id/gridOnelineSelectImgs_v"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="80dp"-->
+                        <!--android:layout_marginRight="1dp"-->
+                        <!--android:layout_toLeftOf="@id/pager_container_bottom_add_page_ly_v" />-->
+
+                    <RelativeLayout
+                        android:id="@+id/pager_container_bottom_add_page_ly_v"
+                        android:layout_width="35dp"
+                        android:layout_height="131dp"
+                        android:background="@drawable/selector_edit_view_bottom_plus_btn"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/btn_edit_view_pageplus" />
+                    </RelativeLayout>
+
+                    <com.snaps.mobile.edit_activity_tools.customview.EditActivityThumbnailRecyclerView
+                        android:id="@+id/activity_edit_themebook_thumbnail_recyclerview_v"
+                        android:layout_height="131dp"
+                        android:layout_toLeftOf="@id/pager_container_bottom_add_page_ly_v"
+                        style="@style/recyclerViewStyleNormal"
+                        android:layout_width="match_parent" />
+
+                    <View
+                        android:id="@+id/activity_edit_themebook_thumbnail_recyclerview_v_dim_view"
+                        android:visibility="gone"
+                        android:background="@color/color_smart_snaps_dim_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_pager_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/activity_edit_themebook_gallery_ly_v"
+                    android:gravity="center" >
+
+                    <com.snaps.mobile.activity.edit.PagerContainer
+                        android:id="@+id/pager_container_v"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#eeeeee" >
+
+                        <com.snaps.mobile.utils.custom_layouts.InterceptTouchableViewPager
+                            android:id="@+id/pager_v"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:overScrollMode="never" />
+                    </com.snaps.mobile.activity.edit.PagerContainer>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/activity_edit_themebook_gallery_ly_v"
+                    android:layout_marginBottom="@dimen/theme_index_margin" >
+
+                    <font.FTextView
+                        android:id="@+id/pageIndex0_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/logo_color"
+                        android:textSize="14sp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal" >
+
+                        <font.FTextView
+                            android:id="@+id/pageIndex1_v"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/logo_color"
+                            android:textSize="14sp"
+                            custom:customFont="@string/font_name_ygt_740"/>
+
+                        <font.FTextView
+                            android:id="@+id/pageIndex2_v"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/subtitle_color"
+                            android:textSize="14sp"
+                            custom:customFont="@string/font_name_ygt_740" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/theme_modify_bar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_above="@+id/activity_edit_themebook_gallery_ly_v"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/theme_text_modify"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_toLeftOf="@+id/theme_cover_modify"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/selector_theme_text" />
+
+                    <ImageView
+                        android:id="@+id/theme_cover_modify"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/selector_theme_cover" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/title_line_color" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--<com.snaps.common.customui.dragdrop.DragLayer-->
+    <FrameLayout
+        android:id="@+id/drag_layer_h"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:id="@+id/frameMain_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <include layout="@layout/activity_edit_photo_card_title" />
+
+            <RelativeLayout
+                android:id="@+id/rootLayout_h"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/activity_edit_themebook_gallery_ly_h"
+                    android:orientation="vertical"
+                    android:layout_width="148dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="148dp"
+                        android:layout_height="0px"
+                        android:layout_weight="1">
+                        <com.snaps.mobile.edit_activity_tools.customview.EditActivityThumbnailRecyclerView
+                            android:id="@+id/activity_edit_themebook_thumbnail_recyclerview_h"
+                            android:layout_height="match_parent"
+                            style="@style/recyclerViewStyleNormal"
+                            android:layout_width="match_parent" />
+
+                        <View
+                            android:id="@+id/activity_edit_themebook_thumbnail_recyclerview_h_dim_view"
+                            android:visibility="gone"
+                            android:background="@color/color_smart_snaps_dim_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/horizontal_line"
+                        android:layout_width="148dp"
+                        android:layout_height="1px"
+                        android:background="#c9c9c9" />
+
+                    <RelativeLayout
+                        android:id="@+id/pager_container_bottom_add_page_ly_h"
+                        android:layout_width="148dp"
+                        android:layout_height="49dp"
+                        android:background="@drawable/selector_edit_view_bottom_plus_btn"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/btn_edit_view_pageplus" />
+                    </RelativeLayout>
+
+                    <!--<View-->
+                        <!--android:id="@+id/vertical_line"-->
+                        <!--android:layout_width="1px"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:background="#c9c9c9" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_pager_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/activity_edit_themebook_gallery_ly_h"
+                    android:gravity="center" >
+
+                    <com.snaps.mobile.activity.edit.PagerContainer
+                        android:id="@+id/pager_container_h"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#eeeeee" >
+
+                        <com.snaps.mobile.utils.custom_layouts.InterceptTouchableViewPager
+                            android:id="@+id/pager_h"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:overScrollMode="never" />
+                    </com.snaps.mobile.activity.edit.PagerContainer>
+                </LinearLayout>
+
+                <font.FTextView
+                    android:id="@+id/pageIndex0_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/logo_color"
+                    android:textSize="14sp"
+                    custom:customFont="@string/font_name_ygt_740" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <font.FTextView
+                        android:id="@+id/pageIndex1_h"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/logo_color"
+                        android:textSize="14sp"
+                        custom:customFont="@string/font_name_ygt_740" />
+
+                    <font.FTextView
+                        android:id="@+id/pageIndex2_h"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="14sp"
+                        custom:customFont="@string/font_name_ygt_740" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+    <!--</com.snaps.common.customui.dragdrop.DragLayer>-->
+
+    <FrameLayout
+        android:id="@+id/tooltip_tutorial_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

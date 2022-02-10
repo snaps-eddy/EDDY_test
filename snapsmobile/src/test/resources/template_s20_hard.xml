@@ -1,0 +1,98 @@
+<template type="calendar">
+    <scene type="page" width="267" height="540" multiform="marvin_PC_UV_23_1" background="" sub_type="" side="">
+        <layer name="background_layer">
+            <image>
+                <source type="color" bgcolor="ffffff"/>
+                <regist name="background" value="0"/>
+            </image>
+        </layer>
+        <layer name="image_layer">
+            <image x="-13" y="340" height="200" width="293" angleClip="0">
+                <source type="browse_file" maximize="on" bgcolor="ffffff" fit="fit_in"/>
+                <modify_content move="on" resize="on" rotate="on" flip="on" border="inner_border" alpha="off"/>
+                <regist name="user_image" value="0"/>
+            </image>
+        </layer>
+        <layer name="form_layer"/>
+        <layer name="form_style"/>
+        <layer name="control_layer">
+            <clipart rc="134 28 283 228" angle="0" id="marvin_cp_9" alpha="1" resourceURL="/Upload/Data1/Resource/clipart/edit/marvin_cp_9.png" priority="0" readOnly="true" move="true" resize="true" rotate="true" delete="true" copy="false" exclude="false"/>
+            <textlist rc="0 161 200 46" angle="0" fontSize="10" color="#000000" emptyText="제목을 입력해주세요" priority="0" readOnly="true" move="true" resize="true" rotate="true" delete="true" copy="false" exclude="false" fontFace="null" align="left" bold="false" italic="false" singleLine="false" vertical="false" checkChange="false" formItem="false" userText="false">
+                <htmlText>
+                    <![CDATA[ <TextFlow xmlns="http://ns.adobe.com/textLayout/2008" color="#38ffde" fontFamily="undefined" fontSize="35" textAlign="center" verticalAlign="middle" lineBreak="explicit" ligatureLevel="minimum" leadingModel="auto" kerning="auto" trackingLeft="0" trackingRight="0" whiteSpaceCollapse="preserve" version="2.0.0"><p><span>TEST</span></p></TextFlow> ]]>
+                </htmlText>
+            </textlist>
+            <sceneMask x="14" y="12" width="239" height="516" angle="0" alpha="1" id="sm_iphone_11_pro_max" resourceURL="/Upload/Data1/Resource/scene_mask/phone_case/iphone-11-pro-max.svg"/>
+        </layer>
+    </scene>
+    <TmplInfo>
+        <F_PROD_CODE>00802900010003</F_PROD_CODE>
+        <F_PROD_NAME>폰케이스-아이폰 11 Pro Max</F_PROD_NAME>
+        <F_PROD_SIZE>iphone[11ProMax]-transparent</F_PROD_SIZE>
+        <F_PROD_NICK_NAME>폰케이스-아이폰 11 Pro Max</F_PROD_NICK_NAME>
+        <F_GLOSSY_TYPE>G</F_GLOSSY_TYPE>
+        <F_USE_ANALECTA>N</F_USE_ANALECTA>
+        <F_ENLARGE_IMG>N</F_ENLARGE_IMG>
+        <FEP>EXTENDED</FEP>
+        <F_PRNT_REF_HEIGHT>1866</F_PRNT_REF_HEIGHT>
+        <F_PRNT_REF_WIDTH>921</F_PRNT_REF_WIDTH>
+        <F_PRNT_REAL_HEIGHT>78</F_PRNT_REAL_HEIGHT>
+        <F_PRNT_REAL_WIDTH>158</F_PRNT_REAL_WIDTH>
+        <F_USE_WATERMARK>N</F_USE_WATERMARK>
+        <F_COVER_EDGE_WIDTH>220</F_COVER_EDGE_WIDTH>
+        <F_COVER_EDGE_HEIGHT>85</F_COVER_EDGE_HEIGHT>
+        <F_PRNT_TYPE>PDF</F_PRNT_TYPE>
+        <F_EDIT_COVER>Y</F_EDIT_COVER>
+        <F_COVER_TYPE>mug</F_COVER_TYPE>
+        <F_COVER_MM_WIDTH>220</F_COVER_MM_WIDTH>
+        <F_COVER_MM_HEIGHT>85</F_COVER_MM_HEIGHT>
+        <F_TITLE_MM_WIDTH>78</F_TITLE_MM_WIDTH>
+        <F_TITLE_MM_HEIGHT>158</F_TITLE_MM_HEIGHT>
+        <F_PAGE_MM_WIDTH>78</F_PAGE_MM_WIDTH>
+        <F_PAGE_MM_HEIGHT>158</F_PAGE_MM_HEIGHT>
+        <F_PAGE_PIXEL_WIDTH>267</F_PAGE_PIXEL_WIDTH>
+        <F_PAGE_PIXEL_HEIGHT>540</F_PAGE_PIXEL_HEIGHT>
+        <F_UI_COVER>N</F_UI_COVER>
+        <F_UI_BACKGROUND>Y</F_UI_BACKGROUND>
+        <F_UI_LAYOUT>Y</F_UI_LAYOUT>
+        <F_UI_BORDER>Y</F_UI_BORDER>
+        <F_THUMBNAIL_STEP>3</F_THUMBNAIL_STEP>
+        <F_TEXT_SIZE_BASE>PRINT</F_TEXT_SIZE_BASE>
+        <F_PROD_TYPE>Apple</F_PROD_TYPE>
+        <F_RES_MIN>0</F_RES_MIN>
+        <F_RES_DISABLE>0</F_RES_DISABLE>
+        <F_PAGE_START_NUM>2</F_PAGE_START_NUM>
+        <F_CENTER_LINE>CHECK</F_CENTER_LINE>
+        <F_UNITTEXT>개</F_UNITTEXT>
+        <F_CALENDAR_BONUS_12>0</F_CALENDAR_BONUS_12>
+        <F_ALLOW_NO_FULL_IMAGE_YORN>N</F_ALLOW_NO_FULL_IMAGE_YORN>
+        <F_TMPL_TITLE>폰케이스-아이폰 11 Pro Max</F_TMPL_TITLE>
+        <F_EDIT_PLATFORM>EXTENDED</F_EDIT_PLATFORM>
+        <F_COVER_XML_WIDTH>660</F_COVER_XML_WIDTH>
+        <F_COVER_XML_HEIGHT>255</F_COVER_XML_HEIGHT>
+        <F_TMPL_ID>marvin_PC_UV_23</F_TMPL_ID>
+        <F_TMPL_CODE>045021018268</F_TMPL_CODE>
+        <F_TMPL_NAME>test</F_TMPL_NAME>
+        <F_XML_ID>046001162270</F_XML_ID>
+        <F_REG_DATE>2020-08-31 16:28:51.0</F_REG_DATE>
+        <F_OUTER_YORN>N</F_OUTER_YORN>
+    </TmplInfo>
+    <TmplPrice>
+        <F_COMP_CODE>KOR0031</F_COMP_CODE>
+        <F_PROD_CODE>00802900010003</F_PROD_CODE>
+        <F_SELL_PRICE>0</F_SELL_PRICE>
+        <F_ORG_PRICE>0</F_ORG_PRICE>
+        <F_PRICE_NUM>1</F_PRICE_NUM>
+        <F_PRNT_BQTY>1</F_PRNT_BQTY>
+        <F_PRNT_EQTY>32767</F_PRNT_EQTY>
+        <F_PAGE_ADD_PRICE>0</F_PAGE_ADD_PRICE>
+        <F_ORG_PAGE_ADD_PRICE>0</F_ORG_PAGE_ADD_PRICE>
+        <F_DISC_RATE>0</F_DISC_RATE>
+        <F_FORM_PRICE>0</F_FORM_PRICE>
+        <F_FORM_ORG_PRICE>0</F_FORM_ORG_PRICE>
+        <F_FRAME_PRICE>0</F_FRAME_PRICE>
+        <F_SCREEN_PRICE>0</F_SCREEN_PRICE>
+        <F_FRAME_ORG_PRICE>0</F_FRAME_ORG_PRICE>
+        <F_SCREEN_ORG_PRICE>0</F_SCREEN_ORG_PRICE>
+    </TmplPrice>
+</template>

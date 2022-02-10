@@ -1,0 +1,224 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.298">
+
+        <RelativeLayout
+            android:id="@+id/btnTitleLeftLy"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/btnTitleLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_back_b" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/btnTitleInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_info_icon_for_sticky_title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <font.FTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/smart_analysis_theme_select_title_text"
+                android:textColor="#191919"
+                android:textSize="22dp"
+                custom:customFont="@string/font_name_ygt_740" />
+
+            <font.FTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/smart_analysis_theme_select_title_desc"
+                android:textColor="#999999"
+                android:textSize="13dp"
+                custom:customFont="@string/font_name_ygt_740" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.35"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_travel_bg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_travel_text_iv"
+                android:layout_width="68dp"
+                android:layout_height="44dp"
+                android:src="@drawable/txt_auto_title_travel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_travel_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/selector_analysis_book_theme_select" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_couple_bg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_couple_text_iv"
+                android:src="@drawable/txt_auto_title_couple"
+                android:layout_width="68dp"
+                android:layout_height="44dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_couple_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/selector_analysis_book_theme_select" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.35"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_family_bg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_family_text_iv"
+                android:src="@drawable/txt_auto_title_family"
+                android:layout_width="68dp"
+                android:layout_height="44dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_family_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/selector_analysis_book_theme_select" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_baby_bg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_baby_text_iv"
+                android:src="@drawable/txt_auto_title_baby"
+                android:layout_width="68dp"
+                android:layout_height="44dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/smart_snaps_analysis_theme_type_select_activity_baby_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/selector_analysis_book_theme_select" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+    <!--
+
+    <LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="0px"--><!--android:layout_weight="1"--><!--android:orientation="vertical"--><!--android:padding="20dp">-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="0px"--><!--android:layout_weight="1"--><!--android:orientation="horizontal">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="0px"--><!--android:layout_height="wrap_content"--><!--android:layout_weight="1">-->
+
+    <!--<ImageView--><!--android:id="@+id/smart_snaps_analysis_theme_type_select_activity_travel_btn"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true"--><!--android:src="@drawable/smart_face_08" />--><!--</RelativeLayout>-->
+
+    <!--<RelativeLayout--><!--android:layout_width="0px"--><!--android:layout_height="wrap_content"--><!--android:layout_weight="1">-->
+
+    <!--<ImageView--><!--android:id="@+id/smart_snaps_analysis_theme_type_select_activity_couple_btn"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true"--><!--android:src="@drawable/smart_rotation_08" />--><!--</RelativeLayout>--><!--</LinearLayout>-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="0px"--><!--android:layout_weight="1"--><!--android:orientation="horizontal">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="0px"--><!--android:layout_height="wrap_content"--><!--android:layout_weight="1">-->
+
+    <!--<ImageView--><!--android:id="@+id/smart_snaps_analysis_theme_type_select_activity_family_btn"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true"--><!--android:src="@drawable/smart_time_07" />--><!--</RelativeLayout>-->
+
+    <!--<RelativeLayout--><!--android:layout_width="0px"--><!--android:layout_height="wrap_content"--><!--android:layout_weight="1">-->
+
+    <!--<ImageView--><!--android:id="@+id/smart_snaps_analysis_theme_type_select_activity_baby_btn"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true"--><!--android:src="@drawable/smart_time_02" />--><!--</RelativeLayout>--><!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<font.FTextView--><!--android:id="@+id/smart_snaps_analysis_theme_type_select_activity_next_btn"--><!--android:layout_width="120dp"--><!--android:layout_height="45dp"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_marginBottom="45dp"--><!--android:background="#e36a63"--><!--android:gravity="center"--><!--android:text="@string/next"--><!--android:textColor="#ffffff"--><!--android:textSize="13dp"--><!--custom:customFont="@string/font_name_ygt_740" />-->

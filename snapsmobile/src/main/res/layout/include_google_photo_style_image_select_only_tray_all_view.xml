@@ -1,0 +1,79 @@
+<RelativeLayout android:id="@+id/include_google_photo_style_image_select_only_tray_all_view_ly"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/snaps_sticky_viewpager_strip_height"
+                android:background="#191919"
+                android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/google_photo_style_image_select_only_tray_all_view_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <font.FTextView
+            android:id="@+id/google_photo_style_image_select_only_tray_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/image_select_tray_all_view_title"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text=" ("
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <font.FTextView
+            android:id="@+id/google_photo_style_image_select_only_tray_count_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="0"
+            android:textColor="#e8625a"
+            android:textSize="11dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <font.FTextView
+            android:id="@+id/google_photo_style_image_select_only_tray_count_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/google_photo_style_image_select_only_tray_count_left_tv"
+            android:maxLines="1"
+            android:textColor="#191919"
+            android:textSize="11dp"
+            android:visibility="gone"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:text=")"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <ImageView
+            android:id="@+id/google_photo_style_image_select_only_title_bar_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_arrow_for_right_s" />
+    </LinearLayout>
+</RelativeLayout>
+

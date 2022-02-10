@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/ly_sticky_network_err_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center"
+                android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/ly_sticky_network_err_margin_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/wifi" />
+
+        <font.FTextView
+            android:id="@+id/tv_network_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_wifi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/network_err_msg_title"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <font.FTextView
+            android:id="@+id/tv_network_text_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_network_text_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/network_err_msg_sub"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+        <font.FTextView
+            android:id="@+id/btn_sticky_network_err_retry"
+            android:layout_width="80dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/tv_network_text_d"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/btn_black"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/retry"
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            custom:customFont="@string/font_name_ygt_740" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

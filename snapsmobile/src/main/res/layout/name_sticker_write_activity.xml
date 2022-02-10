@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+    <include layout="@layout/_include_theme_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_noti" />
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            custom:customFont="@string/font_name_ygt_740"
+            android:textSize="12dp"
+            android:text="@string/text_area_touch_edit"
+            android:layout_marginLeft="4dp"
+            android:textColor="#191919" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/testFrameLayout"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        ></FrameLayout>
+
+    </RelativeLayout>
+    <font.FTextView
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:padding="0dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        custom:customFont="@string/font_name_ygt_740"
+        android:textSize="13dp"
+        android:background="@color/detail_page_make_button_activated"
+        android:text="@string/next"
+        android:onClick="onClick"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

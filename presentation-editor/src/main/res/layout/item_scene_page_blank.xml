@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.snaps.mobile.presentation.editor.sketch.custom.SceneUIContainer
+        android:id="@+id/scene_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gallery"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/contents_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/empty_cd"
+            android:scaleType="fitXY" />
+
+        <FrameLayout
+            android:id="@+id/object_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/page_divider_skin"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/empty_cd"
+            android:src="@drawable/scene_page_divider_skin" />
+
+        <View
+            android:id="@+id/drop_image_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_foreground_image_selected"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <Button xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_delete_page"
+            style="@style/Widget.App.Button.TextButton.IconOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:icon="@drawable/ic_del_thumb" />
+
+    </com.snaps.mobile.presentation.editor.sketch.custom.SceneUIContainer>
+
+    <View
+        android:id="@+id/left_drop_indicator"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/scene_container"
+        android:layout_alignBottom="@id/scene_container"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/shape_image_swap"
+        android:elevation="5dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/right_drop_indicator"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/scene_container"
+        android:layout_alignBottom="@id/scene_container"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/shape_image_swap"
+        android:elevation="5dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/bottom_controller"
+        layout="@layout/view_scene_page_bottom_controller"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scene_container"
+        android:layout_alignStart="@id/scene_container"
+        android:layout_alignEnd="@id/scene_container"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp" />
+
+</RelativeLayout>

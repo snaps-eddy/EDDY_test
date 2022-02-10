@@ -1,0 +1,26 @@
+package com.snaps.mobile.utils.network.retrofit2.interfacies.enums;
+
+public enum eSnapsRetrofitRequestParams {
+    FULL_URL,
+    PASSWORD,
+    USER_ID,
+    SNS_ID,
+    SNS_TYPE,
+    LOGIN_TYPE,
+    USER_NO,
+    X_SNAPS_TOKEN,
+    USER_NAME,
+    TEMPLATE_ID,
+    TEMPLATE_CODE,
+    TEMPLATE_CLASS_CODE,
+    BACKGROUND_CODE,
+    PROJ_CODE,
+    PAGE_RESOURCE_REQUEST_TYPE,
+    MASK_COUNT,
+    PAGE_TYPE,
+    DESIGNER_ID,
+    SIDE,
+    SORT,
+    AUTH_KEY,
+    CELL_PHONE_NUMBER,
+}

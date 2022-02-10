@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_diary_list_bg">
+
+    <RelativeLayout
+        android:id="@+id/snaps_diary_list_item_parent_ly"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/shape_diary_list_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <font.FTextView
+            android:id="@+id/snaps_diary_list_item_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:paddingTop="17dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <font.FTextView
+            android:id="@+id/snaps_diary_list_item_regist_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/snaps_diary_list_item_date_tv"
+            android:gravity="left|center_vertical"
+            android:paddingTop="7dp"
+            android:paddingBottom="12dp"
+            android:textColor="#999999"
+            android:textSize="12dp"/>
+
+        <RelativeLayout
+            android:id="@+id/snaps_diary_list_item_select_ly"
+            android:layout_alignParentRight="true"
+            android:paddingRight="11dp"
+            android:paddingLeft="7dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_diary_list_small_option"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/snaps_diary_list_item_feels_iv"
+            android:layout_marginTop="18dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="14dp"
+            android:scaleType="centerInside"
+            android:layout_toLeftOf="@id/snaps_diary_list_item_select_ly"/>
+
+        <ImageView
+            android:id="@+id/snaps_diary_list_item_wheater_iv"
+            android:layout_marginTop="18dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="centerInside"
+            android:layout_toLeftOf="@id/snaps_diary_list_item_feels_iv"/>
+
+        <ImageView
+            android:id="@+id/snaps_diary_list_item_thumb_iv"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="304dp"
+            android:layout_below="@+id/snaps_diary_list_item_regist_date_tv"
+            android:scaleType="fitXY"/>
+
+        <!--android:src="@drawable/empty_logo"-->
+
+        <com.snaps.mobile.activity.diary.customview.SnapsDiaryLimitLineTextView
+            android:id="@+id/snaps_diary_list_item_contents_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:layout_below="@id/snaps_diary_list_item_thumb_iv"
+            android:textSize="14dp"
+            android:textColor="#333333"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="24dp"
+            custom:maxLineCount="2"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundpatten"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/_include_theme_title" />
+
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp" >
+
+        <LinearLayout
+            android:id="@+id/btn_before"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/btn_before2"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/ar_pre" />
+
+            <font.FTextView
+                android:id="@+id/btn_before1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/prev_photo"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <font.FTextView
+            android:id="@+id/photo_Crop_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <font.FTextView
+                android:id="@+id/btn_next1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/next_photo"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/btn_next2"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/ar_next" />
+        </LinearLayout>
+    </RelativeLayout>
+
+   <!-- <ImageView
+        android:id="@+id/imgOrigin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_view"
+        android:layout_below="@+id/topView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />-->
+    <com.snaps.mobile.component.image_edit_componet.SnapsImageCropView
+        android:id="@+id/imgOrigin"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+
+   <!--  <LinearLayout
+        android:id="@+id/layoutCropRect"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_crop_rectangle"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/crop_focus" /> 
+    </LinearLayout>-->
+
+    <ProgressBar
+        android:id="@+id/progressImg"
+        android:indeterminateDrawable="@drawable/rotate_progress"
+        android:layout_width="@dimen/default_progress_dialog_size"
+        android:layout_height="@dimen/default_progress_dialog_size"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/selector_theme_rotate"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rotate" />
+
+        <font.FTextView
+            android:id="@+id/rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/rotate"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</LinearLayout>

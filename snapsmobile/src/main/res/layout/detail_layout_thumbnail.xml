@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="398dp"
+    android:background="#FFFFFF" >
+    
+    <com.snaps.mobile.activity.ui.menu.renewal.viewpager.TouchCustomRecyclerViewPager
+        android:id="@+id/horizontal_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <font.FTextView
+        android:id="@+id/text_pager"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:gravity="center"
+        custom:customFont="@string/font_name_ygt_740"
+        android:textSize="11dp"
+        android:textColor="#FF999999"
+        android:padding="0dp"
+        android:layout_marginTop="23dp"
+        android:layout_below="@id/horizontal_pager" />
+
+    <font.FTextView
+        android:id="@+id/zoom_button"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        custom:customFont="@string/font_name_ygt_740"
+        android:textSize="12dp"
+        android:background="@drawable/icon_zoom"
+        android:textColor="#FF191919"
+        android:text="zoom"
+        android:gravity="center"
+        android:layout_below="@id/text_pager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp" />
+
+    <RelativeLayout
+        android:layout_below="@id/zoom_button"
+        android:layout_width="match_parent"
+        android:layout_height="27dp" />
+</RelativeLayout>

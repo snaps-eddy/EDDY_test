@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+    <com.snaps.mobile.activity.themebook.holder.SnapsCanvasContainerLayout
+        android:id="@+id/smart_snaps_analysis_product_edit_list_page_fragment_ly"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        android:layout_weight="1" />
+
+    <font.FTextView
+        android:id="@+id/smart_snaps_analysis_product_edit_list_page_label_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#999999"
+        android:textSize="11dp"
+        android:layout_marginTop="12dp"
+        custom:customFont="@string/font_name_ygt_740" />
+
+</LinearLayout>

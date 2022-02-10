@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smart_recommend_book_swipe_page_tutorial_parent_ly"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.54" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.20"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/smart_recommend_book_swipe_page_tutorial_gif_iv"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <font.FTextView
+            android:id="@+id/smart_recommend_book_swipe_page_tutorial_desc_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#191919"
+            android:textSize="12dp"
+            custom:customFont="@string/font_name_ygt_740" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.24"/>
+
+</LinearLayout>

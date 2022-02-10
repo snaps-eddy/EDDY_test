@@ -1,0 +1,674 @@
+{
+  "00800100010001": {
+    "template": {
+      "@type": "photoPrint",
+      "scene": {
+        "@type": "page",
+        "@width": "196",
+        "@height": "280",
+        "layer": [
+          {
+            "@name": "background_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 196,
+              "@height": 280,
+              "source": {
+                "@type": "color",
+                "@bgcolor": "ffffff"
+              },
+              "regist": {
+                "@name": "background",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "image_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 196,
+              "@height": 280,
+              "@angleClip": 0,
+              "source": {
+                "@type": "browse_file",
+                "@fit": "fit_in",
+                "@maximize": "on",
+                "@bgcolor": "ffffff"
+              },
+              "modify_content": {
+                "@move": "on",
+                "@border": "inner_border",
+                "@resize": "on",
+                "@rotate": "on",
+                "@flip": "on",
+                "@alpha": "off"
+              },
+              "regist": {
+                "@name": "user_image",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "form_layer"
+          },
+          {
+            "@name": "form_style"
+          },
+          {
+            "@name": "control_layer",
+            "textlist": {
+              "@rc": "20 255 156 25",
+              "@vertical": "false",
+              "@angle": 0,
+              "htmlText": "<TextFlow color='#ffffff' fontFamily='스냅스 윤고딕 330' fontSize='9' textAlign='right'><p><span></span></p></TextFlow>"
+            }
+          }
+        ]
+      }
+    },
+    "TmplInfo": {
+      "F_PROD_CODE": "00800100010001",
+      "F_PROD_TYPE": "photo_print",
+      "F_PROD_NAME": "일반사진인화 [3 X 5]",
+      "F_PROD_NICK_NAME": "3 X 5",
+      "F_PROD_SIZE": "3 X 5",
+      "F_PAGE_MM_WIDTH": "89",
+      "F_PAGE_MM_HEIGHT": "127",
+      "F_PAGE_PIXEL_WIDTH": "196",
+      "F_PAGE_PIXEL_HEIGHT": "280",
+      "F_RES_MIN": "50"
+    }
+  },
+  "00800100010002": {
+    "template": {
+      "@type": "photoPrint",
+      "scene": {
+        "@type": "page",
+        "@width": "210",
+        "@height": "280",
+        "layer": [
+          {
+            "@name": "background_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 210,
+              "@height": 280,
+              "source": {
+                "@type": "color",
+                "@bgcolor": "ffffff"
+              },
+              "regist": {
+                "@name": "background",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "image_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 210,
+              "@height": 280,
+              "@angleClip": 0,
+              "source": {
+                "@type": "browse_file",
+                "@fit": "fit_in",
+                "@maximize": "on",
+                "@bgcolor": "ffffff"
+              },
+              "modify_content": {
+                "@move": "on",
+                "@border": "inner_border",
+                "@resize": "on",
+                "@rotate": "on",
+                "@flip": "on",
+                "@alpha": "off"
+              },
+              "regist": {
+                "@name": "user_image",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "form_layer"
+          },
+          {
+            "@name": "form_style"
+          },
+          {
+            "@name": "control_layer",
+            "textlist": {
+              "@rc": "17.4 257 148 23.3",
+              "@vertical": "false",
+              "@angle": "0",
+              "htmlText": "<TextFlow color='#ffffff' fontFamily='스냅스 윤고딕 330' fontSize='9' textAlign='right'><p><span></span></p></TextFlow>"
+            }
+          }
+        ]
+      }
+    },
+    "TmplInfo": {
+      "F_PROD_CODE": "00800100010002",
+      "F_PROD_TYPE": "photo_print",
+      "F_PROD_NAME": "일반사진인화 [D4]",
+      "F_PROD_NICK_NAME": "D4",
+      "F_PROD_SIZE": "D4",
+      "F_PAGE_MM_WIDTH": "102",
+      "F_PAGE_MM_HEIGHT": "136",
+      "F_PAGE_PIXEL_WIDTH": "210",
+      "F_PAGE_PIXEL_HEIGHT": "280",
+      "F_RES_MIN": "75"
+    }
+  },
+  "00800100010003": {
+    "template": {
+      "@type": "photoPrint",
+      "scene": {
+        "@type": "page",
+        "@width": "188",
+        "@height": "280",
+        "layer": [
+          {
+            "@name": "background_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 188,
+              "@height": 280,
+              "source": {
+                "@type": "color",
+                "@bgcolor": "ffffff"
+              },
+              "regist": {
+                "@name": "background",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "image_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 188,
+              "@height": 280,
+              "@angleClip": 0,
+              "source": {
+                "@type": "browse_file",
+                "@fit": "fit_in",
+                "@maximize": "on",
+                "@bgcolor": "ffffff"
+              },
+              "modify_content": {
+                "@move": "on",
+                "@border": "inner_border",
+                "@resize": "on",
+                "@rotate": "on",
+                "@flip": "on",
+                "@alpha": "off"
+              },
+              "regist": {
+                "@name": "user_image",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "form_layer"
+          },
+          {
+            "@name": "form_style"
+          },
+          {
+            "@name": "control_layer",
+            "textlist": {
+              "@rc": "17.4 257 148 23.3",
+              "@vertical": "false",
+              "@angle": "0",
+              "htmlText": "<TextFlow color='#ffffff' fontFamily='스냅스 윤고딕 330' fontSize='9' textAlign='right'><p><span></span></p></TextFlow>"
+            }
+          }
+        ]
+      }
+    },
+    "TmplInfo": {
+      "F_PROD_CODE": "00800100010003",
+      "F_PROD_TYPE": "photo_print",
+      "F_PROD_NAME": "일반사진인화 [4 X 6]",
+      "F_PROD_NICK_NAME": "4 X 6",
+      "F_PROD_SIZE": "4 X 6",
+      "F_PAGE_MM_WIDTH": "102",
+      "F_PAGE_MM_HEIGHT": "152",
+      "F_PAGE_PIXEL_WIDTH": "188",
+      "F_PAGE_PIXEL_HEIGHT": "280",
+      "F_RES_MIN": "68"
+    }
+  },
+  "00800100010005": {
+    "template": {
+      "@type": "photoPrint",
+      "scene": {
+        "@type": "page",
+        "@width": "200",
+        "@height": "280",
+        "layer": [
+          {
+            "@name": "background_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 200,
+              "@height": 280,
+              "source": {
+                "@type": "color",
+                "@bgcolor": "ffffff"
+              },
+              "regist": {
+                "@name": "background",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "image_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 200,
+              "@height": 280,
+              "@angleClip": 0,
+              "source": {
+                "@type": "browse_file",
+                "@fit": "fit_in",
+                "@maximize": "on",
+                "@bgcolor": "ffffff"
+              },
+              "modify_content": {
+                "@move": "on",
+                "@border": "inner_border",
+                "@resize": "on",
+                "@rotate": "on",
+                "@flip": "on",
+                "@alpha": "off"
+              },
+              "regist": {
+                "@name": "user_image",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "form_layer"
+          },
+          {
+            "@name": "form_style"
+          },
+          {
+            "@name": "control_layer",
+            "textlist": {
+              "@rc": "14 262 160 17.8",
+              "@vertical": "false",
+              "@angle": "0",
+              "htmlText": "<TextFlow color='#ffffff' fontFamily='스냅스 윤고딕 330' fontSize='6' textAlign='right'><p><span></span></p></TextFlow>"
+            }
+          }
+        ]
+      }
+    },
+    "TmplInfo": {
+      "F_PROD_CODE": "00800100010005",
+      "F_PROD_TYPE": "photo_print",
+      "F_PROD_NAME": "일반사진인화 [5 X 7]",
+      "F_PROD_NICK_NAME": "5 X 7",
+      "F_PROD_SIZE": "5 X 7",
+      "F_PAGE_MM_WIDTH": "127",
+      "F_PAGE_MM_HEIGHT": "178",
+      "F_PAGE_PIXEL_WIDTH": "200",
+      "F_PAGE_PIXEL_HEIGHT": "280",
+      "F_RES_MIN": "89"
+    }
+  },
+  "00800100010006": {
+    "template": {
+      "@type": "photoPrint",
+      "scene": {
+        "@type": "page",
+        "@width": "224",
+        "@height": "280",
+        "layer": [
+          {
+            "@name": "background_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 224,
+              "@height": 280,
+              "source": {
+                "@type": "color",
+                "@bgcolor": "ffffff"
+              },
+              "regist": {
+                "@name": "background",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "image_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 224,
+              "@height": 280,
+              "@angleClip": 0,
+              "source": {
+                "@type": "browse_file",
+                "@fit": "fit_in",
+                "@maximize": "on",
+                "@bgcolor": "ffffff"
+              },
+              "modify_content": {
+                "@move": "on",
+                "@border": "inner_border",
+                "@resize": "on",
+                "@rotate": "on",
+                "@flip": "on",
+                "@alpha": "off"
+              },
+              "regist": {
+                "@name": "user_image",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "form_layer"
+          },
+          {
+            "@name": "form_style"
+          },
+          {
+            "@name": "control_layer",
+            "textlist": {
+              "@rc": "8.7 267 184 12.5",
+              "@vertical": "false",
+              "@angle": "0",
+              "htmlText": "<TextFlow color='#ffffff' fontFamily='스냅스 윤고딕 330' fontSize='4' textAlign='right'><p><span></span></p></TextFlow>"
+            }
+          }
+        ]
+      }
+    },
+    "TmplInfo": {
+      "F_PROD_CODE": "00800100010006",
+      "F_PROD_TYPE": "photo_print",
+      "F_PROD_NAME": "일반사진인화 [8 X 10]",
+      "F_PROD_NICK_NAME": "8 X 10",
+      "F_PROD_SIZE": "8 X 10",
+      "F_PAGE_MM_WIDTH": "203",
+      "F_PAGE_MM_HEIGHT": "254",
+      "F_PAGE_PIXEL_WIDTH": "224",
+      "F_PAGE_PIXEL_HEIGHT": "280",
+      "F_RES_MIN": "78"
+    }
+  },
+  "00800100010011": {
+    "template": {
+      "@type": "photoPrint",
+      "scene": {
+        "@type": "page",
+        "@width": "200",
+        "@height": "280",
+        "layer": [
+          {
+            "@name": "background_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 200,
+              "@height": 280,
+              "source": {
+                "@type": "color",
+                "@bgcolor": "ffffff"
+              },
+              "regist": {
+                "@name": "background",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "image_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 200,
+              "@height": 280,
+              "@angleClip": 0,
+              "source": {
+                "@type": "browse_file",
+                "@fit": "fit_in",
+                "@maximize": "on",
+                "@bgcolor": "ffffff"
+              },
+              "modify_content": {
+                "@move": "on",
+                "@border": "inner_border",
+                "@resize": "on",
+                "@rotate": "on",
+                "@flip": "on",
+                "@alpha": "off"
+              },
+              "regist": {
+                "@name": "user_image",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "form_layer"
+          },
+          {
+            "@name": "form_style"
+          },
+          {
+            "@name": "control_layer",
+            "textlist": {
+              "@rc": "8.4 269 160 10.6",
+              "@vertical": "false",
+              "@angle": "0",
+              "htmlText": "<TextFlow color='#ffffff' fontFamily='스냅스 윤고딕 330' fontSize='4' textAlign='right'><p><span></span></p></TextFlow>"
+            }
+          }
+        ]
+      }
+    },
+    "TmplInfo": {
+      "F_PROD_CODE": "00800100010011",
+      "F_PROD_TYPE": "photo_print",
+      "F_PROD_NAME": "일반사진인화 [A4]",
+      "F_PROD_NICK_NAME": "A4",
+      "F_PROD_SIZE": "A4",
+      "F_PAGE_MM_WIDTH": "210",
+      "F_PAGE_MM_HEIGHT": "297",
+      "F_PAGE_PIXEL_WIDTH": "200",
+      "F_PAGE_PIXEL_HEIGHT": "280",
+      "F_RES_MIN": "68"
+    }
+  },
+  "00800100010009": {
+    "template": {
+      "@type": "photoPrint",
+      "scene": {
+        "@type": "page",
+        "@width": "220",
+        "@height": "280",
+        "layer": [
+          {
+            "@name": "background_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 219,
+              "@height": 280,
+              "source": {
+                "@type": "color",
+                "@bgcolor": "ffffff"
+              },
+              "regist": {
+                "@name": "background",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "image_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 219,
+              "@height": 280,
+              "@angleClip": 0,
+              "source": {
+                "@type": "browse_file",
+                "@fit": "fit_in",
+                "@maximize": "on",
+                "@bgcolor": "ffffff"
+              },
+              "modify_content": {
+                "@move": "on",
+                "@border": "inner_border",
+                "@resize": "on",
+                "@rotate": "on",
+                "@flip": "on",
+                "@alpha": "off"
+              },
+              "regist": {
+                "@name": "user_image",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "form_layer"
+          },
+          {
+            "@name": "form_style"
+          },
+          {
+            "@name": "control_layer",
+            "textlist": {
+              "@rc": "6.5 271 179 8.9",
+              "@vertical": "false",
+              "@angle": "0",
+              "htmlText": "<TextFlow color='#ffffff' fontFamily='스냅스 윤고딕 330' fontSize='3' textAlign='right'><p><span></span></p></TextFlow>"
+            }
+          }
+        ]
+      }
+    },
+    "TmplInfo": {
+      "F_PROD_CODE": "00800100010009",
+      "F_PROD_TYPE": "photo_print",
+      "F_PROD_NAME": "일반사진인화 [11 X 14]",
+      "F_PROD_NICK_NAME": "11 X 14",
+      "F_PROD_SIZE": "11 X 14",
+      "F_PAGE_MM_WIDTH": "279",
+      "F_PAGE_MM_HEIGHT": "356",
+      "F_PAGE_PIXEL_WIDTH": "219",
+      "F_PAGE_PIXEL_HEIGHT": "280",
+      "F_RES_MIN": "64"
+    }
+  },
+  "00800100010010": {
+    "template": {
+      "@type": "photoPrint",
+      "scene": {
+        "@type": "page",
+        "@width": "197",
+        "@height": "280",
+        "layer": [
+          {
+            "@name": "background_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 197,
+              "@height": 280,
+              "source": {
+                "@type": "color",
+                "@bgcolor": "ffffff"
+              },
+              "regist": {
+                "@name": "background",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "image_layer",
+            "image": {
+              "@x": 0,
+              "@y": 0,
+              "@width": 197,
+              "@height": 280,
+              "@angleClip": 0,
+              "source": {
+                "@type": "browse_file",
+                "@fit": "fit_in",
+                "@maximize": "on",
+                "@bgcolor": "ffffff"
+              },
+              "modify_content": {
+                "@move": "on",
+                "@border": "inner_border",
+                "@resize": "on",
+                "@rotate": "on",
+                "@flip": "on",
+                "@alpha": "off"
+              },
+              "regist": {
+                "@name": "user_image",
+                "@value": "0"
+              }
+            }
+          },
+          {
+            "@name": "form_layer"
+          },
+          {
+            "@name": "form_style"
+          },
+          {
+            "@name": "control_layer",
+            "textlist": {
+              "@rc": "5.8 273 157 7.3",
+              "@vertical": "false",
+              "@angle": "0",
+              "htmlText": "<TextFlow color='#ffffff' fontFamily='스냅스 윤고딕 330' fontSize='3' textAlign='right'><p><span></span></p></TextFlow>"
+            }
+          }
+        ]
+      }
+    },
+    "TmplInfo": {
+      "F_PROD_CODE": "00800100010010",
+      "F_PROD_TYPE": "photo_print",
+      "F_PROD_NAME": "일반사진인화 [12 X 17]",
+      "F_PROD_NICK_NAME": "12 X 17",
+      "F_PROD_SIZE": "12 X 17",
+      "F_PAGE_MM_WIDTH": "304",
+      "F_PAGE_MM_HEIGHT": "432",
+      "F_PAGE_PIXEL_WIDTH": "197",
+      "F_PAGE_PIXEL_HEIGHT": "280",
+      "F_RES_MIN": "60"
+    }
+  }
+}

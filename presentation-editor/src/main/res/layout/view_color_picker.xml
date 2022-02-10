@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gallery"
+    android:padding="16dp">
+
+
+    <View
+        android:id="@+id/btn_current_color"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_current_color_selector"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_color_picker_item_selector"
+        app:layout_constraintBottom_toBottomOf="@id/btn_current_color"
+        app:layout_constraintEnd_toEndOf="@id/btn_current_color"
+        app:layout_constraintStart_toStartOf="@id/btn_current_color"
+        app:layout_constraintTop_toTopOf="@id/btn_current_color" />
+
+    <TextView
+        android:id="@+id/tv_basic_color_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/base_color"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/btn_current_color"
+        app:layout_constraintStart_toEndOf="@id/btn_current_color"
+        app:layout_constraintTop_toTopOf="@id/btn_current_color" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/alto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btn_current_color"
+        app:layout_constraintTop_toBottomOf="@id/btn_current_color" />
+
+    <com.snaps.mobile.presentation.editor.textwritter.custom.ColorPicker
+        android:id="@+id/colorpicker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

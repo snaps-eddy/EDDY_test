@@ -1,0 +1,94 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion androidCompileSdkVersion
+
+    defaultConfig {
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+    }
+
+    buildToolsVersion androidBuildToolVersion
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':snapsinstagram')
+    api project(':snapskakao')
+    api project(':snapsfacebook')
+    api project(':snapsconfig')
+    implementation 'com.github.lsjwzh.RecyclerViewPager:lib:v1.1.0'
+    implementation 'com.wdullaer:materialdatetimepicker:2.2.0'
+    implementation 'com.malinskiy:superrecyclerview:1.1.3'
+
+    api 'com.appsflyer:af-android-sdk:5.0.0'
+    api 'com.android.installreferrer:installreferrer:2.1'
+
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'jp.wasabeef:blurry:2.1.1'
+    implementation 'org.jsoup:jsoup:1.11.2'
+    api 'com.squareup:otto:1.3.8'
+    api "com.squareup.retrofit2:retrofit:$retrofit2Version"
+    api "com.squareup.retrofit2:converter-gson:$retrofit2Version"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit2Version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2Version"
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation('com.squareup.retrofit2:converter-simplexml:2.3.0') {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.0.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.0.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.1.0'
+    implementation 'com.google.photos.library:google-photos-library-client:1.1.0'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    testImplementation "junit:junit:4.13"
+    testImplementation "org.powermock:powermock-module-junit4:$powerMockitoVersion"
+    testImplementation "org.powermock:powermock-api-mockito2:$powerMockitoVersion"
+    testImplementation "org.assertj:assertj-core:3.17.2"
+
+    implementation project(':presentation-editor')
+}

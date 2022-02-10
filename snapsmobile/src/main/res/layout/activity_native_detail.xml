@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/main_menu_bar"
+        layout="@layout/_include_title" />
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_menu_bar"
+        android:visibility="invisible"
+        android:background="#FFF4F4F4" >
+
+        <LinearLayout
+            android:id="@+id/thumbnail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="418dp"
+            android:orientation="vertical" />
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/thumbnail_fake_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="418dp"
+                    android:background="#00FFFFFF"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#00FFFFFF" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFF4F4F4" />
+
+                <LinearLayout
+                    android:id="@+id/normal_option_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF4F4F4"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/product_opt_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF4F4F4"
+                    android:paddingTop="8dp"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/premium_layout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:background="#FFF4F4F4"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/detail_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:background="#FFF4F4F4"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/scroll_bottom_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="#FFFFFFFF" />
+            </LinearLayout>
+        </ScrollView>
+
+        <font.FTextView
+            android:id="@+id/make_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="-48dp"
+            android:clickable="true"
+            android:padding="0dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            custom:customFont="@string/font_name_ygt_740"
+            android:textSize="13dp"
+            android:background="@color/detail_page_make_button_inactivated"
+            android:text="@string/create"
+            android:onClick="onClick"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pre_load_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_menu_bar"
+        android:background="#FFF4F4F4" >
+
+        <RelativeLayout
+            android:id="@+id/preload_thumb_area"
+            android:layout_width="match_parent"
+            android:layout_height="328dp"
+            android:background="#FFFFFFFF">
+            <ImageView
+                android:id="@+id/preload_thumb_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/preload_thumb_area2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/preload_thumb_area"
+            android:background="#FFFFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/preload_thumb_area2"
+            android:background="#FFFFFFFF"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="16dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFEEEEEE" />
+
+            <RelativeLayout
+                android:layout_width="66dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="32dp"
+                android:background="#FFF4F4F4" />
+            <RelativeLayout
+                android:layout_width="220dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="16dp"
+                android:background="#FFF4F4F4" />
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="16dp"
+                android:background="#FFF4F4F4" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/dim_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_menu_bar"
+        android:background="#88000000"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/network_error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_menu_bar"
+
+        android:visibility="gone">
+        <include
+            layout="@layout/include_network_error" />
+    </RelativeLayout>
+</RelativeLayout>

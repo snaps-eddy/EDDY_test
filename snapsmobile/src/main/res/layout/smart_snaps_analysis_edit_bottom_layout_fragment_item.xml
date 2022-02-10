@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutImgFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imgCoverAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/select_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/img_out_line"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/img_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="1dp"
+                android:visibility="invisible"
+                android:src="@drawable/icon_check_design_list"/>
+
+            <font.FTextView
+                android:id="@+id/base_label"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="#e36a63"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:layout_marginLeft="1dp"
+                android:text="@string/base"
+                android:textColor="#ffffff"
+                android:textSize="11dp"
+                android:visibility="gone"
+                custom:customFont="@string/font_name_ygt_740" />
+
+        </RelativeLayout>
+</RelativeLayout>

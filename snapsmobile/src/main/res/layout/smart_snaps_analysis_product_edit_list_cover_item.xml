@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <font.FTextView
+            android:id="@+id/smart_snaps_analysis_product_edit_list_cover_page_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#191919"
+            android:textSize="11dp"
+            custom:customFont="@string/font_name_ygt_740" />
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="11dp"
+            android:text=" pages / "
+            custom:customFont="@string/font_name_ygt_740" />
+        <font.FTextView
+            android:id="@+id/smart_snaps_analysis_product_edit_list_cover_photo_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#191919"
+            android:textSize="11dp"
+            custom:customFont="@string/font_name_ygt_740" />
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="11dp"
+            android:text=" photos"
+            custom:customFont="@string/font_name_ygt_740" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="223dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/smart_snaps_analysis_product_edit_list_cover_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:overScrollMode="never"/>
+
+        </RelativeLayout>
+
+        <!-- 인디케이터 -->
+        <LinearLayout
+            android:id="@+id/smart_snaps_analysis_product_edit_list_cover_indicator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:minHeight="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <font.FTextView
+        android:id="@+id/smart_snaps_analysis_product_edit_list_cover_edit_btn"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/selector_smart_recommend_book_edit_cover_btn"
+        android:gravity="center"
+        android:textColor="#191919"
+        android:textSize="12dp"
+        android:text="@string/edit_cover_btn_text"
+        android:layout_marginTop="20dp"
+        custom:customFont="@string/font_name_ygt_740" />
+
+</LinearLayout>

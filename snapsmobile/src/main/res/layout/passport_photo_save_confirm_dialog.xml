@@ -1,0 +1,190 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_black_191919_border_rect"
+    android:minWidth="328dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/passport_photo_save_confirm_title"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#191919"
+            custom:customFont="@string/font_name_ygt_740"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/img_square_dot"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/passport_photo_save_confirm_desc_01"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#191919"
+                custom:customFont="@string/font_name_ygt_740"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/img_square_dot"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <font.FTextView
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/passport_photo_save_confirm_desc_02"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#191919"
+                custom:customFont="@string/font_name_ygt_740"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/img_square_dot"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/passport_photo_save_confirm_desc_03"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#191919"
+                custom:customFont="@string/font_name_ygt_740"
+                android:textSize="11dp"
+                android:id="@+id/FTextView" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/img_gray_dot_line" />
+
+        <font.FTextView
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/passport_photo_save_confirm_question"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#191919"
+            custom:customFont="@string/font_name_ygt_740"
+            android:textSize="12dp" />
+
+        <font.FTextView
+            android:id="@+id/passport_photo_save_confirm_dialog_resolution_desc_tv"
+            android:visibility="gone"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/print_not_recommended_comment_check"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#191919"
+            custom:customFont="@string/font_name_ygt_740"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/custom_dialog_cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_gray_cccccc_border_rect"
+                android:layout_marginLeft="44dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <font.FTextView
+                    android:id="@+id/custom_dialog_cancel_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photoprint_edit_contiue"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:gravity="center"
+                    android:textColor="#191919"
+                    android:textSize="11dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/custom_dialog_ok_btn"
+                android:layout_marginRight="44dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <!-- TODO 하드코딩 텍스트 -->
+                <font.FTextView
+                    android:id="@+id/custom_dialog_ok_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_red_btn"
+                    android:gravity="center"
+                    android:text="장바구니에 저장"
+                    android:textColor="#ffffff"
+                    android:textSize="11dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2363636"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="497dp"
+        android:layout_height="292dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="181dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/dialog_sns_book_load_complate_img"
+                android:layout_width="81dp"
+                android:layout_height="81dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/profile_default_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp" />
+            <LinearLayout
+                android:id="@+id/linearLayoutName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="14dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_below="@id/dialog_sns_book_load_complate_img">
+            <font.FTextView
+                android:id="@+id/dialog_sns_book_load_complate_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_format1"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:layout_below="@id/dialog_sns_book_load_complate_img"/>
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="님"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:gravity="center" />
+            </LinearLayout>
+            <font.FTextView
+                android:id="@+id/dialog_sns_book_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:layout_below="@id/linearLayoutName"
+                android:layout_marginTop="5dp" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/profile_layout"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+               >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <font.FTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:textColor="#000000"
+                        android:text="@string/period"
+                        android:textSize="12dp" />
+                    <font.FTextView
+                        android:id="@+id/dialog_sns_book_load_complate_period_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:textColor="#191919"
+                        android:text="@string/period"
+                        android:textSize="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_dcdcdc"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+                    <font.FTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:textColor="#000000"
+                        android:text="@string/cover_type"
+                        android:textSize="12dp" />
+                    <font.FTextView
+                        android:id="@+id/dialog_sns_book_load_complate_cover_type_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:textColor="#191919"
+                        android:text="@string/period"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_dcdcdc"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+                    <font.FTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:textColor="#000000"
+                        android:text="@string/page_count"
+                        android:textSize="12dp" />
+                    <font.FTextView
+                        android:id="@+id/dialog_sns_book_load_complate_page_count_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:textColor="#191919"
+                        android:text="@string/period"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_dcdcdc"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+                    <font.FTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:textColor="#000000"
+                        android:text="가격"
+                        android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="right|center_vertical">
+                    <font.FTextView
+                        android:id="@+id/dialog_sns_book_load_complate_price_origin_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:textColor="#999999"
+                        android:textSize="13dp"
+                        android:layout_marginRight="5dp" />
+                    <font.FTextView
+                        android:id="@+id/dialog_sns_book_load_complate_price_sale_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:textColor="#E36a63"
+                        android:textSize="13dp" />
+                </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_dcdcdc"/>
+                <font.FTextView
+                    android:id="@+id/dialog_sns_book_load_complate_ok_btn"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="@string/confirm"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/selector_dialog_sns_book_confirm_btn"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.snaps.mobile.activity.google_style_image_selector.ui.custom.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:custom="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/imgParent"
+    android:layout_width="match_parent" 
+	android:layout_height="match_parent">
+	
+    <com.snaps.mobile.activity.google_style_image_selector.ui.custom.SquareImageView
+		android:id="@+id/imgDetail"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scaleType="centerCrop"/>
+
+	<!--android:adjustViewBounds="true"-->
+	<!--android:clipToPadding="false"-->
+	<!--android:clipChildren="false"-->
+
+	<font.FTextView
+		android:id="@+id/txtDetail"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone"/>
+    
+     <ImageView
+        android:id="@+id/imgChoiceBgWhite"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="invisible"/>
+
+	<!--android:background="@drawable/shape_red_e36a63_fill_solid_border_rect"-->
+    
+    <ImageView
+        android:id="@+id/imgChoiceBg"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:scaleType="centerInside"
+		android:visibility="invisible"/>
+	<!--android:src="@drawable/img_image_select_fragment_checked"-->
+    
+    <ImageView
+        android:id="@+id/imgFilterBg"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_centerInParent="true"
+		android:scaleType="centerInside"
+		android:visibility="invisible"/>
+
+	<font.FTextView
+		android:id="@+id/imgLabel"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="20dp"
+		android:background="#e36a63"
+		android:paddingBottom="3dp"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"
+		android:paddingTop="3dp"
+		android:text="@string/cover"
+		android:textColor="#ffffff"
+		android:textSize="11dp"
+		android:visibility="gone"
+		custom:customFont="@string/font_name_ygt_740" />
+
+	<!--android:src="@drawable/img_tray_noprint_icon"-->
+
+</com.snaps.mobile.activity.google_style_image_selector.ui.custom.SquareRelativeLayout>

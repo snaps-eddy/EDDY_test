@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/google_photo_style_root_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/include_google_photo_style_image_select_only_tray_all_view_wrapper_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/include_google_photo_style_image_select_only_tray_all_view_ly"
+            layout="@layout/include_google_photo_style_image_select_only_tray_all_view"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- RecyclerView -->
+    <FrameLayout
+        android:id="@+id/google_photo_style_image_select_frame_main_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/include_google_photo_style_image_select_only_tray_all_view_wrapper_ly"
+        android:layout_marginTop="140dp"
+        android:background="@color/white" />
+
+    <!-- 타이틀 영역 -->
+    <include
+        android:id="@+id/include_google_photo_style_image_select_title_area_ly"
+        layout="@layout/include_google_photo_style_image_select_title_bar" />
+
+    <!-- 트레이 영역 -->
+    <include
+        android:id="@+id/include_google_photo_style_image_select_tray_ly"
+        layout="@layout/include_google_photo_style_image_select_tray" />
+
+    <!-- 앨범 리스트 -->
+    <RelativeLayout
+        android:id="@+id/include_google_photo_style_image_select_album_list_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include_google_photo_style_image_select_title_area_ly"
+        android:background="@color/white"
+        android:visibility="invisible">
+
+        <com.snaps.mobile.activity.diary.customview.SnapsRecyclerView
+            android:id="@+id/include_google_photo_style_image_select_album_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/include_sticky_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

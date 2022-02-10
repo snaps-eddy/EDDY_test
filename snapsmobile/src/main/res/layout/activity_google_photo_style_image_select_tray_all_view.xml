@@ -1,0 +1,123 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 타이틀 영역 -->
+    <RelativeLayout
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_title_bar_height"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <font.FTextView
+                android:id="@+id/google_photo_style_image_select_tray_all_view_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/image_select_tray_all_view_title"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_760"/>
+
+            <font.FTextView
+                android:layout_marginLeft="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="("
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:id="@+id/google_photo_style_image_select_tray_count_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#e8625a"
+                android:textSize="12dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:id="@+id/google_photo_style_image_select_tray_count_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#999999"
+                android:textSize="12dp"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=")"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size"
+                custom:customFont="@string/font_name_ygt_740"/>
+
+
+        </LinearLayout>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/google_photo_style_image_select_title_bar_close_iv"-->
+            <!--android:layout_width="38dp"-->
+            <!--android:layout_height="38dp"-->
+            <!--android:src="@drawable/selector_close_small"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="8dp" />-->
+        <font.FTextView
+            android:id="@+id/google_photo_style_image_select_title_bar_close_tv"
+            custom:customFont="@string/font_name_ygt_740"
+            android:background="@color/white"
+            android:textSize="13dp"
+            android:textColor="#191919"
+            android:text="@string/done"
+            android:gravity="center"
+            android:layout_marginRight="16dp"
+            android:layout_width="38dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <com.snaps.mobile.activity.diary.customview.SnapsRecyclerView
+            android:id="@+id/google_photo_style_image_select_tray_all_view_recyclerview"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        
+        <font.FTextView
+            android:id="@+id/google_photo_style_image_select_tray_all_view_bottom_desc"
+            android:visibility="gone"
+            custom:customFont="@string/font_name_ygt_740"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:textSize="11dp"
+            android:textColor="#191919"
+            android:text="@string/layout_guide_text"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

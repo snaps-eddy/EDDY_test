@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+    <RelativeLayout 
+    android:id="@+id/snaps_main_store_menu_item_layout"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    android:layout_width="360dp"
+    android:layout_height="222dp">
+    <!-- 배경 -->
+
+    <ImageView
+        android:id="@+id/snaps_main_store_menu_item_bg_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <!-- 할인 마크 -->
+
+    <ImageView
+        android:id="@+id/snaps_main_store_menu_item_sale_iv"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitXY" />
+
+    <!-- 상세정보 -->
+
+    <ImageView
+        android:id="@+id/snaps_main_store_menu_item_info_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY" />
+    
+    <ImageView
+        android:id="@+id/snaps_main_store_menu_item_comming_soon_iv"
+        android:layout_width="88dp"
+        android:layout_height="22dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY" />
+
+    <!-- 원가 -->
+
+    <font.FTextView
+        android:id="@+id/snaps_main_store_menu_item_origin_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="19dp"
+        android:gravity="center_vertical"
+        android:textColor="#474747"
+        android:textSize="@dimen/main_store_origin_price_size" />
+
+    <!-- 할인가 -->
+
+    <font.FTextView
+        android:id="@+id/snaps_main_store_menu_item_sale_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/snaps_main_store_menu_item_origin_price_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/snaps_main_store_menu_item_origin_price_tv"
+        android:gravity="center_vertical"
+        android:textColor="#474747"
+        android:textSize="@dimen/main_store_sale_price_size"
+        android:textStyle="bold" />
+
+    <!-- 상품명 -->
+
+    <font.FTextView
+        android:id="@+id/snaps_main_store_menu_item_product_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/snaps_main_store_menu_item_sale_price_tv"
+        android:layout_alignLeft="@id/snaps_main_store_menu_item_origin_price_tv"
+        android:gravity="center_vertical"
+        android:textColor="#3a3a3a"
+        android:textSize="@dimen/main_store_menu_name_size"/>
+
+    <font.FTextView
+        android:id="@+id/snaps_main_store_menu_item_product_sub_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/snaps_main_store_menu_item_product_name_tv"
+        android:layout_toRightOf="@id/snaps_main_store_menu_item_product_name_tv"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:gravity="center_vertical"
+        android:textColor="#3a3a3a"
+        android:textSize="@dimen/main_store_menu_sub_name_size"/>
+	</RelativeLayout>
+</RelativeLayout>

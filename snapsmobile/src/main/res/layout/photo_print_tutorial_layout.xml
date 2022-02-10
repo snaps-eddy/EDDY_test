@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false">
+
+    <RelativeLayout
+        android:id="@+id/tutorial_text_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img_tutorial_speech_bubble"
+        android:clickable="true"
+        android:visibility="gone" >
+        <font.FTextView
+            android:id="@+id/tutorial_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:customFont="@string/font_name_ygt_740"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

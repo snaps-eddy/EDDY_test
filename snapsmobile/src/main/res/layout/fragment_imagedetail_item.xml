@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.snaps.mobile.activity.google_style_image_selector.ui.custom.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/imgParent"
+    android:layout_width="match_parent" 
+	android:layout_height="match_parent">
+	
+    <ImageView
+		android:id="@+id/imgDetail"
+		android:src="@drawable/color_drawable_eeeeee"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scaleType="centerCrop"/>
+
+	<font.FTextView
+		android:id="@+id/txtDetail"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#FFFFFF"
+		android:visibility="gone"/>
+    
+     <ImageView
+        android:id="@+id/imgChoiceBgWhite"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		 android:background="@drawable/shape_red_e36a63_fill_solid_border_rect"
+		android:visibility="invisible"/>
+    
+    <ImageView
+        android:id="@+id/imgChoiceBg"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/img_image_select_fragment_checked"
+		android:scaleType="centerInside"
+		android:visibility="invisible"/>
+    
+    <ImageView
+        android:id="@+id/imgFilterBg"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_centerInParent="true"
+		android:src="@drawable/img_tray_noprint_icon"
+		android:scaleType="centerInside"
+		android:visibility="invisible"/>
+
+</com.snaps.mobile.activity.google_style_image_selector.ui.custom.SquareRelativeLayout>

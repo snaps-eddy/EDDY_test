@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FF46FEA5"
+        android:weightSum="16">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:text="폰트테스트"
+            android:textSize="20dp"
+            android:paddingLeft="15dp"
+            android:layout_weight="10"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:src="@drawable/btn_card_align_center_focus"
+            android:scaleType="fitCenter"
+            android:onClick="showTextInput"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:src="@drawable/n_icon_set_on"
+            android:scaleType="fitCenter"
+            android:onClick="showSizeSelect"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:src="@drawable/img_effect_filter_focus"
+            android:scaleType="fitCenter"
+            android:onClick="doSort" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout" />
+
+    <RelativeLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@drawable/btn_diary_gray"
+            android:layout_centerInParent="true"
+            android:weightSum="7" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/input_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical|left"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:textColor="#FF000000" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:weightSum="10">
+                <EditText
+                    android:id="@+id/input_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:textSize="15sp"
+                    android:layout_margin="10dp"
+                    android:textColor="#FF000000" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/confirm_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:src="@drawable/btn_diary_black"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

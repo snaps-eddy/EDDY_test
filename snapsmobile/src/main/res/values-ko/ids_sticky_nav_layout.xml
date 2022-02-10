@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<item name="snpas_sticky_id_sticky_layout" type="id"/>-->
+    <!--<item name="snpas_sticky_id_topview" type="id"/>-->
+    <!--<item name="snpas_sticky_id_viewpager" type="id"/>-->
+    <!--<item name="snpas_sticky_id_inner_scrollview" type="id"/>-->
+    <!--<item name="snpas_sticky_id_tab_strip" type="id"/>-->
+    <!--<item name="snpas_sticky_id_image_layout" type="id"/>-->
+    <!--<item name="snpas_sticky_id_title_layout" type="id"/>-->
+    <!--<item name="snpas_sticky_id_title_bar_text" type="id"/>-->
+    <!--<item name="snpas_sticky_id_sticky_area_title" type="id"/>-->
+    <!--<item name="snpas_sticky_id_sticky_area_desc" type="id"/>-->
+    <!--<item name="snpas_sticky_id_sticky_area_info" type="id"/>-->
+    <!--<item name="snpas_sticky_id_title_bar_back" type="id"/>-->
+    <!--<item name="snpas_sticky_id_title_bar_info" type="id"/>-->
+    <!--<item name="snpas_sticky_id_title_bar_menu" type="id"/>-->
+    <!--<item name="snpas_sticky_id_sticky_area_image" type="id"/>-->
+    <item name="google_photo_style_sticky_topview" type="id"/>
+</resources>

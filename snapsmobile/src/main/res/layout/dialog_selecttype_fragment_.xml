@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+        <font.FTextView 
+            android:id="@+id/txtSelectTitle"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="15sp"
+	        android:padding="20px"
+	        android:gravity="center_vertical"/>
+        <font.FTextView
+            android:id="@+id/btnListClose"
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginRight="20px"
+	        android:background="@drawable/selector_list_close"/>
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#aaaaaa"/>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+        <ListView
+		    android:id="@+id/makeDialogListView"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:cacheColorHint="@android:color/transparent"
+		    android:fadingEdge="none"
+		    android:focusable="true"
+		    android:scrollbarStyle="outsideOverlay"
+		    android:scrollbars="@null"
+		    android:smoothScrollbar="false"/>
+        <font.FTextView
+            android:id="@+id/txtNotResult"
+            android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:paddingTop="50dp"
+	    	android:paddingBottom="50dp"
+	    	android:visibility="gone"
+	    	android:gravity="center"
+            android:text="@string/api_not_result"/>
+    </RelativeLayout>
+	
+</LinearLayout>

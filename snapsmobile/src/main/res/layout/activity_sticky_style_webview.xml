@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/snpas_sticky_id_sticky_area_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/snaps_sticky_strip_offset_y">
+
+        <ImageView
+            android:id="@+id/snpas_sticky_id_sticky_area_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:id="@+id/snpas_sticky_id_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/snpas_sticky_id_sticky_area_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:id="@+id/snpas_sticky_id_sticky_area_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/snpas_sticky_id_sticky_area_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_sticky_info_bg"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--<com.gxz.library.StickyNavLayout-->
+    <com.snaps.common.customui.sticky.SnapsStickyLayout
+        android:id="@+id/snpas_sticky_id_sticky_layout"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 그림 영역 + 스트랩 크기로 지정해 준다.-->
+        <LinearLayout
+            android:id="@+id/snpas_sticky_id_topview"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <com.snaps.mobile.component.CustomSensitivityViewPager
+            android:id="@+id/snpas_sticky_id_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.snaps.common.customui.sticky.SnapsStickyLayout>
+
+    <RelativeLayout
+        android:id="@+id/snpas_sticky_id_title_layout"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/snaps_sticky_title_height">
+            <ImageView
+                android:id="@+id/snpas_sticky_id_title_bar_back"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_sticky_back"/>
+
+            <TextView
+                android:id="@+id/snpas_sticky_id_title_bar_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textColor="#ffffff"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="right|center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/snpas_sticky_id_title_bar_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:scaleType="centerInside"
+                    android:alpha="0"
+                    android:src="@drawable/selector_info_icon_for_sticky_title"/>
+                <ImageView
+                    android:id="@+id/snpas_sticky_id_title_bar_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/selector_hamburger_menu_icon"/>
+            </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/snpas_sticky_id_full_screen_title"
+        android:visibility="gone"
+        layout="@layout/_include_title"/>
+
+    <com.snaps.mobile.component.CustomSensitivityViewPager
+        android:id="@+id/snpas_sticky_id_full_screen_viewpager"
+        android:layout_below="@id/snpas_sticky_id_full_screen_title"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.astuetz.PagerSlidingTabStripForSticky
+        android:id="@+id/snpas_sticky_id_tab_strip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/snaps_sticky_viewpager_strip_height"/>
+
+    <ImageView
+        android:id="@+id/snpas_sticky_id_tab_strip_grad_left"
+        android:visibility="gone"
+        android:src="@drawable/img_pager_strip_grad_left"
+        android:scaleType="centerInside"
+        android:layout_alignTop="@id/snpas_sticky_id_tab_strip"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"/>
+"
+    <ImageView
+        android:id="@+id/snpas_sticky_id_tab_strip_grad_right"
+        android:visibility="gone"
+        android:src="@drawable/img_pager_strip_grad_right"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/snpas_sticky_id_tab_strip"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"/>
+
+    <!-- info 버튼이 아래 깔려 있어서 클릭이 안되서 만든 꽁수 입니다...-_-;;; -->
+    <TextView
+        android:id="@+id/snpas_sticky_id_sticky_area_info_fake"
+        android:layout_width="90dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="122dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <include
+        layout="@layout/include_sticky_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

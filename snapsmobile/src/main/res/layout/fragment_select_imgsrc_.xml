@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+    <!--<font.FTextView -->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="89px"-->
+        <!--android:visibility="gone"-->
+        <!--android:text="@string/album_list"-->
+        <!--android:textSize="17sp"-->
+        <!--android:gravity="center"/>-->
+    <!--<View -->
+        <!--android:visibility="gone"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="0.5dp"-->
+        <!--android:background="#aaaaaa"/>-->
+
+    <ScrollView
+        android:id="@+id/custom_snaps_native_super_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/top_gray_layout"
+                android:visibility="gone"
+                android:background="#f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+
+            <View
+                android:background="#f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/layout_between_customer"
+                android:layout_width="match_parent"
+                android:layout_height="74.5dp"
+                android:visibility="gone"
+                android:background="@drawable/selector_img_src_list_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/between_customer_logo"
+                        android:layout_width="43.5dp"
+                        android:layout_height="43.5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="17dp"
+                        android:minHeight="54dp"
+                        android:minWidth="54dp"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                    <font.FTextView
+                        android:id="@+id/between_customer_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:minHeight="?android:attr/listPreferredItemHeight"
+                        android:text="@string/between_customer_name"
+                        android:textColor="#333333"
+                        android:textSize="17dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/selector_select_arrow"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d2d2d2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_sdk_customer"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="74.5dp"
+                android:background="@drawable/selector_img_src_list_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/sdk_customer_logo"
+                        android:layout_width="43.5dp"
+                        android:layout_height="43.5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="17dp"
+                        android:minHeight="54dp"
+                        android:minWidth="54dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_kidsnote_service_logo"
+                        android:visibility="gone" />
+
+                    <font.FTextView
+                        android:id="@+id/sdk_customer_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:minHeight="?android:attr/listPreferredItemHeight"
+                        android:text="@string/sdk_customer_name"
+                        android:textColor="#333333"
+                        android:textSize="17dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/selector_select_arrow"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d2d2d2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPhone"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center_vertical" >
+
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="68dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/pic_select_phone" />
+                    </RelativeLayout>
+
+                    <font.FTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:minHeight="?android:attr/listPreferredItemHeight"
+                        android:text="@string/phone_photo"
+                        android:textColor="#191919"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="26dp"
+                        android:src="@drawable/img_list_arrow_for_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSnaps"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="68dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_sticker" />
+                    </RelativeLayout>
+
+                    <font.FTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:minHeight="?android:attr/listPreferredItemHeight"
+                        android:text="@string/snaps_sticker"
+                        android:textColor="#191919"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="26dp"
+                        android:src="@drawable/img_list_arrow_for_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutKakao"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="68dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_setting_kas" />
+                    </RelativeLayout>
+
+                    <font.FTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:minHeight="?android:attr/listPreferredItemHeight"
+                        android:text="@string/kakaostory_photo"
+                        android:textColor="#191919"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="26dp"
+                        android:src="@drawable/img_list_arrow_for_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="68dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_setting_fb" />
+                    </RelativeLayout>
+
+                    <font.FTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:minHeight="?android:attr/listPreferredItemHeight"
+                        android:text="@string/facebook_photo"
+                        android:textColor="#191919"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="26dp"
+                        android:src="@drawable/img_list_arrow_for_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_instagram"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="68dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/instagram_icon"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/pic_select_insta" />
+                    </RelativeLayout>
+
+                    <font.FTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:minHeight="?android:attr/listPreferredItemHeight"
+                        android:text="@string/instagram_photo"
+                        android:textColor="#191919"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="26dp"
+                        android:src="@drawable/img_list_arrow_for_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_googlephoto"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="68dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/pic_select_google" />
+                    </RelativeLayout>
+
+                    <font.FTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:minHeight="?android:attr/listPreferredItemHeight"
+                        android:text="@string/google_photo"
+                        android:textColor="#191919"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="26dp"
+                        android:src="@drawable/img_list_arrow_for_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

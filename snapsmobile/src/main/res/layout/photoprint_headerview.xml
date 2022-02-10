@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    tools:context="font.BaseActivity" >
+
+    <RadioGroup
+        android:id="@+id/rgOption"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbGlossy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_photoprint_radio"
+            android:checked="true"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/title_size"
+            android:text="@string/print_glossy_paper"
+            android:textColor="@color/color_rgb_333333" />
+
+        <RadioButton
+            android:id="@+id/rbMatt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/title_size"
+            android:button="@drawable/selector_photoprint_radio"
+            android:text="@string/print_matt_pager"
+            android:textColor="@color/color_rgb_333333" />
+    </RadioGroup>
+
+</RelativeLayout>

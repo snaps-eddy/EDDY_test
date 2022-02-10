@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_title_bar_height"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/btnTitleLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:onClick="onClick"
+            android:src="@drawable/btn_prev" />
+
+        <font.FTextView
+            android:id="@+id/txtTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_size" />
+
+        <font.FTextView
+            android:id="@+id/btnProductComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_top_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/product_comment"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!--<View-->
+        <!--android:id="@+id/TopLine"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:layout_below="@+id/title"-->
+        <!--android:background="#e5e5e5" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_webPopup"
+        android:layout_below="@+id/title"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/listphoto"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </ListView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/tv_webPopup"
+        android:background="#FF4646" />
+
+    <font.FTextView
+        android:id="@+id/tv_webPopup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_homemake"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/show_detail_info"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <!--
+    <include
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_bottom_bar" />
+    -->
+
+</RelativeLayout>

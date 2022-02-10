@@ -1,0 +1,25 @@
+<LinearLayout android:id="@+id/snaps_diary_mission_sate_bar_layout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFFFFF"
+              android:orientation="horizontal">
+
+    <font.FTextView
+        android:id="@+id/snaps_diary_mission_state_tv"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#333333"
+        android:textSize="28dp"/>
+
+    <com.snaps.mobile.activity.diary.customview.SnapsMapStyleResourceImageView
+        android:id="@+id/snaps_diary_mission_ink_iv"
+        android:layout_width="54dp"
+        android:layout_height="72dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:layout_marginRight="36dp"/>
+
+</LinearLayout>

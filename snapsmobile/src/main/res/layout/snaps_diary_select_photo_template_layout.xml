@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFFFFF"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/snaps_diary_title_include"
+        layout="@layout/_include_theme_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c9c9c9"/>
+
+    <GridView
+        android:id="@+id/snaps_diary_select_photo_template_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:listSelector="#00000000"
+        android:horizontalSpacing="11dp"
+        android:verticalSpacing="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:numColumns="3"
+        android:overScrollMode="never"
+        android:stretchMode="columnWidth" />
+
+
+</LinearLayout>

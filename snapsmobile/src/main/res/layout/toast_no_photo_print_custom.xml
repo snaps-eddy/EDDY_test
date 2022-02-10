@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/toast_custom_bg">
+    <font.FTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/photo_print_not_recommended"
+        android:layout_marginTop="6dp"
+        android:textColor="#e8625a"
+        android:textSize="14dp"
+        custom:customFont="@string/font_name_ygt_760" />
+    <font.FTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/photo_print_not_recommended_comment"
+        android:lineSpacingExtra="5dp"
+        android:textColor="#ffffff"
+        android:textSize="11dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        custom:customFont="@string/font_name_ygt_740" />
+
+</LinearLayout>

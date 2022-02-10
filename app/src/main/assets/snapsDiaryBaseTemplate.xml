@@ -1,0 +1,96 @@
+<template type="calendar">
+    <scene type="page" width="298" height="422">
+        <layer name="background_layer">
+            <image>
+                <source type="color" bgcolor="FFFFFF"/>
+                <regist name="background" value="0"/>
+            </image>
+        </layer>
+        INPUT_HERE
+        <layer name="form_layer"/>
+        <layer name="form_style"/>
+        <layer name="control_layer">
+            <textlist rc="78 294 196 106" priority="0" angle="0" readOnly="true" move="true" resize="true" rotate="true" delete="false" copy="true" exclude="false" fontFace="null" fontSize="7" align="left" bold="false" italic="false" color="#000000" singleLine="false" vertical="false" checkChange="false" formItem="false" userText="false" emptyText="">
+                <htmlText>
+                    <![CDATA[
+<TextFlow color="#000000" fontFamily="snaps YGO 230" fontSize="12" kerning="auto" leadingModel="auto" ligatureLevel="minimum" lineBreak="toFit" textAlign="left" trackingLeft="0" trackingRight="0" whiteSpaceCollapse="preserve" version="2.0.0" xmlns="http://ns.adobe.com/textLayout/2008"><p><span fontSize="7" fontFamily="스냅스 윤고딕 700">text</span></p></TextFlow>
+]]>
+                </htmlText>
+            </textlist>
+        </layer>
+    </scene>
+    <TmplInfo>
+        <F_PROD_CODE>00800600070007</F_PROD_CODE>
+        <F_PROD_NAME>데일리북[A5, 하드커버]</F_PROD_NAME>
+        <F_PROD_SIZE>A5</F_PROD_SIZE>
+        <F_PROD_NICK_NAME>데일리북[하드-A5]</F_PROD_NICK_NAME>
+        <F_GLOSSY_TYPE>M</F_GLOSSY_TYPE>
+        <F_USE_ANALECTA>N</F_USE_ANALECTA>
+        <F_ENLARGE_IMG>N</F_ENLARGE_IMG>
+        <FEP>EXTENDED</FEP>
+        <F_USE_WATERMARK>N</F_USE_WATERMARK>
+        <F_COVER_VIRTUAL_WIDTH>646</F_COVER_VIRTUAL_WIDTH>
+        <F_COVER_VIRTUAL_HEIGHT>442</F_COVER_VIRTUAL_HEIGHT>
+        <F_COVER_EDGE_WIDTH>323</F_COVER_EDGE_WIDTH>
+        <F_COVER_EDGE_HEIGHT>221</F_COVER_EDGE_HEIGHT>
+        <F_BASE_QUANTITY>15</F_BASE_QUANTITY>
+        <F_MAX_QUANTITY>30</F_MAX_QUANTITY>
+        <F_PRNT_TYPE>PDF</F_PRNT_TYPE>
+        <F_EDIT_COVER>Y</F_EDIT_COVER>
+        <F_COVER_TYPE>hard</F_COVER_TYPE>
+        <F_COVER_MID_WIDTH>16</F_COVER_MID_WIDTH>
+        <F_COVER_MM_WIDTH>349</F_COVER_MM_WIDTH>
+        <F_COVER_MM_HEIGHT>247</F_COVER_MM_HEIGHT>
+        <F_COVER2_MM_WIDTH>323</F_COVER2_MM_WIDTH>
+        <F_COVER2_MM_HEIGHT>221</F_COVER2_MM_HEIGHT>
+        <F_TITLE_MM_WIDTH>298</F_TITLE_MM_WIDTH>
+        <F_TITLE_MM_HEIGHT>211</F_TITLE_MM_HEIGHT>
+        <F_PAGE_MM_WIDTH>298</F_PAGE_MM_WIDTH>
+        <F_PAGE_MM_HEIGHT>211</F_PAGE_MM_HEIGHT>
+        <F_PAGE_PIXEL_WIDTH>596</F_PAGE_PIXEL_WIDTH>
+        <F_PAGE_PIXEL_HEIGHT>422</F_PAGE_PIXEL_HEIGHT>
+        <F_CP_CODE>0003</F_CP_CODE>
+        <F_UI_COVER>N</F_UI_COVER>
+        <F_UI_BACKGROUND>Y</F_UI_BACKGROUND>
+        <F_UI_LAYOUT>Y</F_UI_LAYOUT>
+        <F_UI_BORDER>Y</F_UI_BORDER>
+        <F_THUMBNAIL_STEP>3</F_THUMBNAIL_STEP>
+        <F_TEXT_SIZE_BASE>PRINT</F_TEXT_SIZE_BASE>
+        <F_PROD_TYPE>mbook</F_PROD_TYPE>
+        <F_RES_MIN>40</F_RES_MIN>
+        <F_RES_DISABLE>25</F_RES_DISABLE>
+        <F_PAGE_START_NUM>2</F_PAGE_START_NUM>
+        <F_CENTER_LINE>CHECK</F_CENTER_LINE>
+        <F_UNITTEXT>권</F_UNITTEXT>
+        <F_CALENDAR_BONUS_12>0</F_CALENDAR_BONUS_12>
+        <F_ALLOW_NO_FULL_IMAGE_YORN>N</F_ALLOW_NO_FULL_IMAGE_YORN>
+        <F_TMPL_TITLE>데일리북[A5, 하드커버]</F_TMPL_TITLE>
+        <F_EDIT_PLATFORM>EXTENDED</F_EDIT_PLATFORM>
+        <F_COVER_XML_WIDTH>646</F_COVER_XML_WIDTH>
+        <F_COVER_XML_HEIGHT>442</F_COVER_XML_HEIGHT>
+        <F_TMPL_ID>MTFT2_TEST_DYL</F_TMPL_ID>
+        <F_TMPL_CODE>045021007802</F_TMPL_CODE>
+        <F_TMPL_NAME>MTFT2_TEST_DYL</F_TMPL_NAME>
+        <F_XML_ID>046001050515</F_XML_ID>
+        <F_REG_DATE>2016-03-18 16:08:38.0</F_REG_DATE>
+        <F_OUTER_YORN>N</F_OUTER_YORN>
+    </TmplInfo>
+    <TmplPrice>
+        <F_COMP_CODE>KOR0031</F_COMP_CODE>
+        <F_PROD_CODE>00800600070007</F_PROD_CODE>
+        <F_SELL_PRICE>500</F_SELL_PRICE>
+        <F_ORG_PRICE>500</F_ORG_PRICE>
+        <F_PRICE_NUM>1</F_PRICE_NUM>
+        <F_PRNT_BQTY>1</F_PRNT_BQTY>
+        <F_PRNT_EQTY>1</F_PRNT_EQTY>
+        <F_PAGE_ADD_PRICE>0</F_PAGE_ADD_PRICE>
+        <F_ORG_PAGE_ADD_PRICE>0</F_ORG_PAGE_ADD_PRICE>
+        <F_DISC_RATE>0</F_DISC_RATE>
+        <F_FORM_PRICE>0</F_FORM_PRICE>
+        <F_FORM_ORG_PRICE>0</F_FORM_ORG_PRICE>
+        <F_FRAME_PRICE>0</F_FRAME_PRICE>
+        <F_SCREEN_PRICE>0</F_SCREEN_PRICE>
+        <F_FRAME_ORG_PRICE>0</F_FRAME_ORG_PRICE>
+        <F_SCREEN_ORG_PRICE>0</F_SCREEN_ORG_PRICE>
+    </TmplPrice>
+</template>

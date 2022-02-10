@@ -1,0 +1,149 @@
+{
+  "project_info": {
+    "project_number": "639058883054",
+    "firebase_url": "https://snapsformobile.firebaseio.com",
+    "project_id": "snapsformobile",
+    "storage_bucket": "snapsformobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639058883054:android:89a7797a3c6a23c2",
+        "android_client_info": {
+          "package_name": "com.snaps.mobile.kr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639058883054-3chs2n4rsdb16fjofeeod4rj4e4j6dtk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr",
+            "certificate_hash": "3f8cd3b00ba722ac0e1e3f2971161a6ea9ff3339"
+          }
+        },
+        {
+          "client_id": "639058883054-cho236mg2knnducan7btdrc0d6af4919.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr",
+            "certificate_hash": "9dd51e7dbe38f6042a16b09ed77b6865c31d6131"
+          }
+        },
+        {
+          "client_id": "639058883054-588k067blv1u78cgbtp8kerudjjo2174.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr",
+            "certificate_hash": "f1ea595da793c891c2d0beb033187ce344edea94"
+          }
+        },
+        {
+          "client_id": "639058883054-e1l98144gso9nqjbnr02be0d96m089uf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr",
+            "certificate_hash": "86cba886dde887aa87257794a506d350b4a5ff45"
+          }
+        },
+        {
+          "client_id": "639058883054-098vi1tbc6echmv84c0j5f6cq3to34so.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr",
+            "certificate_hash": "496b069be5914e153f40a966de33c55b06ce5cd5"
+          }
+        },
+        {
+          "client_id": "639058883054-7k9v2ug2f47ejm1rj2i93s96oh71uund.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSyhlwjkFUE-QMFnVIE_rTpexmlbnrorM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639058883054-7k9v2ug2f47ejm1rj2i93s96oh71uund.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639058883054:android:52ab747041a2a040",
+        "android_client_info": {
+          "package_name": "com.snaps.mobile.kr.develop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639058883054-082ch12hqkg2h0f4ekkmk4l24ct9qius.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr.develop",
+            "certificate_hash": "3f8cd3b00ba722ac0e1e3f2971161a6ea9ff3339"
+          }
+        },
+        {
+          "client_id": "639058883054-hfk6s6qphvohf3c8u61buvj0g6l5ave0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr.develop",
+            "certificate_hash": "496b069be5914e153f40a966de33c55b06ce5cd5"
+          }
+        },
+        {
+          "client_id": "639058883054-fk5hbgp8dt5nk0ber4ma9l0odqbkeab2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr.develop",
+            "certificate_hash": "f1ea595da793c891c2d0beb033187ce344edea94"
+          }
+        },
+        {
+          "client_id": "639058883054-bl50agi9n5m0nlg3ckjvv2i88ihblocd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr.develop",
+            "certificate_hash": "86cba886dde887aa87257794a506d350b4a5ff45"
+          }
+        },
+        {
+          "client_id": "639058883054-qjo93jj8tqp40d2ic5c7oev31lku3pg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaps.mobile.kr.develop",
+            "certificate_hash": "9dd51e7dbe38f6042a16b09ed77b6865c31d6131"
+          }
+        },
+        {
+          "client_id": "639058883054-7k9v2ug2f47ejm1rj2i93s96oh71uund.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSyhlwjkFUE-QMFnVIE_rTpexmlbnrorM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639058883054-7k9v2ug2f47ejm1rj2i93s96oh71uund.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

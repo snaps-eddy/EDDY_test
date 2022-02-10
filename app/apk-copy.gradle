@@ -1,0 +1,27 @@
+android.applicationVariants.all { variant ->
+
+    def date = new Date()
+    def yyyyMMdd = date.format('yyyyMMdd')
+    def hourMinute = date.format('hhmm')
+    def amOrPm = (Integer.parseInt(date.format('HH')) >= 12 ? "PM" : "AM")
+    def formattedDate = yyyyMMdd + "_" + amOrPm + "_" + hourMinute
+
+    // 1. Copy Task 생성
+    def task = project.tasks.create("copy${variant.name}Apk", Copy)
+    task.from(variant.outputs[0].outputFile)
+
+    // 2. 바탕화면 Task 로 복사, 오프린트미도 같은 코드를 사용하기에 폴더로 나누고 날짜별 빌드 취합.
+    task.into("${System.properties['user.home']}/Desktop/snaps_apks/$yyyyMMdd")
+
+    // 3. 복사하는 과정에서 APK 이름 변경
+    def targetName = "${variant.name}-${variant.versionName}" + "_" + formattedDate + ".apk"
+    task.rename ".*", targetName
+    task.doFirst {
+        println "copy from ${source.singleFile.name} to $destinationDir"
+    }
+
+    task.doLast { value ->
+        println "completed to copy : $targetName"
+    }
+
+}

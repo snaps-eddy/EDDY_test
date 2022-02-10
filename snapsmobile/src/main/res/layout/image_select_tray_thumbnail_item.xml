@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/simple_grid_back"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:gravity="center">
+
+        <com.snaps.mobile.component.SnapsTrayLayoutView
+            android:id="@+id/imgSelectTrayLayoutView"
+            android:layout_width="66dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="6dp" />
+        <!--android:layout_centerInParent="true"
+        android:layout_margin="4px" -->
+
+        <font.FTextView
+            android:id="@+id/imgSelect_page_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:gravity="bottom|center"
+            android:textColor="#757575"
+            android:textSize="11dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgSelect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="4px"
+            android:scaleType="centerCrop" />
+
+        <font.FTextView
+            android:id="@+id/imgSelectTextView"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="11dp"
+            android:textColor="#191919"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="4px"/>
+
+        <ImageView
+            android:id="@+id/imgSelector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_red_e36a63_fill_solid_border_rect"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:paddingRight="1dp"
+            android:paddingTop="1dp"
+            android:orientation="horizontal">
+
+            <font.FTextView
+                android:id="@+id/imgLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="#e36a63"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:text="@string/cover"
+                android:textColor="#ffffff"
+                android:textSize="11dp"
+                android:visibility="gone"
+                custom:customFont="@string/font_name_ygt_740" />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_tray_delete_icon"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgNoprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_tray_noprint_icon"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgSelectTrayPlusBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

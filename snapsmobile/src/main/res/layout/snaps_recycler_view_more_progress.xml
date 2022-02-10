@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:paddingBottom="10dp"
+                android:paddingTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+    <ProgressBar
+        android:layout_width="@dimen/default_progress_dialog_size"
+        android:layout_height="@dimen/default_progress_dialog_size"
+        android:indeterminateDrawable="@drawable/rotate_progress"/>
+</RelativeLayout>
+    <!--android:indeterminateDrawable="@drawable/rotate_progress"-->
+    <!--<ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="16dp"-->
+    <!--android:paddingBottom="16dp"-->
+    <!--style="@android:style/Widget.ProgressBar.Inverse"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:indeterminate="false" />-->
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="44dp"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_filter_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        tools:text="원본" />
+
+    <ImageView
+        android:id="@+id/iv_filter_image"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/tv_filter_name"
+        android:contentDescription="@string/empty_cd"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/view_select_indicator"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/tv_filter_name"
+        android:background="@drawable/shape_default_select"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>

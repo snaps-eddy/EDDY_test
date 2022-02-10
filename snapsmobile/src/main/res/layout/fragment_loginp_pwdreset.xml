@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <ImageView
+            android:id="@+id/fragment_loginp_login_back_iv"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_prev"/>
+        <font.FTextView
+            custom:customFont="@string/font_name_ygt_760"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#191919"
+            android:text="@string/change_password"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:textColorHint="#999999"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <font.FEditText
+            android:id="@+id/editCurrPwd"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="@string/current_password"
+            android:inputType="textPassword"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColorHint="#999999"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/editCurrPwdUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+
+        <font.FEditText
+            android:id="@+id/editNewPwd"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="@string/pwdreset_newpwd"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColorHint="#999999"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/editNewPwdUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+
+        <font.FEditText
+            android:id="@+id/editMoreNewPwd"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="@string/re_input_new_password"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColorHint="#999999"
+            android:textSize="12dp" />
+        
+         <ImageView
+             android:id="@+id/editMoreNewPwdUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+
+        <font.FTextView
+            android:id="@+id/editChangeTxt"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/pwdreset_desc"
+            android:textSize="@dimen/default_size" />
+
+        <font.FTextView
+            android:id="@+id/btnPwdReset"
+            custom:customFont="@string/font_name_ygt_740"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/selector_black_btn"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+</LinearLayout><!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:padding="10dp">
+    	
+        <font.FEditText 
+	        android:id="@+id/editCurrPwd"
+	        android:layout_width="fill_parent"
+			android:layout_height="48dp"
+			android:layout_marginTop="5dp"
+			android:background="@drawable/bg_input_top"
+			android:gravity="center_vertical"
+			android:textSize="15sp"
+			android:inputType="textPassword"
+			android:textColorHint="#b4b4b4"
+			android:hint="@string/pwdreset_currpwd"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:maxLength="100"
+			android:maxLines="1"/>
+        <font.FEditText 
+	        android:id="@+id/editNewPwd"
+	        android:layout_width="fill_parent"
+			android:layout_height="48dp"
+			android:background="@drawable/bg_input_middle"
+			android:gravity="center_vertical"
+			android:textSize="15sp"
+			android:inputType="textPassword"
+			android:textColorHint="#b4b4b4"
+			android:hint="@string/pwdreset_newpwd"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:maxLength="15"
+			android:maxLines="1"/>
+        
+        <font.FEditText 
+	        android:id="@+id/editMoreNewPwd"
+	        android:layout_width="fill_parent"
+			android:layout_height="48dp"
+			android:background="@drawable/bg_input_bottom"
+			android:gravity="center_vertical"
+			android:textSize="15sp"
+			android:inputType="textPassword"
+			android:textColorHint="#b4b4b4"
+			android:hint="@string/pwdreset_new_more_pwd"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:maxLength="15"
+			android:maxLines="1"/>
+        
+        <font.FTextView
+            android:id="@+id/editChangeTxt"
+	        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:gravity="center"
+			android:textSize="@dimen/default_size"
+			android:text="@string/pwdreset_desc"/>
+        
+        <font.FTextView
+	        android:id="@+id/btnPwdReset"
+	        android:layout_width="fill_parent"
+			android:layout_height="48dp"
+			android:layout_marginTop="10dp"
+			android:background="@drawable/btn_black03"
+			android:gravity="center"
+			android:textSize="17sp"
+			android:textColor="@color/white"
+			android:text="@string/order_ok"/>
+        
+    </LinearLayout>
+
+</LinearLayout>
+-->

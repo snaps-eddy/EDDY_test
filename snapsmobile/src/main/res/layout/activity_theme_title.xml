@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/_include_theme_title" />
+
+    <ImageView
+        android:src="@drawable/icon_snapsphoto"
+        android:layout_marginTop="26dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <font.FEditText
+        android:id="@+id/title_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="26dp"
+        android:background="#00000000"
+        android:gravity="center"
+        android:hint="@string/please_enter_title"
+        android:inputType="text"
+        android:maxLength="@integer/photo_book_title_text_max_length"
+        android:maxLines="1"
+        android:textColor="#191919"
+        custom:customFont="@string/font_name_ygt_760"
+        android:textColorHint="#999999"
+        android:textSize="13dp" />
+
+    <View
+        android:id="@+id/title_line_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#191919" />
+
+    <!--<View-->
+        <!--android:id="@+id/title_line_red"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="4px"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:background="#e54736"-->
+        <!--android:visibility="gone" />-->
+
+    <font.FTextView
+        android:id="@+id/title_message"
+        custom:customFont="@string/font_name_ygt_740"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="left"
+        android:text="@string/input_title_desc"
+        android:textColor="#999999"
+        android:textSize="11dp" />
+
+
+    <font.FTextView
+        android:id="@+id/activity_theme_title_next_btn"
+        custom:customFont="@string/font_name_ygt_740"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#e36a63"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="#ffffff"
+        android:textSize="13dp" />
+
+</LinearLayout>
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+              <!--xmlns:custom="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#ebe9e9"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<include layout="@layout/_include_theme_title" />-->
+
+    <!--<View-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:background="@color/title_line_color" />-->
+
+    <!--<font.FEditText-->
+        <!--android:id="@+id/title_edit"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:background="#00000000"-->
+        <!--android:gravity="left|center_vertical"-->
+        <!--android:hint="@string/please_enter_title"-->
+        <!--android:inputType="text"-->
+        <!--android:maxLength="13"-->
+        <!--android:maxLines="1"-->
+        <!--android:textColor="#191919"-->
+        <!--custom:customFont="@string/font_name_ygt_740"-->
+        <!--android:textColorHint="#c6c6c6"-->
+        <!--android:textSize="22dp" />-->
+
+    <!--<View-->
+        <!--android:id="@+id/title_line_gray"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:layout_marginTop="9dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:background="#d2d2d2" />-->
+
+    <!--<View-->
+        <!--android:id="@+id/title_line_red"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="4px"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:background="#e54736"-->
+        <!--android:visibility="gone" />-->
+
+    <!--<font.FTextView-->
+        <!--android:id="@+id/title_message"-->
+        <!--custom:customFont="@string/font_name_ygt_740"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:gravity="left"-->
+        <!--android:text="@string/input_title_desc"-->
+        <!--android:textColor="#757575"-->
+        <!--android:textSize="14dp" />-->
+
+<!--</LinearLayout>-->

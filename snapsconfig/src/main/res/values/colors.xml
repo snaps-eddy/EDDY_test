@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="default_background">#f7f7f0</color>
+    <color name="transparent">#00000000</color>
+    <color name="trans_background">#aaffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="pink">#ef5d73</color>
+    <color name="grey">#3d3d3d</color>
+    <color name="light_grey">#8d8d8d</color>
+    <color name="brown">#6e4e4f</color>
+    <color name="dark_brown">#362f2d</color>
+    <color name="bg_grey">#f5f5f5</color>
+    <color name="bg_yellow">#fcf8c9</color>
+    <color name="light_red">#ef4123</color>
+    <color name="select_rotate">#f0f0f0</color>
+    <color name="main_bg">#2F3A45</color>
+    <color name="main_line">#444F54</color>
+    <color name="subtitle_color">#323232</color>
+    <color name="subtitle_bluecolor">#007aff</color>
+    <color name="orangetext_color">#ef4123</color>
+    <color name="line225_color">#e1e1e1</color>
+    <color name="line200_color">#c8c8c8</color>
+    <color name="line229_color">#e5e5e5</color>
+    <color name="title_line_color">#D8D8D8</color>
+    <color name="logo_color">#ef4123</color>
+    <color name="theme_background_edit">#f0f0f0</color>
+    <color name="theme_background">#eeeeee</color>
+    <color name="met_guide">#ff0000</color>
+    <color name="between_menu_text_color">#484848</color>
+    <color name="between_setting_text_title">#303030</color>
+    <color name="between_setting_text_sub_title">#65dbd5</color>
+    <color name="between_setting_text_desc">#505050</color>
+    <color name="circular_progress_default_progress">#FFFFFF</color>
+    <color name="circular_progress_default_background">#F66F03</color>
+    <color name="circular_progress_default_title">#FFFFFF</color>
+    <color name="circular_progress_default_subtitle">#FFFFFF</color>
+    <color name="kakao_yellow">#ffd00a</color>
+    <color name="facebook_blue">#3C5B96</color>
+    <color name="transparentGray">#7A999999</color>
+    <color name="color_menu_top_bg">#ebe9e9</color>
+    <color name="color_menu_selector_focus">#eeeeee</color>
+    <color name="color_menu_font_black_light">#2a2a2a</color>
+    <color name="color_menu_font_black_strong">#040404</color>
+    <color name="color_menu_font_gray">#505050</color>
+    <color name="color_menu_vertival_gray">#c6c5c5</color>
+    <color name="color_menu_horizontal_gray">#f2f2f2</color>
+
+    <color name="color_rgb_ebe9e9">#ebe9e9</color>
+    <color name="color_rgb_dfdfdf">#dfdfdf</color>
+    <color name="color_rgb_e54736">#e54736</color>
+    <color name="color_rgb_333333">#333333</color>
+    <color name="color_rgb_e2e2e2">#e2e2e2</color>
+    <color name="color_rgb_ffffff">#ffffff</color>
+
+    <color name="facebook_photobook_progress_bg_color">#FF3B5999</color>
+    <color name="instagram_book_bg_color">#FF3B749F</color>
+    <color name="snaps_diary_bg_color">#FF333333</color>
+
+    <color name="color_diary_list_bg">#ffededed</color>
+    <color name="color_diary_template_seleted">#ffe54736</color>
+    <color name="color_diary_template_normal">#ff999999</color>
+
+    <color name="color_join_edit_text_normal">#555555</color>
+    <color name="color_join_edit_text_pw_focus">#e8625a</color>
+    <color name="color_white_bg_edit_text_focus">#191919</color>
+    <color name="color_white_bg_edit_text_normal">#eeeeee</color>
+
+    <color name="selector_black_btn">#191919</color>
+    <color name="selector_black_btn_focus">#333333</color>
+
+    <color name="selector_black_btn_dark_focus">#222222</color>
+
+    <color name="selector_diary_black_btn">#fa191919</color>
+    <color name="selector_diary_black_btn_focus">#fa333333</color>
+
+    <color name="selector_red_btn_focus">#c6564f</color>
+    <color name="selector_red_btn">#e36a63</color>
+
+    <color name="selector_transparent_red_btn_focus">#e5c6564f</color>
+    <color name="selector_transparent_red_btn">#e5e36a63</color>
+
+    <color name="color_rgb_999999">#999999</color>
+
+    <color name="detail_page_make_button_activated">#E6E36A63</color>
+    <color name="detail_page_make_button_inactivated">#E6191919</color>
+    <color name="color_rgb_bababa">#bababa</color>
+
+    <drawable name="color_drawable_eeeeee">#eeeeee</drawable>
+
+    <drawable name="photo_print_menu_bg">#FFFFFFFF</drawable>
+    <drawable name="photo_print_menu_bg_select">#FFF4F4F4</drawable>
+
+    <color name="photo_print_meun_text_color_off">#FFCCCCCC</color>
+    <color name="photo_print_meun_text_color_on">#FF191919</color>
+    <color name="photo_print_detail_menu_bg_select">#FF222222</color>
+    <color name="photo_print_detail_menu_text_color_on">#FFFFFFFF</color>
+    <color name="photo_print_detail_menu_text_color_off">#FF555555</color>
+
+    <color name="edit_view_bottom_plus_page">#aaaaaa</color>
+    <color name="edit_view_bottom_plus_page_press">#999999</color>
+
+    <color name="dialog_sns_book_load_confirm_press">#c6564f</color>
+    <color name="dialog_sns_book_load_confirm">#e36a63</color>
+
+    <color name="popmenu_text_press">#999999</color>
+    <color name="popmenu_text_">#ffffff</color>
+
+    <color name="color_smart_snaps_dim_layout">#50363636</color>
+    <color name="edit_text_hint_color">#999999</color>
+
+    <color name="alpha_black_color">#19191919</color>
+
+    <!-- New Editor Color way -->
+    <color name="bittersweet">#FF6060</color>
+    <color name="bittersweet_alpha_20">#33FF6060</color>
+    <color name="cod_gray">#191919</color>
+    <color name="martini">#999999</color>
+    <color name="sunglo">#E36A63</color>
+    <color name="harlequin">#30D80F</color>
+    <color name="harlequin_alpha_20">#3330D80F</color>
+    <color name="alto">#E0E0E0</color>
+    <color name="white_alpha_20">#33FFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="gallery">#EEEEEE</color>
+    <color name="early_dawn">#FFF9E9</color>
+    <color name="dove_gray">#666666</color>
+
+    <color name="black_alpha_20">#33000000</color>
+    <color name="silver">#CCCCCC</color>
+    <color name="mercury">#e2e2e2</color>
+
+    <color name="black_alpha_30">#B3000000</color>
+
+</resources>

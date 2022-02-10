@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <include layout="@layout/_include_theme_title" />
+
+            <!--<FrameLayout-->
+            <!--android:id="@+id/smart_snaps_analysis_cover_edit_activity_fragment_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0px"-->
+            <!--android:layout_weight="1" />-->
+
+            <com.snaps.mobile.utils.custom_layouts.InterceptTouchableViewPager
+                android:id="@+id/smart_snaps_analysis_cover_edit_activity_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/smart_snaps_analysis_page_edit_activity_bottom_fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:id="@+id/smart_snaps_analysis_cover_edit_activity_bottom_menu_ly"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/smart_snaps_analysis_page_edit_activity_change_photo_ly"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/smart_snaps_analysis_page_edit_activity_change_photo_btn"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_edit_photo_off" />
+
+                <font.FTextView
+                    android:id="@+id/smart_snaps_analysis_page_edit_activity_change_photo_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:gravity="center"
+                    android:text="@string/smart_recommend_book_edit_bottom_photo_text"
+                    android:textColor="#191919"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smart_snaps_analysis_page_edit_activity_change_layout_ly"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/smart_snaps_analysis_page_edit_activity_change_layout_btn"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_edit_layout_off" />
+
+                <font.FTextView
+                    android:id="@+id/smart_snaps_analysis_page_edit_activity_change_layout_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/smart_recommend_book_edit_bottom_layout_text"
+                    android:textColor="#191919"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smart_snaps_analysis_page_edit_activity_change_bg_ly"
+                android:visibility="gone"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/smart_snaps_analysis_page_edit_activity_change_bg_btn"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_edit_bg_off" />
+
+                <font.FTextView
+                    android:id="@+id/smart_snaps_analysis_page_edit_activity_change_bg_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:gravity="center"
+                    android:text="@string/smart_recommend_book_edit_bottom_bg_text"
+                    android:textColor="#191919"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smart_snaps_analysis_page_edit_activity_change_title_layout"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/smart_snaps_analysis_page_edit_activity_change_title_btn"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_edit_title_off" />
+
+                <font.FTextView
+                    android:id="@+id/smart_snaps_analysis_page_edit_activity_change_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:gravity="center"
+                    android:text="@string/smart_recommend_book_edit_bottom_spine_text"
+                    android:textColor="#191919"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.snaps.mobile.activity.themebook.smart_analysis_product.page_edit.custom.SmartRecommendBookPageEditDragNDropLayout
+        android:id="@+id/smart_snaps_analysis_page_edit_activity_drag_n_drop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:visibility="gone" />
+
+</RelativeLayout>

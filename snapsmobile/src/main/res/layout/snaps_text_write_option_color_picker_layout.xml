@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="#eeeeee">
+
+    <RelativeLayout
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <View
+            android:id="@+id/snaps_text_write_option_color_picker_base_color_view"
+            android:layout_centerVertical="true"
+            android:layout_width="29dp"
+            android:layout_height="29dp"/>
+
+        <View
+            android:id="@+id/snaps_text_write_option_color_picker_base_color_selector"
+            android:visibility="gone"
+            android:background="@drawable/img_base_color_item_selector"
+            android:layout_centerVertical="true"
+            android:layout_width="29dp"
+            android:layout_height="29dp"/>
+
+        <font.FTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/snaps_text_write_option_color_picker_base_color_view"
+            android:layout_marginLeft="10dp"
+            android:text="@string/base_color"
+            android:textColor="#191919"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#d8d8d8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <com.snaps.mobile.component.SnapsTextWriteColorPickerView
+        android:id="@+id/snaps_text_write_option_color_picker_view"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

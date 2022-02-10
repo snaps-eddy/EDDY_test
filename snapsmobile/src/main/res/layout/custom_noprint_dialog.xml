@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <font.FTextView
+            android:id="@+id/noprint_dialog_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:lineSpacingExtra="5dp"
+            android:textSize="13sp"
+            android:gravity="center_horizontal"
+            android:text="@string/photoprint_noprint_message" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_below="@+id/noprint_dialog_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/noprint_dialog_check_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_check_off" />
+
+            <font.FTextView
+                android:id="@+id/noprint_dialog_check_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="@string/photoprint_noprint_notice" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="#e5e5e5" />
+
+    <font.FTextView
+        android:id="@+id/noprint_dialog_btn"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/confirm" />
+
+</LinearLayout>

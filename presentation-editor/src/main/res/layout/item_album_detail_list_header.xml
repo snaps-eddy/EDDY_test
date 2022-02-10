@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/cb_select_date"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:drawableLeft="@drawable/selector_gallery_group_selected"
+        android:button="@null"
+        android:clickable="false"
+        android:contentDescription="@string/empty_cd"
+        android:focusable="false"
+        android:padding="8dp"
+        tools:checked="true" />
+
+    <TextView
+        android:id="@+id/tv_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cod_gray"
+        android:textSize="13dp"
+        tools:ignore="SpUsage"
+        tools:text="9월 8일 화요일" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+class Environments {
+    String frontendBaseUrl = ""
+    String backendBaseUrl = ""
+    String backendNewBaseUrl = ""
+}
+
+class EnvironmentItems {
+    Environments dev = new Environments()
+    Environments stg = new Environments()
+    Environments stg2 = new Environments()
+    Environments real = new Environments()
+}
+
+EnvironmentItems environments = new EnvironmentItems()
+
+environments.dev.frontendBaseUrl = "dev-%s.snaps.com"
+environments.dev.backendBaseUrl = "stg-m.snaps.kr"
+environments.dev.backendNewBaseUrl = "stg-%s-m-api.snaps.com"
+
+environments.stg.frontendBaseUrl = "stg-%s.snaps.com"
+environments.stg.backendBaseUrl = "stg-m.snaps.kr"
+environments.stg.backendNewBaseUrl = "stg-%s-m-api.snaps.com"
+
+environments.stg2.frontendBaseUrl = "stg-%s2.snaps.com"
+environments.stg2.backendBaseUrl = "stg-m.snaps.kr"
+environments.stg2.backendNewBaseUrl = "stg-%s-m-api.snaps.com"
+
+environments.real.frontendBaseUrl = "%s.snaps.com"
+environments.real.backendBaseUrl = "m.snaps.kr"
+environments.real.backendNewBaseUrl = "%s-m-api.snaps.com"
+
+ext.environments = environments

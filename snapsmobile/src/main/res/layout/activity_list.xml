@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.snaps.mobile.component.CustomSensitivityViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:id="@+id/snpas_sticky_id_full_screen_title"
+        layout="@layout/_include_title"/>
+
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/snaps_sticky_viewpager_strip_height"
+        android:layout_below="@id/snpas_sticky_id_full_screen_title" >
+        <com.astuetz.PagerSlidingTabStripForSticky
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            custom:pstsIndicatorColor="#FFE54736"
+            custom:pstsBackgroundColor="#FFFFFFFF"
+            custom:pstsDividerColor="#00FFFFFF"
+            android:fillViewport="false" />
+        <ImageView
+            android:id="@+id/snpas_sticky_id_tab_strip_grad_left"
+            android:visibility="gone"
+            android:src="@drawable/img_pager_strip_grad_left"
+            android:scaleType="centerInside"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/snpas_sticky_id_tab_strip_grad_right"
+            android:visibility="gone"
+            android:src="@drawable/img_pager_strip_grad_right"
+            android:scaleType="centerInside"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/TopLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFEEEEEE"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+    <include
+        layout="@layout/include_sticky_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

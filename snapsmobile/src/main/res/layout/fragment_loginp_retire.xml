@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#ffffff"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/fragment_loginp_login_back_iv"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_prev"/>
+
+        <font.FTextView
+            custom:customFont="@string/font_name_ygt_760"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/delete_account"
+            android:textColor="#191919"
+            android:textColorHint="#999999"
+            android:textSize="14dp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/fragment_login_retire_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/img_snaps_logo_for_retire"/>
+
+            <font.FTextView
+                android:id="@+id/txtRetireDesc1"
+                custom:customFont="@string/font_name_ygt_740"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="@string/retire_desc1"
+                android:textColor="#191919"
+                android:textSize="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee"
+                    android:scaleType="centerInside"
+                    android:layout_marginBottom="20dp" />
+
+                <font.FTextView
+                    android:id="@+id/txtRetire_Txt"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="left"
+                    android:text="@string/sns_alert_title"
+                    android:textColor="#333333"
+                    android:textSize="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img_find_pw_dot"/>
+
+                    <font.FTextView
+                        android:id="@+id/txtRetireDesc2_1"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/delete_account_message"
+                        android:textColor="#999999"
+                        android:textSize="11dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/txtRetireDesc2_2_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img_find_pw_dot"/>
+
+                    <font.FTextView
+                        android:id="@+id/txtRetireDesc2_2"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/retire_desc2_2"
+                        android:textColor="#999999"
+                        android:textSize="11dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img_find_pw_dot"/>
+
+                    <font.FTextView
+                        android:id="@+id/txtRetireDesc2_3"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/retire_desc2_3"
+                        android:textColor="#999999"
+                        android:textSize="11dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/txtRetireDesc2_4_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img_find_pw_dot"/>
+
+                    <font.FTextView
+                        android:id="@+id/txtRetireDesc2_4"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/retire_desc2_4"
+                        android:textColor="#999999"
+                        android:textSize="11dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#f4f4f4"
+                android:scaleType="centerInside"/>
+
+            <LinearLayout
+                android:id="@+id/retire_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <font.FTextView
+                    android:id="@+id/reTireTv"
+                    custom:customFont="@string/font_name_ygt_740"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginTop="11dp"
+                    android:text="@string/retire_desc3"
+                    android:textColor="#191919"
+                    android:textSize="12dp"/>
+
+                <font.FEditText
+                    android:id="@+id/editRetirePwdConfirm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#999999"
+                    android:textSize="12dp"/>
+
+                <ImageView
+                    android:id="@+id/editRetirePwdConfirmUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee"/>
+
+                <font.FEditText
+                    android:id="@+id/editRetirePwdReConfirm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:hint="@string/re_input_password"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#999999"
+                    android:textSize="12dp"/>
+
+                <ImageView
+                    android:id="@+id/editRetirePwdReConfirmUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="140dp"
+                    android:layout_marginTop="32dp">
+
+                    <font.FTextView
+                        android:id="@+id/btnRetireCancel"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_white_btn"
+                        android:gravity="center"
+                        android:text="@string/cancel"
+                        android:textColor="#191919"
+                        android:textSize="13dp"/>
+
+                    <font.FTextView
+                        android:id="@+id/btnRetire"
+                        custom:customFont="@string/font_name_ygt_740"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_black_btn"
+                        android:gravity="center"
+                        android:text="@string/secession"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+    <!--
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <font.FTextView
+            android:id="@+id/txtRetireDesc1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/retire_desc1"
+            android:textSize="15sp" />
+
+        <font.FTextView
+            android:id="@+id/txtRetire_Txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/subtitle_color"
+            android:gravity="left"
+            android:text="@string/retire_desc_title"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
+
+                <font.FTextView
+                    android:id="@+id/txtRetireDot_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="·" />
+
+                <font.FTextView
+                    android:id="@+id/txtRetireDesc2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/retire_desc2_1"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
+
+                <font.FTextView
+                    android:id="@+id/txtRetireDot_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="·" />
+
+                <font.FTextView
+                    android:id="@+id/txtRetireDesc2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/retire_desc2_2"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
+
+                <font.FTextView
+                    android:id="@+id/txtRetireDot_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="·" />
+
+                <font.FTextView
+                    android:id="@+id/txtRetireDesc2_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/retire_desc2_3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal" >
+
+                <font.FTextView
+                    android:id="@+id/txtRetireDot_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="·" />
+
+                <font.FTextView
+                    android:id="@+id/txtRetireDesc2_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/retire_desc2_4"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="15dp"
+            android:background="#e5e5e5" />
+
+        <font.FTextView
+            android:id="@+id/txtRetire_Txt1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:padding="10dp"
+            android:textColor="@color/subtitle_color"
+            android:text="@string/retire_desc_title1"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <font.FTextView
+                android:id="@+id/reTireTv"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input01"
+                android:gravity="center_vertical"
+                android:textColorHint="#b4b4b4"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="15sp" />
+            
+            <font.FEditText
+                android:id="@+id/editRetirePwdConfirm"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input03"
+                android:gravity="center_vertical"
+                android:hint="@string/intro_pwd"
+                android:inputType="textPassword"
+                android:textColorHint="#b4b4b4"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="15sp" />
+
+            <font.FEditText
+                android:id="@+id/editRetirePwdReConfirm"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input_bottom"
+                android:gravity="center_vertical"
+                android:hint="@string/intro_re_pwd"
+                android:inputType="textPassword"
+                android:textColorHint="#b4b4b4"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:background="#e5e5e5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <font.FTextView
+                android:id="@+id/btnRetireCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_retire_cancel"
+                android:gravity="center"
+                android:text="@string/retire_cancel"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <font.FTextView
+                android:id="@+id/btnRetire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_retire_agree"
+                android:gravity="center"
+                android:text="탈퇴"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+-->

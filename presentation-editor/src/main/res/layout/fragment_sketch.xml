@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gallery">
+
+    <View
+        android:id="@+id/appbar"
+        android:layout_width="0dp"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/Widget.App.Button.TextButton.IconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="1dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp"
+        app:icon="@drawable/ic_before"
+        app:layout_constraintBottom_toBottomOf="@id/appbar"
+        app:layout_constraintStart_toStartOf="@id/appbar"
+        app:layout_constraintTop_toTopOf="@id/appbar" />
+
+    <Button
+        android:id="@+id/btn_tutorial"
+        style="@style/Widget.App.Button.TextButton.IconOnly"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:elevation="1dp"
+        android:padding="8dp"
+        app:icon="@drawable/ic_tutorial"
+        app:layout_constraintBottom_toBottomOf="@id/appbar"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/appbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btn_add_cart"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ripple_text_button"
+        android:backgroundTint="@color/cod_gray"
+        android:clickable="true"
+        android:elevation="1dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/appbar"
+        app:layout_constraintEnd_toEndOf="@id/appbar"
+        app:layout_constraintTop_toTopOf="@id/appbar" />
+
+    <com.snaps.mobile.presentation.editor.sketch.custom.CartThumbnailView
+        android:id="@+id/cart_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rv_scenes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/zone_scroll_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+    <View
+        android:id="@+id/zone_scroll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guide_bottom_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.snaps.mobile.presentation.editor.sketch.custom.BottomSheetGroup
+        android:id="@+id/view_bottom_sheet_group"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/bottom_toggle_group"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:selectionRequired="false"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/btn_photo_tray"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingTop="10dp"
+            android:text="@string/picture"
+            android:textColor="@color/cod_gray"
+            android:textSize="10dp"
+            app:backgroundTint="@color/white"
+            app:elevation="0dp"
+            app:icon="@drawable/selector_editor_menu_picture"
+            app:iconGravity="top"
+            app:iconPadding="0dp"
+            app:iconTint="@color/cod_gray" />
+
+        <Button
+            android:id="@+id/btn_layout_tray"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingTop="10dp"
+            android:text="@string/layout_tray_title"
+            android:textColor="@color/cod_gray"
+            android:textSize="10dp"
+            app:backgroundTint="@color/white"
+            app:icon="@drawable/selector_editor_menu_layout"
+            app:iconGravity="top"
+            app:iconPadding="0dp"
+            app:iconTint="@color/cod_gray" />
+
+        <Button
+            android:id="@+id/btn_bg_tray"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingTop="10dp"
+            android:text="@string/bring_backgrounds"
+            android:textColor="@color/cod_gray"
+            android:textSize="10dp"
+            app:backgroundTint="@color/white"
+            app:elevation="0dp"
+            app:icon="@drawable/selector_editor_menu_bg"
+            app:iconGravity="top"
+            app:iconPadding="0dp"
+            app:iconTint="@color/cod_gray" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <View
+        android:id="@+id/zone_scroll_top"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+
+    <com.snaps.mobile.presentation.editor.sketch.custom.DeleteImageZoneView
+        android:id="@+id/view_delete_zone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_bottom_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="64dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        
+        <RelativeLayout
+            android:id="@+id/between_menu_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_title_bar_height"
+            android:layout_marginBottom="14dp"
+            android:visibility="gone" >
+            <ImageView
+                android:id="@+id/between_menu_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <!-- 상단 -->
+
+        <LinearLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_login_mode_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_menu_top_bg"
+            android:orientation="vertical"
+            android:paddingLeft="21dp"
+            android:paddingRight="21dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_slide_menu_height"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <!-- 이름과 등급 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <font.FTextView
+                        android:id="@+id/fragment_home_slidemenu_renewal_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/color_menu_font_black_light"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:id="@+id/fragment_home_slidemenu_renewal_user_grade"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="centerInside" />
+                </LinearLayout>
+
+                <!-- 혜택 -->
+
+                <LinearLayout
+                    android:id="@+id/benefit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <font.FTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/benefit"
+                        android:textColor="@color/color_menu_font_gray"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="11.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/color_menu_vertival_gray" />
+
+                    <font.FTextView
+                        android:id="@+id/fragment_home_slidemenu_renewal_event_desc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/color_menu_font_gray"
+                        android:textSize="11dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/show_grade_button_layout" >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/show_grade_reward_button"
+                    android:src="@drawable/level_btn"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <!-- 비 로그인 상태 -->
+        
+        <LinearLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_guest_mode_ly"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_slide_menu_height"
+            android:layout_marginBottom="14dp"
+            android:background="@color/color_menu_top_bg"
+            android:orientation="vertical"
+            android:paddingBottom="25dp"
+            android:paddingLeft="21dp"
+            android:paddingRight="20dp"
+            android:paddingTop="25dp" >
+
+            <!-- 로그인을 해 주세요. -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <font.FTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/setting_text_do_login"
+                    android:textColor="@color/color_menu_font_black_light"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/fragment_home_slidemenu_renewal_login_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/meun_btn_login" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/login"
+                        android:textSize="15dp"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 스토어 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_store_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:scaleType="centerInside"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/meun_icon_home" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="77dp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/store"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <!-- 일기  -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_diary_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="21dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/meun_icon_diary" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="77dp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/snaps_diary_product_name"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+
+            <font.FTextView
+                android:id="@+id/navy_diary_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="NEW"
+                android:gravity="center_vertical"
+                android:textColor="#EF4123"
+                android:textSize="13dp" />/>
+
+        </RelativeLayout>
+
+        <!-- 장바구니 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_cart_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="21dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="77dp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/cart"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+
+            <font.FTextView
+                android:id="@+id/navy_cart_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/meun_icon_new"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 주문배송관리 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_order_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/meun_icon_order" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="77dp"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:text="@string/order_and_delivery"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <!-- 쿠폰관리 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_coupon_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="21dp"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:src="@drawable/meun_icon_cupon" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="77dp"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:text="@string/manage_coupons"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+
+            <font.FTextView
+                android:id="@+id/navy_coupon_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/meun_icon_new"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 친구초대 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_invite_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="21dp"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:src="@drawable/meun_icon_friend" />
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="77dp"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:text="@string/invite"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+
+            <font.FTextView
+                android:id="@+id/tv_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="@string/event_text"
+                android:gravity="center_vertical"
+                android:textColor="#EF4123"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_menu_horizontal_gray" />
+
+        <!-- 공지사항 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_notice_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/notice"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+
+            <font.FTextView
+                android:id="@+id/navy_notice_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/meun_icon_new"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="N"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 고객센터 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_customer_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <font.FTextView
+                android:id="@+id/fragment_home_slidemenu_renewal_menu_customer_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+
+            <font.FTextView
+                android:id="@+id/navy_qna_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/meun_icon_new"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="N"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 설정 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_home_slidemenu_renewal_menu_setting_ly"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu_selector_bg"
+            android:gravity="center_vertical" >
+
+            <font.FTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/setting"
+                android:textColor="@color/color_menu_font_black_strong"
+                android:textSize="16dp" />
+
+            <font.FTextView
+                android:id="@+id/tv_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="TEST"
+                android:textColor="#ef4123"
+                android:textSize="13dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+        
+        
+        <RelativeLayout
+            android:id="@+id/bottom_space"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:visibility="invisible"
+            android:layout_weight="1" />
+        
+		<RelativeLayout
+		    android:id="@+id/between_dummy_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_menu_bar_height"
+            android:visibility="gone" />
+		
+		<RelativeLayout
+		    android:id="@+id/between_dummy_2"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:visibility="gone"
+            android:layout_weight="1" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

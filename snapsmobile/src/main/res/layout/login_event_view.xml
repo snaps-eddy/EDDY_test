@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1280"
+    android:background="#BF000000" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="720"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="65" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="590" >
+	        <ImageView
+				android:id="@+id/iv_event_image"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@android:color/black" />
+	        
+			<ImageView
+		        android:id="@+id/iv_close"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="5dp"
+		        android:layout_marginTop="5dp"
+		        android:src="@drawable/tut_close" />            
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="65" />
+    </LinearLayout>
+    
+</LinearLayout>

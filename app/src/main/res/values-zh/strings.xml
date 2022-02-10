@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  <string name="facebook_appid_kr">443364279094014</string>-->
+    <!-- AppID를 변경 할 때는 manifest.xml에 있는 provider도 수정 해 주어야 함. -->
+    <string name="kakao_app_key">acd18dd4945db7ee0a3ee5c2bc9204dd</string>
+    <string name="app_name">SNAPS</string>
+    <string name="app_develop_name">D_Snaps</string>
+    <string name="app_cs_name">CS_SNAPS</string>
+
+</resources>

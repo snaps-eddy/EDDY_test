@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!--android:id="@+id/gridDetail"custom_snaps_native_super_recycler_view-->
+        <!--<com.snaps.mobile.activity.google_style_image_selector.ui.custom.ImageSelectGridView-->
+            <!--android:id="@+id/custom_snaps_native_super_recycler_view"-->
+            <!--style="@style/PhotoGridLayout"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:columnWidth="@dimen/image_thumbnail_size"-->
+            <!--android:horizontalSpacing="@dimen/image_thumbnail_spacing"-->
+            <!--android:gravity="center"-->
+            <!--android:numColumns="3"-->
+            <!--android:stretchMode="columnWidth"-->
+            <!--android:overScrollMode="never"-->
+            <!--android:verticalSpacing="@dimen/image_thumbnail_spacing" />-->
+
+    <com.snaps.mobile.activity.diary.customview.SnapsSuperRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/custom_snaps_native_super_recycler_view_depth_year"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_moreProgress="@layout/snaps_recycler_view_more_progress"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        android:visibility="invisible"
+        app:recyclerClipToPadding="false"/>
+
+    <com.snaps.mobile.activity.diary.customview.SnapsSuperRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/custom_snaps_native_super_recycler_view_depth_month"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_moreProgress="@layout/snaps_recycler_view_more_progress"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        android:visibility="invisible"
+        app:recyclerClipToPadding="false"/>
+
+    <com.snaps.mobile.activity.diary.customview.SnapsSuperRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/custom_snaps_native_super_recycler_view_depth_day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_moreProgress="@layout/snaps_recycler_view_more_progress"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        android:visibility="invisible"
+        app:recyclerClipToPadding="false"/>
+
+    <com.snaps.mobile.activity.diary.customview.SnapsSuperRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/custom_snaps_native_super_recycler_view_depth_staggered"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_moreProgress="@layout/snaps_recycler_view_more_progress"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        android:visibility="invisible"
+        app:recyclerClipToPadding="false"/>
+
+    <com.snaps.mobile.activity.google_style_image_selector.ui.custom.GooglePhotoStyleFrontView
+        android:id="@+id/custom_snaps_native_fake_layout"
+        android:background="#00000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.snaps.mobile.activity.google_style_image_selector.ui.custom.DateDisplayScrollBar
+        android:id="@+id/date_display_scroll_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/date_scroll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+            <RelativeLayout
+                android:layout_width="102dp"
+                android:layout_height="26dp">
+
+                <RelativeLayout
+                    android:id="@+id/date_text_layout"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_marginLeft="36dp"
+                    android:layout_alignParentLeft="true" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_date_2"/>
+
+                    <font.FTextView
+                        android:id="@+id/date_text"
+                        custom:customFont="@string/font_name_ygt_760"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="0dp"
+                        android:textSize="11dp"
+                        android:textColor="#FFFFFFFF"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/scroll_bar"
+                android:layout_width="34dp"
+                android:layout_height="56dp"
+                android:src="@drawable/btn_floating_scroll"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+
+    </com.snaps.mobile.activity.google_style_image_selector.ui.custom.DateDisplayScrollBar>
+
+    <!--android:background="#10ff0000"-->
+
+    <!--app:layout_empty="@layout/snaps_recycler_empty_view"-->
+
+    <include
+        layout="@layout/include_sticky_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/noPhotoMsg"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/no_printable_photo"-->
+        <!--android:textSize="20sp"-->
+        <!--android:visibility="invisible" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/noPhotoImg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/noPhotoMsg"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="25dp"-->
+        <!--android:background="@drawable/img_unprint"-->
+        <!--android:visibility="invisible" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/noPhotoDetailMsg1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/noPhotoMsg"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/photoprint_noprint_facebook_detail_message1"-->
+        <!--android:visibility="invisible" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/noPhotoDetailMsg2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/noPhotoDetailMsg1"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/photoprint_noprint_facebook_detail_message2"-->
+        <!--android:visibility="invisible" />-->
+
+</RelativeLayout>

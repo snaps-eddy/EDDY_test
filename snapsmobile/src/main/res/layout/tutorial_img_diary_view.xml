@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:background="#FFFFFF"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:clickable="true"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/ThemeTitleLeftLy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp" >
+
+                <ImageView
+                    android:id="@+id/ThemeTitleLeft"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:visibility="gone"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_prev" />
+            </RelativeLayout>
+
+            <font.FTextView
+                android:id="@+id/ThemeTitleText"
+                android:clickable="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                custom:customFont="@string/font_name_ygt_760"
+                android:text="@string/diary_tutorial_title"
+                android:textColor="#191919"
+                android:textSize="@dimen/title_size" />
+
+        <ImageView
+            android:id="@+id/btnTitleClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_close_small"/>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/tutorial_img_diary_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_gravity="center"
+        android:layout_weight="0.7280701754386"
+        android:overScrollMode="never"/>
+
+    <LinearLayout
+        android:id="@+id/tutorial_img_diary_view_bottom_layout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.26785714285714">
+        <TextView
+            android:id="@+id/tutorial_for_diary_desc"
+            android:textSize="17dp"
+            android:textColor="#333333"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- 인디케이터 -->
+        <LinearLayout
+            android:id="@+id/tutorial_for_diary_indicator_layout"
+            android:visibility="gone"
+            android:layout_marginTop="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tutorial_img_diary_view_pager_item_btn_ly"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/tutorial_img_diary_view_pager_item_left_btn"
+                android:background="@drawable/btn_diary_gray"
+                android:text="@string/diary_tutorial_btn_01_txt"
+                android:textSize="14dp"
+                android:textColor="#474747"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="46dp"/>
+            <Button
+                android:id="@+id/tutorial_img_diary_view_pager_item_right_btn"
+                android:layout_marginLeft="12dp"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:text="@string/diary_tutorial_btn_02_txt"
+                android:background="@drawable/btn_diary_black"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="46dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

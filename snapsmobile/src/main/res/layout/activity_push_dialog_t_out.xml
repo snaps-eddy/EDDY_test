@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/push_inner_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/push_inner_background_out"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent" >
+
+        <RelativeLayout
+            android:id="@+id/lay_popUp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/popup_bottom"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:background="@drawable/push_bg_popup_red_01"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/lay_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/logo_push" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/push_right_view"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/push_top_view" />
+
+        <RelativeLayout
+            android:id="@+id/popup_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:background="@drawable/push_bg_popup_w" >
+
+            <TextView
+                android:id="@+id/pushTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:lineSpacingExtra="5dip"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="push title"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/pushMsg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pushTitle"
+                android:layout_marginTop="10dp"
+                android:gravity="center|center_horizontal"
+                android:lineSpacingExtra="5dip"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="push message"
+                android:textColor="@color/brown"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <font.FTextView
+            android:id="@+id/pushOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/popup_bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_chk"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/lay_popUp_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_popUp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/push_bg_popup_red_02" />
+
+        <View
+            android:id="@+id/push_top_view"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_above="@+id/lay_popUp"
+            android:layout_alignRight="@+id/lay_popUp" />
+
+        <font.FTextView
+            android:id="@+id/push_Cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignRight="@+id/push_right_view"
+            android:layout_alignTop="@+id/push_top_view"
+            android:background="@drawable/push_close" />
+    </RelativeLayout>
+
+</RelativeLayout>

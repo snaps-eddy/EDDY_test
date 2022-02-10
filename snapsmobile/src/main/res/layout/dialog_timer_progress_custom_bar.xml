@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="108.5dp"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_progress"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <font.FTextView
+            android:id="@+id/progress_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textColor="#474747"
+            android:textSize="15dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+<!--                 style="?android:attr/progress" -->
+            <ProgressBar
+                android:id="@+id/loading"
+                android:indeterminateDrawable="@drawable/rotate_progress"
+                android:layout_width="@dimen/default_progress_dialog_size"
+        		android:layout_height="@dimen/default_progress_dialog_size"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" >
+            </ProgressBar>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="@style/CustomProgressBarHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" >
+            </ProgressBar>
+
+      
+        </RelativeLayout>
+        
+        <font.FTextView
+          android:id="@+id/page_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:layout_marginTop="5dp"
+          android:layout_marginRight="25dp"
+          android:textColor="#7f7f7f"
+          android:textSize="12dp" />
+
+        <!--
+        <RelativeLayout
+            android:id="@+id/progress_view_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/progress_1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:progressDrawable="@drawable/custom_progressbar" >
+            </ProgressBar>
+
+            <font.FTextView
+                android:id="@+id/progress_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/progress_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/progress_2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:progressDrawable="@drawable/custom_progressbar" >
+            </ProgressBar>
+
+            <font.FTextView
+                android:id="@+id/progress_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        -->
+
+    </LinearLayout>
+
+</LinearLayout>
